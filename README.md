@@ -3,6 +3,7 @@ Con il seguente progetto si cerca di definire un protocollo univoco per lo scamb
 con gli enti pubblici che lo richiedono (Questura, Istat, Comuni).
 Si sono prese alcune decisioni di base come specifiche di partenza:
 * Le specifiche di Alloggiatiweb (Il portale della Questura dedicato allo scopo) rappresentano l'ossatura da cui parte lo sviluppo
+* Le codifiche nazioni/comuni che si considerano sono quelle di Alloggiati Web. Sarà cura dei vari enti (o delegati) convertirli nei formati Istat.
 * Si sono ridefinite le specifiche utilizzando il formato xml 
 * Si sono integrate le variabili necessarie per gli adempimenti Istat
 * Si sono integrate le variabili necessarie per l'Imposta di soggiorno
