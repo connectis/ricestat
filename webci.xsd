@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xsi:schemaLocation= "http://ws.webci.it/webci.xsd">
+
+<xs:element name="Modalita" >
+  <xs:complexType>
+   <xs:element rel="POS" />
+  <xs:choice>
+    <xs:element rel="InserimentoAlloggiati" />
+    <xs:element rel="Aggiornamento" />
+    <xs:element rel="Eliminazione" />
+  </xs:choice>
+  </xs:complexType>
+ </xs:element> 
+
+<xs:element name="POS" minOccurs="2" maxOccurs="2" >
+  <xs:element rel="Source" />
+</xs:element>
+
+<xs:element name="Source"  >
+  <xs:element name="RequestorID " >
+      <xs:attribute name="Type" use="required" type="xs:string" />
+      <xs:attribute name="ID" use="required" type="xs:string" />
+      <xs:attribute name="MessagePassword" use="required" type="xs:string" />
+  </xs:element>
+</xs:element>
+
+<xs:element name="Eliminazione" >
+  <xs:element name="Alloggiato" >
+    <xs:attribute rel="id" />
+    </xs:element>
+</xs:element> 
+     
+<xs:element name="Aggiornamento" >
+  <xs:element rel="Ospite" />
+</xs:element> 
+
+<xs:element name="InserimentoAlloggiati" >
+  <xs:complexType>
+    <xs:choice>
+      <xs:element  ref="Gruppo" />
+      <xs:element ref="OspiteSingolo" />
+    </xs:choice>
+  </xs:complexType>
+</xs:element> 
+
+  <xs:element name="Provenienza" >
+    <xs:complexType>
+      <xs:choice>
+        <xs:element  ref="Italia" />
+        <xs:element ref="Estero" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element> 
+  <xs:element name="Nascita" >
+    <xs:complexType>
+      <xs:choice>
+        <xs:element  ref="Italia" />
+        <xs:element ref="Estero" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element> 
+<xs:element name="Cittadinanza" >
+    <xs:attribute name="Stato" use="required" type="xs:positiveInteger" />
+  </xs:element> 
+   <xs:element name="Italia" >
+      <xs:complexType>
+         <xs:attibute name="CodiceComune" use="required" type="xs:positiveInteger" />
+         <xs:attribute name="Provincia" use="required" type="xs:positiveInteger"/>
+         <xs:attribute name="Stato" use="required" type="xs:positiveInteger" />
+      </xs:complexType>
+  </xs:element>
+<xs:element name="Estero" >
+    <xs:attribute name="Stato" use="required" type="xs:positiveInteger" />
+  </xs:element>
+  
+<xs:element name="Gruppo" minOccurs="2" maxOccurs="unbounded">
+    <xs:sequence>
+     <xs:element ref="Ospite" minOccurs="1" maxOccurs="1" >
+      <xs:attribute name="TipoAlloggiato">
+          <xs:annotation>
+            <xs:documentation>Capofamiglia (17) o Capogruppo (18)</xs:documentation>
+          </xs:annotation>
+        			<xs:restriction base="xs:positiveInteger">
+				        <xs:enumeration value="17"/>
+                <xs:enumeration value="18"/>
+              </xs:restriction>
+          </xs:attribute>
+      </xs:element>
+     <xs:element ref="Ospite" minOccurs="1" maxOccurs="unbounded">
+           <xs:attribute name="TipoAlloggiato">
+          <xs:annotation>
+            <xs:documentation>Familiare (19) o Membro di gruppo (20)</xs:documentation>
+          </xs:annotation>
+        			<xs:restriction base="xs:positiveInteger">
+				        <xs:enumeration value="19"/>
+                <xs:enumeration value="20"/>
+              </xs:restriction>
+          </xs:attribute>
+      </xs:element>
+    </xs:sequence>
+</xs:element>
+
+<xs:element name="OspiteSingolo" minOccurs="1" maxOccurs="1">
+         <xs:attribute name="TipoAlloggiato">
+          <xs:annotation>
+            <xs:documentation>Ospite Singolo (16)</xs:documentation>
+          </xs:annotation>
+        			<xs:restriction base="xs:positiveInteger">
+				        <xs:enumeration value="16"/>
+              </xs:restriction>
+          </xs:attribute> 
+          <xs:element ref="Ospite" minOccurs="1" maxOccurs="1"/>
+</xs:element>
+
+<xs:element name="Ospite" minOccurs="1" maxOccurs="1">
+ <xs:attribute name="Id" type="xs:ID"  use="required"  />
+  <xs:attribute name="IdCamera" type="xs:ID"  use="required"  >
+   <xs:annotation>
+      <xs:documentation>Identificativo univoco della camera (per il calcolo delle camere occupate)</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:complexType>
+    <xs:element  ref="DataDiArrivo" />
+    <xs:element  ref="DataDiPartenza" />
+    <xs:element  ref="DataDiNascita" />
+    <xs:element  ref="Sesso" />
+    <xs:element ref="Provenienza"/>
+    <xs:element ref="Nascita"/>
+    <xs:element ref="Cittadinanza"/>
+    <xs:element ref="ImpostaDiSoggiorno"/>
+    <xs:element ref="CampiStatistici"/>
+  </xs:complexType>
+</xs:element>
+
+
+
+<xs:element name="DataDiArrivo" use="required" type="xs:date">
+    <xs:annotation>
+      <xs:documentation> Data di arrivo (aaaa-mm-gg)</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DataDiPartenza" use="required" type="xs:date">
+    <xs:annotation>
+      <xs:documentation> Data di partenza (aaaa-mm-gg)</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+    <xs:element name="DataDiNascita" use="required" type="xs:date">
+    <xs:annotation>
+      <xs:documentation>Data di nascita (aaaa-mm-gg) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+    <xs:element name="Sesso"  use="required" >
+      <xs:annotation>
+        <xs:documentation>Sesso (1=maschio; 2=femmina)</xs:documentation>
+      </xs:annotation>
+      <xs:restriction type="xs:positiveInteger">
+        <xs:enumeration value="1" />
+        <xs:enumeration value="2" />
+      </xs:restriction>
+    </xs:element>
+
+
+<xs:element name="ImpostaDiSoggiorno">
+ <xs:element name="CodiceImpostaSoggiorno" type="xs:str"  >
+  <xs:annotation>
+      <xs:documentation>Codice per imposta di soggiorno, null se non esente</xs:documentation>
+    </xs:annotation>
+  </xs:element> 
+  <xs:element name="ValoreImpostaUnitaria" type="xs:decimal"  >
+  <xs:annotation>
+      <xs:documentation>Valore per singolo giorno dell'imposta</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+   <xs:element name="Notti Imponibili" type="xs:positiveInteger"  >
+  <xs:annotation>
+      <xs:documentation>Notti soggette ad Imposta</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+</xs:element>
+
+<xs:element name="CampiStatistici" >
+        <xs:complexType>
+          <xs:attribute name="TipoTurismo"  type="TipoTurismo"/>
+          <xs:attribute name="MezzoDiTrasporto"  type="MezzoDiTrasporto"/>
+          <xs:attribute name="TipoPrenotazione"  type="TipoPrenotazione"/>
+        </xs:complexType>
+</xs:element>
+  
+<xs:simpleType name="TipoTurismo">
+  <xs:restriction base="xs:string">
+        <xs:enumeration  name="Affari/Congressuale" />
+        <xs:enumeration  name="Arte e cultura" />
+        <xs:enumeration  name="Cicloturismo" />
+        <xs:enumeration  name="Enogastronomia" />
+        <xs:enumeration  name="Fiere" />
+        <xs:enumeration  name="Parchi Tematici" />
+        <xs:enumeration  name="Religioso" />
+        <xs:enumeration  name="Salute" />
+        <xs:enumeration  name="Scolastico" />
+        <xs:enumeration  name="Sportivo e Fitness" />
+        <xs:enumeration  name="Terme" />
+        <xs:enumeration  name="Altro" />
+  </xs:restriction>
+</xs:simpleType>  
+
+
+ <xs:simpleType name="MezzoDiTrasporto" >
+  <xs:restriction base="xs:string">
+        <xs:enumeration  name="Auto" />
+        <xs:enumeration  name="Aereo" />
+        <xs:enumeration  name="Treno" />
+        <xs:enumeration  name="Autobus" />
+        <xs:enumeration  name="Barca / Nave" />
+        <xs:enumeration  name="Moto" />
+        <xs:enumeration  name="Bicicletta" />
+        <xs:enumeration  name="Altro" />
+      </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TipoPrenotazione" >
+  <xs:restriction base="xs:string">
+        <xs:enumeration  name="Email" />
+        <xs:enumeration  name="Sito web privato" />
+        <xs:enumeration  name="Portale" />
+        <xs:enumeration  name="Telefonica/Fax" />
+        <xs:enumeration  name="Tour Operator" />
+        <xs:enumeration  name="Altro" />
+      </xs:restriction>
+  </xs:simpleType>
+  
+</xs:schema>
