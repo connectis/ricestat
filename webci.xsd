@@ -80,19 +80,19 @@
           <xs:annotation>
             <xs:documentation>Capofamiglia (17) o Capogruppo (18)</xs:documentation>
           </xs:annotation>
-        			<xs:restriction base="xs:positiveInteger">
-				        <xs:enumeration value="17"/>
-                <xs:enumeration value="18"/>
+        	<xs:restriction base="xs:positiveInteger">
+			<xs:enumeration value="17"/>
+                	<xs:enumeration value="18"/>
               </xs:restriction>
           </xs:attribute>
       </xs:element>
      <xs:element ref="Ospite" minOccurs="1" maxOccurs="unbounded">
-           <xs:attribute name="TipoAlloggiato">
-          <xs:annotation>
+           <xs:annotation>
             <xs:documentation>Familiare (19) o Membro di gruppo (20)</xs:documentation>
           </xs:annotation>
-        			<xs:restriction base="xs:positiveInteger">
-				        <xs:enumeration value="19"/>
+          <xs:attribute name="TipoAlloggiato">
+        	<xs:restriction base="xs:positiveInteger">
+			<xs:enumeration value="19"/>
                 <xs:enumeration value="20"/>
               </xs:restriction>
           </xs:attribute>
@@ -101,15 +101,18 @@
 </xs:element>
 
 <xs:element name="OspiteSingolo" minOccurs="1" maxOccurs="1">
-         <xs:attribute name="TipoAlloggiato">
-          <xs:annotation>
-            <xs:documentation>Ospite Singolo (16)</xs:documentation>
-          </xs:annotation>
-        			<xs:restriction base="xs:positiveInteger">
-				        <xs:enumeration value="16"/>
-              </xs:restriction>
-          </xs:attribute> 
-          <xs:element ref="Ospite" minOccurs="1" maxOccurs="1"/>
+          <xs:element ref="Ospite" minOccurs="1" maxOccurs="1">        
+	          <xs:annotation>
+	            <xs:documentation>Ospite Singolo (16)</xs:documentation>
+	          </xs:annotation>          
+           	<xs:attribute name="TipoAlloggiato">
+           		<xs:restriction base="xs:positiveInteger">
+				<xs:enumeration value="16"/>
+              		</xs:restriction>
+              </xs:attribute> 
+          </xs:element>
+
+
 </xs:element>
 
 <xs:element name="Ospite" minOccurs="1" maxOccurs="1">
@@ -172,7 +175,7 @@
       <xs:documentation>Valore per singolo giorno dell'imposta</xs:documentation>
     </xs:annotation>
   </xs:element>
-   <xs:element name="Notti Imponibili" type="xs:positiveInteger"  >
+   <xs:element name="NottiImponibili" type="xs:positiveInteger"  >
   <xs:annotation>
       <xs:documentation>Notti soggette ad Imposta</xs:documentation>
     </xs:annotation>
