@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xsi:schemaLocation= "http://ws.webci.it/webci.xsd">
 
-<xs:element name="Modalita" >
+<xs:element name="MTO_SchedineRQ" >
   <xs:complexType>
    <xs:element rel="POS" />
   <xs:choice>
     <xs:element rel="InserimentoAlloggiati" />
     <xs:element rel="Aggiornamento" />
-    <xs:element rel="Eliminazione" />
+    <xs:element rel="Eliminazione" />    
+    <xs:element rel="RequestSegments" />
   </xs:choice>
   </xs:complexType>
  </xs:element> 
@@ -42,6 +43,29 @@
     </xs:choice>
   </xs:complexType>
 </xs:element> 
+
+<xs:element name="RequestSegments" >
+  <xs:complexType>
+  	<xs:element name="RequestSegment" >
+  		<xs:element name="SearchCriteria" >
+  			<xs:element name="Criterion" >
+				<xs:choice>
+					<xs:element ref="DateRange" />
+					<xs:element ref="UniqueID" />
+					<xs:element ref="ImpostaSoggiorno" />
+					<xs:element ref="ListaResidenze" />
+					<xs:element ref="ListaStatistiche" />
+				</xs:choice>
+  			</xs:element>   	
+  		</xs:element> 
+  	</xs:element> 
+    
+  </xs:complexType>
+</xs:element> 
+
+
+
+
 
   <xs:element name="Provenienza" >
     <xs:complexType>
