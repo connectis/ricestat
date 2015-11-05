@@ -150,6 +150,10 @@
   </xs:element>
   
 <xs:element name="Gruppo" minOccurs="2" maxOccurs="unbounded">
+	<xs:attribute name="IdGruppo" type="xs:ID"  use="required">
+	<xs:annotation>
+            <xs:documentation>Identificativo univoco del gruppo</xs:documentation>
+          </xs:annotation>
     <xs:sequence>
      <xs:element ref="Ospite" minOccurs="1" maxOccurs="1" >
       <xs:attribute name="TipoAlloggiato">
