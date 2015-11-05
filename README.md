@@ -21,7 +21,8 @@ http://test.motouristoffice.it/MTO_SchedinaRQ.php
 
 Usando un client REST tipo l'estensione per Chrome: Advanced REST client 
 E'possibile fare delle prove.
-Di seguito un esempio di Richiesta XML per leggere i clienti comunicati in un dato periodo
+Di seguito un esempio di Richiesta XML per leggere i clienti comunicati in un dato periodo. Per visualizzare andare in raw mode.
+
  
 <?xml version="1.0" encoding="UTF-8"?>
 <MTO_SchedineRQ>
