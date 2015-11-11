@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MTO_SchedineRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="file:/Users/andrea/Downloads/oxygen/Oxygen%20XML%20Editor.app/webci.xsd">
+    <POS>
+        <Source>
+            <RequestorID Type="Type0" ID="ID0" MessagePassword="MessagePassword0"/>
+        </Source>
+    </POS>
+    <POS>
+        <Source>
+            <RequestorID Type="Type1" ID="ID1" MessagePassword="MessagePassword1"/>
+        </Source>
+    </POS>
+    <InserimentoAlloggiati>
+        <Gruppo IdGruppo="ID000">
+            <Ospite TipoAlloggiato="17" Id="ID001" IdCamera="IdCamera0">
+                <DataDiArrivo>2006-05-04</DataDiArrivo>
+                <DataDiPartenza>2006-05-04</DataDiPartenza>
+                <DataDiNascita>2006-05-04</DataDiNascita>
+                <Sesso>1</Sesso>
+                <Provenienza>
+                    <Italia CodiceComune="50" Provincia="50" Stato="50"/>
+<!--                    <Estero Stato="50"/>-->
+                </Provenienza>
+                <Nascita>
+                    <Italia CodiceComune="50" Provincia="50" Stato="50"/>
+<!--                    <Estero Stato="50"/>-->
+                </Nascita>
+                <Cittadinanza Stato="50"/>
+                <ImpostaDiSoggiorno>
+                    <CodiceImpostaSoggiorno>CodiceImpostaSoggiorno0</CodiceImpostaSoggiorno>
+                    <ValoreImpostaUnitaria>0</ValoreImpostaUnitaria>
+                    <NottiImponibili>50</NottiImponibili>
+                </ImpostaDiSoggiorno>
+                <CampiStatistici TipoTurismo="Affari/Congressuale" MezzoDiTrasporto="Auto" TipoPrenotazione="Email"/>
+            </Ospite>
+        </Gruppo>
+        <Gruppo IdGruppo="ID002">
+            <Ospite TipoAlloggiato="17" Id="ID003" IdCamera="IdCamera1">
+                <DataDiArrivo>2006-05-04</DataDiArrivo>
+                <DataDiPartenza>2006-05-04</DataDiPartenza>
+                <DataDiNascita>2006-05-04</DataDiNascita>
+                <Sesso>1</Sesso>
+                <Provenienza>
+                    <Italia CodiceComune="50" Provincia="50" Stato="50"/>
+<!--                    <Estero Stato="50"/>-->
+                </Provenienza>
+                <Nascita>
+                    <Italia CodiceComune="50" Provincia="50" Stato="50"/>
+<!--                    <Estero Stato="50"/>-->
+                </Nascita>
+                <Cittadinanza Stato="50"/>
+                <ImpostaDiSoggiorno>
+                    <CodiceImpostaSoggiorno>CodiceImpostaSoggiorno1</CodiceImpostaSoggiorno>
+                    <ValoreImpostaUnitaria>0</ValoreImpostaUnitaria>
+                    <NottiImponibili>50</NottiImponibili>
+                </ImpostaDiSoggiorno>
+                <CampiStatistici TipoTurismo="Affari/Congressuale" MezzoDiTrasporto="Auto" TipoPrenotazione="Email"/>
+            </Ospite>
+        </Gruppo>
+<!--        <OspiteSingolo>
+            <Ospite TipoAlloggiato="16" Id="ID004" IdCamera="IdCamera2">
+                <DataDiArrivo>2006-05-04</DataDiArrivo>
+                <DataDiPartenza>2006-05-04</DataDiPartenza>
+                <DataDiNascita>2006-05-04</DataDiNascita>
+                <Sesso>1</Sesso>
+                <Provenienza>
+                    <Italia CodiceComune="50" Provincia="50" Stato="50"/>
+                </Provenienza>
+                <Nascita>
+                    <Italia CodiceComune="50" Provincia="50" Stato="50"/>
+                </Nascita>
+                <Cittadinanza Stato="50"/>
+                <ImpostaDiSoggiorno>
+                    <CodiceImpostaSoggiorno>CodiceImpostaSoggiorno2</CodiceImpostaSoggiorno>
+                    <ValoreImpostaUnitaria>0</ValoreImpostaUnitaria>
+                    <NottiImponibili>50</NottiImponibili>
+                </ImpostaDiSoggiorno>
+                <CampiStatistici TipoTurismo="Affari/Congressuale" MezzoDiTrasporto="Auto" TipoPrenotazione="Email"/>
+            </Ospite>
+        </OspiteSingolo>-->
+    </InserimentoAlloggiati>
+<!--    <Aggiornamento>
+        <Ospite Id="ID005" IdCamera="IdCamera3">
+            <DataDiArrivo>2006-05-04</DataDiArrivo>
+            <DataDiPartenza>2006-05-04</DataDiPartenza>
+            <DataDiNascita>2006-05-04</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="50" Provincia="50" Stato="50"/>
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="50" Provincia="50" Stato="50"/>
+            </Nascita>
+            <Cittadinanza Stato="50"/>
+            <ImpostaDiSoggiorno>
+                <CodiceImpostaSoggiorno>CodiceImpostaSoggiorno3</CodiceImpostaSoggiorno>
+                <ValoreImpostaUnitaria>0</ValoreImpostaUnitaria>
+                <NottiImponibili>50</NottiImponibili>
+            </ImpostaDiSoggiorno>
+            <CampiStatistici TipoTurismo="Affari/Congressuale" MezzoDiTrasporto="Auto" TipoPrenotazione="Email"/>
+        </Ospite>
+    </Aggiornamento>-->
+<!--    <Eliminazione>
+        <Alloggiato id="id0"/>
+    </Eliminazione>-->
+<!--    <RequestSegments>
+        <RequestSegment>
+            <SearchCriteria>
+                <Criterion>
+                </Criterion>
+                <DateRange Start="2006-05-04" End="2006-05-04"/>
+            </SearchCriteria>
+        </RequestSegment>
+    </RequestSegments>-->
+</MTO_SchedineRQ>
