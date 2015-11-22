@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MTO_SchedineRQ>
+<POS>
+        <Source>
+            <RequestorID Type = "4" ID = "PmsProva1" MessagePassword = "ProvaProva"/>
+        </Source>
+        <Source>
+            <RequestorID Type = "10" ID = "052004ALBTEST" MessagePassword = "password"/>
+        </Source>
+</POS>
+ <RequestSegments>
+  <RequestSegment>
+   <SearchCriteria>
+    <Criterion>
+     <DateRange Start="2013-03-20" End="2015-03-20" />
+    </Criterion>
+   </SearchCriteria>
+  </RequestSegment>
+ </RequestSegments>
+</MTO_SchedineRQ>
