@@ -32,7 +32,22 @@
 </xs:element> 
      
 <xs:element name="Aggiornamento" >
-  <xs:element rel="Ospite" />
+
+  <xs:element ref="Ospite" />  	
+  	<xs:attribute name="TipoAlloggiato">
+	   	<xs:restriction base="xs:positiveInteger">
+			<xs:enumeration value="16"/>
+			<xs:enumeration value="17"/>
+			<xs:enumeration value="18"/>
+			<xs:enumeration value="19"/>
+			<xs:enumeration value="20"/>
+	      	</xs:restriction>
+	</xs:attribute> 
+	<xs:attribute name="IdGruppo" type="xs:ID"  use="required">
+	    <xs:annotation>
+	      <xs:documentation>Possibilità di correggere gruppo</xs:documentation>
+	    </xs:annotation>
+	</xs:attribute> 
 </xs:element> 
 
 <xs:element name="InserimentoAlloggiati" >
