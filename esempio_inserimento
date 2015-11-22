@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MTO_SchedineRQ>
+<POS>
+        <Source>
+            <RequestorID Type = "4" ID = "PmsProva1" MessagePassword = "ProvaProva"/>
+        </Source>
+        <Source>
+            <RequestorID Type = "10" ID = "052004ALBTEST" MessagePassword = "password"/>
+        </Source>
+</POS>
+<InserimentoAlloggiati CodiceEsercizio="052004ALBTEST">
+  <Gruppo IdGruppo="155">
+   <Ospite Id="231140" IdCamera="1602" TipoAlloggiato="17">
+    <DataDiArrivo>2015-03-20</DataDiArrivo>
+    <DataDiPartenza>2015-03-21</DataDiPartenza>
+    <Provenienza>
+     <Italia CodiceComune="409100005" Provincia="409100" Stato="100000100"/>
+    </Provenienza>
+    <Sesso>2</Sesso>
+    <DataDiNascita>1996-01-01</DataDiNascita>
+    <Nascita>
+     <Estero Stato="100000100"/>
+    </Nascita>
+    <Cittadinanza Stato="100000100"/>
+  <CampiStatistici>
+     <TipoTurismo>1</TipoTurismo>
+     <MezzoDiTrasporto>1</MezzoDiTrasporto>
+     <TipoPrenotazione>1</TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno>MN</CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria>1,5</ValoreImpostaUnitaria>
+     <NottiImponibili>2</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+   <Ospite Id="231144" IdCamera="1602" TipoAlloggiato="19">
+    <DataDiArrivo>2015-03-20</DataDiArrivo>
+    <DataDiPartenza>2015-03-21</DataDiPartenza>
+    <Provenienza>
+     <Italia CodiceComune="409100005" Provincia="409100" Stato="100000100"/>
+    </Provenienza>
+    <Sesso>1</Sesso>
+    <DataDiNascita>1986-03-01</DataDiNascita>
+    <Nascita>
+     <Estero Stato="100000100"/>
+    </Nascita>
+    <Cittadinanza Stato="100000100"/>
+  <CampiStatistici>
+     <TipoTurismo>1</TipoTurismo>
+     <MezzoDiTrasporto>1</MezzoDiTrasporto>
+     <TipoPrenotazione>1</TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno>MN</CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria>1,5</ValoreImpostaUnitaria>
+     <NottiImponibili>2</NottiImponibili>
+    </ImpostaDiSoggiorno>
+
+   </Ospite>
+  </Gruppo>
+  <Gruppo IdGruppo="157">
+   <Ospite Id="331140" IdCamera="1602" TipoAlloggiato="17">
+    <DataDiArrivo>2015-03-20</DataDiArrivo>
+    <DataDiPartenza>2015-03-21</DataDiPartenza>
+    <Provenienza>
+     <Italia CodiceComune="409100005" Provincia="409100" Stato="100000100"/>
+    </Provenienza>
+    <Sesso>2</Sesso>
+    <DataDiNascita>1996-01-01</DataDiNascita>
+    <Nascita>
+     <Estero Stato="100000100"/>
+    </Nascita>
+    <Cittadinanza Stato="100000100"/>
+  <CampiStatistici>
+     <TipoTurismo>1</TipoTurismo>
+     <MezzoDiTrasporto>1</MezzoDiTrasporto>
+     <TipoPrenotazione>1</TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno>MN</CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria>1,5</ValoreImpostaUnitaria>
+     <NottiImponibili>2</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+   <Ospite Id="331144" IdCamera="1602" TipoAlloggiato="19">
+    <DataDiArrivo>2015-03-20</DataDiArrivo>
+    <DataDiPartenza>2015-03-21</DataDiPartenza>
+    <Provenienza>
+     <Italia CodiceComune="409100005" Provincia="409100" Stato="100000100"/>
+    </Provenienza>
+    <Sesso>1</Sesso>
+    <DataDiNascita>1986-03-01</DataDiNascita>
+    <Nascita>
+     <Estero Stato="100000100"/>
+    </Nascita>
+    <Cittadinanza Stato="100000100"/>
+  <CampiStatistici>
+     <TipoTurismo>1</TipoTurismo>
+     <MezzoDiTrasporto>1</MezzoDiTrasporto>
+     <TipoPrenotazione>1</TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno>MN</CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria>1,5</ValoreImpostaUnitaria>
+     <NottiImponibili>2</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </Gruppo>
+  <Gruppo IdGruppo="159">
+   <Ospite Id="331150" IdCamera="1602" TipoAlloggiato="17">
+    <DataDiArrivo>2015-03-20</DataDiArrivo>
+    <DataDiPartenza>2015-03-21</DataDiPartenza>
+    <Provenienza>
+     <Italia CodiceComune="409100005" Provincia="409100" Stato="100000100"/>
+    </Provenienza>
+    <Sesso>2</Sesso>
+    <DataDiNascita>1996-01-01</DataDiNascita>
+    <Nascita>
+     <Estero Stato="100000100"/>
+    </Nascita>
+    <Cittadinanza Stato="100000100"/>
+  <CampiStatistici>
+     <TipoTurismo>1</TipoTurismo>
+     <MezzoDiTrasporto>1</MezzoDiTrasporto>
+     <TipoPrenotazione>1</TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno>MN</CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria>1,5</ValoreImpostaUnitaria>
+     <NottiImponibili>2</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+   <Ospite Id="331154" IdCamera="1602" TipoAlloggiato="19">
+    <DataDiArrivo>2015-03-20</DataDiArrivo>
+    <DataDiPartenza>2015-03-21</DataDiPartenza>
+    <Provenienza>
+     <Italia CodiceComune="409100005" Provincia="409100" Stato="100000100"/>
+    </Provenienza>
+    <Sesso>1</Sesso>
+    <DataDiNascita>1986-03-01</DataDiNascita>
+    <Nascita>
+     <Estero Stato="100000100"/>
+    </Nascita>
+    <Cittadinanza Stato="100000100"/>
+  <CampiStatistici>
+     <TipoTurismo>1</TipoTurismo>
+     <MezzoDiTrasporto>1</MezzoDiTrasporto>
+     <TipoPrenotazione>1</TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno>MN</CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria>1,5</ValoreImpostaUnitaria>
+     <NottiImponibili>2</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </Gruppo>
+  <OspiteSingolo Id="331159">
+   <Ospite Id="331159" IdCamera="1355" TipoAlloggiato="16">
+    <DataDiArrivo>2015-03-20</DataDiArrivo>
+    <DataDiPartenza>2015-03-21</DataDiPartenza>
+    <Provenienza>
+     <Italia CodiceComune="401001201" Provincia="401001" Stato="100000100"/>
+    </Provenienza>
+    <Sesso>2</Sesso>
+    <DataDiNascita>1968-01-01</DataDiNascita>
+    <Nascita>
+     <Estero Stato="100000100"/>
+    </Nascita>
+    <Cittadinanza Stato="100000100"/>
+    
+  <CampiStatistici>
+     <TipoTurismo>1</TipoTurismo>
+     <MezzoDiTrasporto>1</MezzoDiTrasporto>
+     <TipoPrenotazione>1</TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno>MN</CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria>1,5</ValoreImpostaUnitaria>
+     <NottiImponibili>2</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </OspiteSingolo>
+  <OspiteSingolo Id="331157">
+   <Ospite Id="331157" IdCamera="1355" TipoAlloggiato="16">
+    <DataDiArrivo>2015-03-20</DataDiArrivo>
+    <DataDiPartenza>2015-03-21</DataDiPartenza>
+    <Provenienza>
+     <Italia CodiceComune="420092009" Provincia="420092" Stato="100000100"/>
+    </Provenienza>
+    <Sesso>1</Sesso>
+    <DataDiNascita>1968-01-01</DataDiNascita>
+    <Nascita>
+     <Estero Stato="100000100"/>
+    </Nascita>
+    <Cittadinanza Stato="100000100"/>
+  <CampiStatistici>
+     <TipoTurismo>1</TipoTurismo>
+     <MezzoDiTrasporto>1</MezzoDiTrasporto>
+     <TipoPrenotazione>1</TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno>MN</CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria>1,5</ValoreImpostaUnitaria>
+     <NottiImponibili>2</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </OspiteSingolo>
+  <OspiteSingolo Id="331250">
+   <Ospite Id="3311350" IdCamera="1355" TipoAlloggiato="16">
+    <DataDiArrivo>2015-03-20</DataDiArrivo>
+    <DataDiPartenza>2015-03-21</DataDiPartenza>
+    <Provenienza>
+     <Italia CodiceComune="409100005" Provincia="409100" Stato="100000100"/>
+    </Provenienza>
+    <Sesso>1</Sesso>
+    <DataDiNascita>2015-02-01</DataDiNascita>
+    <Nascita>
+     <Estero Stato="100000100"/>
+    </Nascita>
+    <Cittadinanza Stato="100000100"/>
+  <CampiStatistici>
+     <TipoTurismo>1</TipoTurismo>
+     <MezzoDiTrasporto>1</MezzoDiTrasporto>
+     <TipoPrenotazione>1</TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno>MN</CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria>1,5</ValoreImpostaUnitaria>
+     <NottiImponibili>2</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </OspiteSingolo>
+ </InserimentoAlloggiati>
+
+</MTO_SchedineRQ>
