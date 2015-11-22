@@ -21,7 +21,9 @@ http://test.motouristoffice.it/MTO_SchedinaRQ.php
 
 Usando un client REST tipo l'estensione per Chrome: Advanced REST client 
 E'possibile fare delle prove.
-Di seguito un esempio di Richiesta XML per leggere i clienti comunicati in un dato periodo. Per visualizzare andare in raw mode.
+I file che iniziano con esempio riportano una serie di esempi utili per interrogare il webservice.
+I parametri del POS devono essere sostituiti con i propri personali forniti da Connectis, per non accavallarsi con altri sviluppatori.
+Di seguito un esempio di Richiesta XML per leggere i clienti comunicati in un dato periodo. 
 
  
 `<?xml version="1.0" encoding="UTF-8"?>
@@ -47,7 +49,8 @@ Di seguito un esempio di Richiesta XML per leggere i clienti comunicati in un da
 `
 #1.	Introduzione
 ##1.1	Finalità
-Questo documento descrive l’interfaccia XML in uso alle piattaforme Ricestat ed Unicom.
+Questo documento descrive l’interfaccia XML in uso alle piattaforme Ricestat ed Unicom. 
+IL servizio è un servizio WEBSERVICE in Rest.
 ##1.2	Destinatari del documento
 Questo documento è prodotto per quei soggetti che hanno esperienza nelle procedure XML e di programmazione in generale
 Nel dettaglio è raccomandato che gli sviluppatori abbiano le seguenti competenze:
