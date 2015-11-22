@@ -19,7 +19,7 @@ di software per gli Enti Pubblici di tutta Italia.
 L'end point di test è il seguente:
 http://test.motouristoffice.it/MTO_SchedinaRQ.php
 
-Usando un client REST tipo l'estensione per Chrome: Advanced REST client 
+Usando un client REST tipo l'estensione per Chrome: Advanced REST client http://chromerestclient.appspot.com/
 E'possibile fare delle prove.
 I file che iniziano con esempio riportano una serie di esempi utili per interrogare il webservice.
 I parametri del POS devono essere sostituiti con i propri personali forniti da Connectis, per non accavallarsi con altri sviluppatori.
