@@ -24,7 +24,7 @@ E'possibile fare delle prove.
 Di seguito un esempio di Richiesta XML per leggere i clienti comunicati in un dato periodo. Per visualizzare andare in raw mode.
 
  
-<?xml version="1.0" encoding="UTF-8"?>
+`<?xml version="1.0" encoding="UTF-8"?>
 <MTO_SchedineRQ>
 <POS>
         <Source>
@@ -44,7 +44,7 @@ Di seguito un esempio di Richiesta XML per leggere i clienti comunicati in un da
   </RequestSegment>
  </RequestSegments>
 </MTO_SchedineRQ>
-
+`
 #1.	Introduzione
 ##1.1	Finalità
 Questo documento descrive l’interfaccia XML in uso alle piattaforme Ricestat ed Unicom.
