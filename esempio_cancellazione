@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MTO_SchedineRQ>
+  <POS>
+        <Source>
+            <RequestorID Type = "4" ID = "PmsProva1" MessagePassword = "ProvaProva"/>
+        </Source>
+        <Source>
+            <RequestorID Type = "10" ID = "052004ALBTEST" MessagePassword = "password"/>
+        </Source>
+  </POS>
+  <Eliminazione >
+    <Alloggiato Id="231140" />
+    <Alloggiato Id="331144" />
+    <Alloggiato Id="331150" />
+    <Alloggiato Id="331154" />
+    <Alloggiato Id="331157" />
+    <Alloggiato Id="331159" />
+    <Alloggiato Id="231144" />
+    <Alloggiato Id="3311350" />
+  </Eliminazione >
+
+</MTO_SchedineRQ>
