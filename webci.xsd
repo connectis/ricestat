@@ -27,7 +27,7 @@
 
 <xs:element name="Eliminazione" >
   <xs:element name="Alloggiato" >
-    <xs:attribute rel="id" />
+    <xs:attribute name="Id" use="required" type="xs:int" />
     </xs:element>
 </xs:element> 
      
