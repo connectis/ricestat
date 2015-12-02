@@ -79,21 +79,24 @@
 </xs:element> 
 
   <xs:element name="DateRange" >
-      <xs:attribute name="Start" use="required"  type="xs:date">
+      	<xs:attribute name="Start" use="required"  type="xs:date">
 	    <xs:annotation>
 	      <xs:documentation> Data di inizio periodo di ricerca (aaaa-mm-gg)</xs:documentation>
 	    </xs:annotation>
+	</xs:attribute> 
       <xs:attribute name="End" use="required"  type="xs:date">
 	    <xs:annotation>
 	      <xs:documentation> Data di fine periodo di ricerca  (aaaa-mm-gg)</xs:documentation>
 	    </xs:annotation>
+	</xs:attribute> 
   </xs:element>
 
   <xs:element name="UniqueID" >
-      <xs:attribute name="Id" use="required"  type="xs:int">
+      	<xs:attribute name="Id" use="required"  type="xs:int">
 	    <xs:annotation>
 	      <xs:documentation>Identificativo univoco</xs:documentation>
 	    </xs:annotation>
+	</xs:attribute> 
       	<xs:attribute name="tipo" use="required" type="xs:string">
 		<xs:annotation>
 			<xs:documentation>Tipo di identificativo (Gruppo; OspiteSingolo)</xs:documentation>
@@ -102,13 +105,15 @@
 			<xs:enumeration value="Gruppo" />
 			<xs:enumeration value="OspiteSingolo" />
 		</xs:restriction>
+	</xs:attribute> 
   </xs:element>
   
 <xs:element name="ImpostaSoggiorno" >
   <xs:attribute name="Comune" use="required"  type="xs:int">
-    <xs:annotation>
-      <xs:documentation>Codice identificativo univoco del comune</xs:documentation>
-  </xs:annotation>
+    	<xs:annotation>
+      		<xs:documentation>Codice identificativo univoco del comune</xs:documentation>
+  	</xs:annotation>
+  </xs:attribute> 
 </xs:element>
 
 <xs:element name="ListaResidenze" >
@@ -116,10 +121,12 @@
 	<xs:annotation>
 		<xs:documentation>Tipo di identificativo (Stati; Comuni)</xs:documentation>
 	</xs:annotation>
+      </xs:attribute> 
 	<xs:restriction type="xs:string">
 		<xs:enumeration value="Stati" />
 		<xs:enumeration value="Comuni" />
 	</xs:restriction>
+	</xs:attribute> 
 </xs:element>
 <xs:element name="ListaStatistiche" >
       <xs:attribute name="tipo" use="required" type="xs:string">
@@ -131,6 +138,7 @@
 		<xs:enumeration value="MezzoDiTrasporto" />
 		<xs:enumeration value="TipoPrenotazione" />
 	</xs:restriction>
+	</xs:attribute> 
 </xs:element>
   
   
@@ -169,6 +177,7 @@
 	<xs:annotation>
             <xs:documentation>Identificativo univoco del gruppo</xs:documentation>
           </xs:annotation>
+          	</xs:attribute> 
     <xs:sequence>
      <xs:element ref="Ospite" minOccurs="1" maxOccurs="1" >
       <xs:attribute name="TipoAlloggiato">
