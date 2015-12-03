@@ -1,338 +1,399 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xs:schemaLocation= "http://ws.webci.it/webci.xsd">
-
-<xs:element name="MTO_SchedineRQ" >
-  <xs:complexType>
-   <xs:element rel="POS" />
-  <xs:choice>
-    <xs:element rel="InserimentoAlloggiati" />
-    <xs:element rel="Aggiornamento" />
-    <xs:element rel="Eliminazione" />    
-    <xs:element rel="RequestSegments" />
-  </xs:choice>
-  </xs:complexType>
- </xs:element> 
-
-<xs:element name="POS" minOccurs="2" maxOccurs="2" >
-  <xs:element rel="Source" />
-</xs:element>
-
-<xs:element name="Source"  >
-  <xs:element name="RequestorID " >
-      <xs:attribute name="Type" use="required" type="xs:string" />
-      <xs:attribute name="ID" use="required" type="xs:string" />
-      <xs:attribute name="MessagePassword" use="required" type="xs:string" />
-  </xs:element>
-</xs:element>
-
-<xs:element name="Eliminazione" >
-  <xs:element name="Alloggiato" >
-    <xs:attribute name="Id" use="required" type="xs:int" />
-    </xs:element>
-</xs:element> 
-     
-<xs:element name="Aggiornamento" >
-
-  <xs:element ref="Ospite" />  	
-  	<xs:attribute name="TipoAlloggiato">
-	   	<xs:restriction base="xs:positiveInteger">
-			<xs:enumeration value="16"/>
-			<xs:enumeration value="17"/>
-			<xs:enumeration value="18"/>
-			<xs:enumeration value="19"/>
-			<xs:enumeration value="20"/>
-	      	</xs:restriction>
-	</xs:attribute> 
-	<xs:attribute name="IdGruppo" type="xs:ID"  use="required">
-	    <xs:annotation>
-	      <xs:documentation>Possibilità di correggere gruppo</xs:documentation>
-	    </xs:annotation>
-	</xs:attribute> 
-</xs:element> 
-
-<xs:element name="InserimentoAlloggiati" >
-  <xs:complexType>
-    <xs:choice>
-      <xs:element  ref="Gruppo" />
-      <xs:element ref="OspiteSingolo" />
-    </xs:choice>
-  </xs:complexType>
-</xs:element> 
-
-<xs:element name="RequestSegments" >
-  <xs:complexType>
-  	<xs:element name="RequestSegment" >
-  		<xs:element name="SearchCriteria" >
-  			<xs:element name="Criterion" >
-				<xs:choice>
-					<xs:element ref="DateRange" />
-					<xs:element ref="UniqueID" />
-					<xs:element ref="ImpostaSoggiorno" />
-					<xs:element ref="ListaResidenze" />
-					<xs:element ref="ListaStatistiche" />
-				</xs:choice>
-  			</xs:element>   	
-  		</xs:element> 
-  	</xs:element> 
-    
-  </xs:complexType>
-</xs:element> 
-
-  <xs:element name="DateRange" >
-      	<xs:attribute name="Start" use="required"  type="xs:date">
-	    <xs:annotation>
-	      <xs:documentation> Data di inizio periodo di ricerca (aaaa-mm-gg)</xs:documentation>
-	    </xs:annotation>
-	</xs:attribute> 
-      <xs:attribute name="End" use="required"  type="xs:date">
-	    <xs:annotation>
-	      <xs:documentation> Data di fine periodo di ricerca  (aaaa-mm-gg)</xs:documentation>
-	    </xs:annotation>
-	</xs:attribute> 
-  </xs:element>
-
-  <xs:element name="UniqueID" >
-      	<xs:attribute name="Id" use="required"  type="xs:int">
-	    <xs:annotation>
-	      <xs:documentation>Identificativo univoco</xs:documentation>
-	    </xs:annotation>
-	</xs:attribute> 
-      	<xs:attribute name="tipo" use="required" type="xs:string">
-		<xs:annotation>
-			<xs:documentation>Tipo di identificativo (Gruppo; OspiteSingolo)</xs:documentation>
-		</xs:annotation>
-		<xs:restriction type="xs:string">
-			<xs:enumeration value="Gruppo" />
-			<xs:enumeration value="OspiteSingolo" />
-		</xs:restriction>
-	</xs:attribute> 
-  </xs:element>
-  
-<xs:element name="ImpostaSoggiorno" >
-  <xs:attribute name="Comune" use="required"  type="xs:int">
-    	<xs:annotation>
-      		<xs:documentation>Codice identificativo univoco del comune</xs:documentation>
-  	</xs:annotation>
-  </xs:attribute> 
-</xs:element>
-
-<xs:element name="ListaResidenze" >
-      <xs:attribute name="tipo" use="required" type="xs:string">
-	<xs:annotation>
-		<xs:documentation>Tipo di identificativo (Stati; Comuni)</xs:documentation>
-	</xs:annotation>
-      </xs:attribute> 
-	<xs:restriction type="xs:string">
-		<xs:enumeration value="Stati" />
-		<xs:enumeration value="Comuni" />
-	</xs:restriction>
-	</xs:attribute> 
-</xs:element>
-<xs:element name="ListaStatistiche" >
-      <xs:attribute name="tipo" use="required" type="xs:string">
-	<xs:annotation>
-		<xs:documentation>Tipo di identificativo (Stati; Comuni)</xs:documentation>
-	</xs:annotation>
-	<xs:restriction type="xs:string">
-		<xs:enumeration value="TipoTurismo" />
-		<xs:enumeration value="MezzoDiTrasporto" />
-		<xs:enumeration value="TipoPrenotazione" />
-	</xs:restriction>
-	</xs:attribute> 
-</xs:element>
-  
-  
-  <xs:element name="Provenienza" >
-    <xs:complexType>
-      <xs:choice>
-        <xs:element  ref="Italia" />
-        <xs:element ref="Estero" />
-      </xs:choice>
-    </xs:complexType>
-  </xs:element> 
-  <xs:element name="Nascita" >
-    <xs:complexType>
-      <xs:choice>
-        <xs:element  ref="Italia" />
-        <xs:element ref="Estero" />
-      </xs:choice>
-    </xs:complexType>
-  </xs:element> 
-<xs:element name="Cittadinanza" >
-    <xs:attribute name="Stato" use="required" type="xs:positiveInteger" />
-  </xs:element> 
-   <xs:element name="Italia" >
-      <xs:complexType>
-         <xs:attibute name="CodiceComune" use="required" type="xs:positiveInteger" />
-         <xs:attribute name="Provincia" use="required" type="xs:positiveInteger"/>
-         <xs:attribute name="Stato" use="required" type="xs:positiveInteger" />
-      </xs:complexType>
-  </xs:element>
-<xs:element name="Estero" >
-    <xs:attribute name="Stato" use="required" type="xs:positiveInteger" />
-  </xs:element>
-  
-<xs:element name="Gruppo" minOccurs="2" maxOccurs="unbounded">
-	<xs:attribute name="IdGruppo" type="xs:ID"  use="required">
-	<xs:annotation>
-            <xs:documentation>Identificativo univoco del gruppo</xs:documentation>
-          </xs:annotation>
-          	</xs:attribute> 
-    <xs:sequence>
-     <xs:element ref="Ospite" minOccurs="1" maxOccurs="1" >
-      <xs:attribute name="TipoAlloggiato">
-          <xs:annotation>
-            <xs:documentation>Capofamiglia (17) o Capogruppo (18)</xs:documentation>
-          </xs:annotation>
-        	<xs:restriction base="xs:positiveInteger">
-			<xs:enumeration value="17"/>
-                	<xs:enumeration value="18"/>
-              </xs:restriction>
-          </xs:attribute>
-      </xs:element>
-     <xs:element ref="Ospite" minOccurs="1" maxOccurs="unbounded">
-           <xs:annotation>
-            <xs:documentation>Familiare (19) o Membro di gruppo (20)</xs:documentation>
-          </xs:annotation>
-          <xs:attribute name="TipoAlloggiato">
-        	<xs:restriction base="xs:positiveInteger">
-			<xs:enumeration value="19"/>
-                <xs:enumeration value="20"/>
-              </xs:restriction>
-          </xs:attribute>
-      </xs:element>
-    </xs:sequence>
-</xs:element>
-
-<xs:element name="OspiteSingolo" minOccurs="1" maxOccurs="1">
-          <xs:element ref="Ospite" minOccurs="1" maxOccurs="1">        
-	          <xs:annotation>
-	            <xs:documentation>Ospite Singolo (16)</xs:documentation>
-	          </xs:annotation>          
-           	<xs:attribute name="TipoAlloggiato">
-           		<xs:restriction base="xs:positiveInteger">
-				<xs:enumeration value="16"/>
-              		</xs:restriction>
-              </xs:attribute> 
-          </xs:element>
-
-
-</xs:element>
-
-<xs:element name="Ospite" minOccurs="1" maxOccurs="1">
- <xs:attribute name="Id" type="xs:ID"  use="required"  />
-  <xs:attribute name="IdCamera" type="xs:ID"  use="required"  >
-   <xs:annotation>
-      <xs:documentation>Identificativo univoco della camera (per il calcolo delle camere occupate)</xs:documentation>
-    </xs:annotation>
-  </xs:attribute>
-  <xs:complexType>
-    <xs:element  ref="DataDiArrivo" />
-    <xs:element  ref="DataDiPartenza" />
-    <xs:element  ref="DataDiNascita" />
-    <xs:element  ref="Sesso" />
-    <xs:element ref="Provenienza"/>
-    <xs:element ref="Nascita"/>
-    <xs:element ref="Cittadinanza"/>
-    <xs:element ref="ImpostaDiSoggiorno"/>
-    <xs:element ref="CampiStatistici"/>
-  </xs:complexType>
-</xs:element>
-
-
-
-<xs:element name="DataDiArrivo" use="required" type="xs:date">
-    <xs:annotation>
-      <xs:documentation> Data di arrivo (aaaa-mm-gg)</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DataDiPartenza" use="required" type="xs:date">
-    <xs:annotation>
-      <xs:documentation> Data di partenza (aaaa-mm-gg)</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  
-    <xs:element name="DataDiNascita" use="required" type="xs:date">
-    <xs:annotation>
-      <xs:documentation>Data di nascita (aaaa-mm-gg) </xs:documentation>
-    </xs:annotation>
-  </xs:element>
-    <xs:element name="Sesso"  use="required" >
-      <xs:annotation>
-        <xs:documentation>Sesso (1=maschio; 2=femmina)</xs:documentation>
-      </xs:annotation>
-      <xs:restriction type="xs:positiveInteger">
-        <xs:enumeration value="1" />
-        <xs:enumeration value="2" />
-      </xs:restriction>
-    </xs:element>
-
-
-<xs:element name="ImpostaDiSoggiorno">
- <xs:element name="CodiceImpostaSoggiorno" type="xs:str"  >
-  <xs:annotation>
-      <xs:documentation>Codice per imposta di soggiorno, null se non esente</xs:documentation>
-    </xs:annotation>
-  </xs:element> 
-  <xs:element name="ValoreImpostaUnitaria" type="xs:decimal"  >
-  <xs:annotation>
-      <xs:documentation>Valore per singolo giorno dell'imposta</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-   <xs:element name="NottiImponibili" type="xs:positiveInteger"  >
-  <xs:annotation>
-      <xs:documentation>Notti soggette ad Imposta</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-</xs:element>
-
-<xs:element name="CampiStatistici" >
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation= "http://ws.webci.it/ http://ws.webci.it/webci.xsd">
+    <xs:element name="MTO_SchedineRQ" >
         <xs:complexType>
-          <xs:attribute name="TipoTurismo"  type="TipoTurismo"/>
-          <xs:attribute name="MezzoDiTrasporto"  type="MezzoDiTrasporto"/>
-          <xs:attribute name="TipoPrenotazione"  type="TipoPrenotazione"/>
+            <xs:sequence>
+                <xs:element name="POS" type="POSType" />
+                <xs:choice>
+                    <xs:element name="InserimentoAlloggiati"  type="InserimentoAlloggiatiType" />
+                    <xs:element name="Aggiornamento"  type="AggiornamentoType"/>
+                    <xs:element name="Eliminazione" type="EliminazioneType" />    
+                    <xs:element name="RequestSegments" type="RequestSegmentsType" />
+                </xs:choice>
+            </xs:sequence>
         </xs:complexType>
-</xs:element>
+    </xs:element> 
+
+    <xs:complexType name="POSType"  >
+        <xs:annotation>
+            <xs:documentation>Point of Sale (POS) is the details identifying the party or PMS making the request.</xs:documentation>
+        </xs:annotation>    
+        <xs:sequence>
+            <xs:element name="Source" type="SourceType" minOccurs="2" maxOccurs="2">
+                <xs:annotation>
+                    <xs:documentation>This holds details regarding the requestor. It may be repeated to also accommodate the delivery systems.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+       
+    <xs:complexType name="SourceType" >
+        <xs:sequence>
+            <xs:element name="RequestorID"  >
+                <xs:complexType>
+                    <xs:annotation>
+                        <xs:documentation>An identifier of the entity making the request </xs:documentation>
+                    </xs:annotation>
+                    <xs:attributeGroup ref="Authentication"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:attributeGroup name="Authentication">
+        <xs:attribute name="Type" use="required" type="xs:string" />
+        <xs:attribute name="ID" use="required" type="xs:string" />
+        <xs:attribute name="MessagePassword" use="required" type="xs:string" />
+    </xs:attributeGroup>
+
+    <xs:complexType name="EliminazioneType" >
+        <xs:sequence>
+            <xs:element name="Alloggiato">
+                <xs:complexType>
+                    <xs:attribute name="Id" use="required" type="xs:int" />
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType> 
+     
+    <xs:complexType  name="AggiornamentoType" >
+        <xs:sequence>
+            <xs:element name="Ospite" type="OspiteType" >  
+                <xs:complexType>
+                    <xs:attribute name="TipoAlloggiato">
+                        <xs:simpleType> 
+                            <xs:restriction base="xs:positiveInteger">
+                                <xs:enumeration value="16"/>
+                                <xs:enumeration value="17"/>
+                                <xs:enumeration value="18"/>
+                                <xs:enumeration value="19"/>
+                                <xs:enumeration value="20"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute> 
+                    <xs:attribute name="IdGruppo" type="xs:ID"  use="required">
+                        <xs:annotation>
+                            <xs:documentation>Possibilità di correggere gruppo</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute> 
+                </xs:complexType > 
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType > 
+
+    <xs:complexType name="InserimentoAlloggiatiType" >
+        <xs:choice>
+            <xs:element  name="Gruppo" type="GruppoType"  minOccurs="2" maxOccurs="unbounded" />
+            <xs:element name="OspiteSingolo" type="OspiteSingoloType" minOccurs="1" maxOccurs="1"/>
+        </xs:choice>
+        <xs:attribute name="CodiceEsercizio"/>
+    </xs:complexType>
+
+    <xs:complexType name="RequestSegmentsType" >
+        <xs:sequence>
+            <xs:element name="RequestSegment" >
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="SearchCriteria" >
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="Criterion" >
+                                        <xs:complexType>
+                                            <xs:choice>
+                                                <xs:element name="DateRange"  type="DateRangeType" />
+                                                <xs:element name="UniqueID" type="UniqueIDType" />
+                                                <xs:element name="ImpostaSoggiorno" type="ImpostaSoggiornoType" />
+                                                <xs:element name="ListaResidenze" type="ListaResidenzeType" />
+                                                <xs:element name="ListaStatistiche" type="ListaStatisticheType" />
+                                            </xs:choice>
+                                        </xs:complexType>
+                                    </xs:element>  
+                                </xs:sequence>
+                            </xs:complexType>  	
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType> 
+            </xs:element> 
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DateRangeType" >       
+        <xs:attribute name="Start" use="required"  type="xs:date">
+            <xs:annotation>
+                <xs:documentation> Data di inizio periodo di ricerca (aaaa-mm-gg)</xs:documentation>
+            </xs:annotation>
+        </xs:attribute> 
+        <xs:attribute name="End" use="required"  type="xs:date">
+            <xs:annotation>
+                <xs:documentation> Data di fine periodo di ricerca  (aaaa-mm-gg)</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>    
+    </xs:complexType>
+
+    <xs:complexType name="UniqueIDType" >
+        <xs:attribute name="Id" use="required"  type="xs:int">
+            <xs:annotation>
+                <xs:documentation>Identificativo univoco</xs:documentation>
+            </xs:annotation>
+        </xs:attribute> 
+        <xs:attribute name="tipo" use="required">
+            <xs:annotation>
+                <xs:documentation>Tipo di identificativo (Gruppo; OspiteSingolo)</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType> 
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="Gruppo" />
+                    <xs:enumeration value="OspiteSingolo" />
+                </xs:restriction>
+            </xs:simpleType> 
+        </xs:attribute> 
+    </xs:complexType>
   
-<xs:simpleType name="TipoTurismo">
-  <xs:restriction base="xs:string">
-        <xs:enumeration  name="Affari/Congressuale" />
-        <xs:enumeration  name="Arte e cultura" />
-        <xs:enumeration  name="Cicloturismo" />
-        <xs:enumeration  name="Enogastronomia" />
-        <xs:enumeration  name="Fiere" />
-        <xs:enumeration  name="Parchi Tematici" />
-        <xs:enumeration  name="Religioso" />
-        <xs:enumeration  name="Salute" />
-        <xs:enumeration  name="Scolastico" />
-        <xs:enumeration  name="Sportivo e Fitness" />
-        <xs:enumeration  name="Terme" />
-        <xs:enumeration  name="Altro" />
-  </xs:restriction>
-</xs:simpleType>  
+    <xs:complexType name="ImpostaSoggiornoType" >
+        <xs:attribute name="Comune" use="required"  type="xs:int">
+            <xs:annotation>
+                <xs:documentation>Codice identificativo univoco del comune</xs:documentation>
+            </xs:annotation>
+        </xs:attribute> 
+    </xs:complexType>
 
+    <xs:complexType name="ListaResidenzeType" >
+        <xs:attribute name="tipo" use="required" >
+            <xs:annotation>
+                <xs:documentation>Tipo di identificativo (Stati; Comuni)</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType> 
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="Stati" />
+                    <xs:enumeration value="Comuni" />
+                </xs:restriction>
+            </xs:simpleType> 
+        </xs:attribute> 
+    </xs:complexType>
+    <xs:complexType name="ListaStatisticheType" >
+        <xs:attribute name="tipo" use="required" >
+            <xs:annotation>
+                <xs:documentation>Tipo di identificativo (Stati; Comuni)</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType> 
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="TipoTurismo" />
+                    <xs:enumeration value="MezzoDiTrasporto" />
+                    <xs:enumeration value="TipoPrenotazione" />
+                </xs:restriction>
+            </xs:simpleType> 
+        </xs:attribute> 
+    </xs:complexType>
+  
+    <xs:element name="Provenienza" >
+        <xs:complexType>
+            <xs:choice>
+                <xs:element name="Italia" type="ItaliaType" />
+                <xs:element name="Estero" type="EsteroType" />
+            </xs:choice>
+        </xs:complexType>
+    </xs:element> 
+    <xs:element name="Nascita" >
+        <xs:complexType>
+            <xs:choice>
+                <xs:element  name="Italia" type="ItaliaType" />
+                <xs:element name="Estero" type="EsteroType" />
+            </xs:choice>
+        </xs:complexType>
+    </xs:element> 
+    <xs:element name="Cittadinanza" >
+        <xs:complexType>
+            <xs:attribute name="Stato" use="required" type="xs:positiveInteger" />
+        </xs:complexType>
+    </xs:element> 
 
- <xs:simpleType name="MezzoDiTrasporto" >
-  <xs:restriction base="xs:string">
-        <xs:enumeration  name="Auto" />
-        <xs:enumeration  name="Aereo" />
-        <xs:enumeration  name="Treno" />
-        <xs:enumeration  name="Autobus" />
-        <xs:enumeration  name="Barca / Nave" />
-        <xs:enumeration  name="Moto" />
-        <xs:enumeration  name="Bicicletta" />
-        <xs:enumeration  name="Altro" />
-      </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="TipoPrenotazione" >
-  <xs:restriction base="xs:string">
-        <xs:enumeration  name="Email" />
-        <xs:enumeration  name="Sito web privato" />
-        <xs:enumeration  name="Portale" />
-        <xs:enumeration  name="Telefonica/Fax" />
-        <xs:enumeration  name="Tour Operator" />
-        <xs:enumeration  name="Altro" />
-      </xs:restriction>
-  </xs:simpleType>
+    <xs:complexType name="ItaliaType">
+        <xs:attribute name="CodiceComune" use="required" type="xs:positiveInteger" />
+        <xs:attribute name="Provincia" use="required" type="xs:positiveInteger"/>
+        <xs:attribute name="Stato" use="required" type="xs:positiveInteger" />
+    </xs:complexType>
+
+    <xs:complexType name="EsteroType" >
+        <xs:attribute name="Stato" use="required" type="xs:positiveInteger" />
+    </xs:complexType>
+  
+    <xs:complexType name="GruppoType">
+        <xs:sequence>
+            <xs:element name="Ospite" type="OspiteType" minOccurs="1" maxOccurs="1" >
+                <xs:complexType>
+                    <xs:attribute name="TipoAlloggiato">
+                        <xs:annotation>
+                            <xs:documentation>Capofamiglia (17) o Capogruppo (18)</xs:documentation>
+                        </xs:annotation>
+                        <xs:simpleType> 
+                            <xs:restriction base="xs:positiveInteger">
+                                <xs:enumeration value="17"/>
+                                <xs:enumeration value="18"/>
+                            </xs:restriction>
+                        </xs:simpleType> 
+                    </xs:attribute>
+                </xs:complexType>
+            </xs:element>
+  
+            <xs:element name="Ospite" type="OspiteType" minOccurs="1" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Familiare (19) o Membro di gruppo (20)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:attribute name="TipoAlloggiato">
+                        <xs:simpleType> 
+                            <xs:restriction base="xs:positiveInteger">
+                                <xs:enumeration value="19"/>
+                                <xs:enumeration value="20"/>
+                            </xs:restriction>
+                        </xs:simpleType> 
+                    </xs:attribute>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="IdGruppo" type="xs:ID"  use="required">
+            <xs:annotation>
+                <xs:documentation>Identificativo univoco del gruppo</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="OspiteSingoloType" >
+        <xs:sequence>
+            <xs:element name="Ospite" type="OspiteType" minOccurs="1" maxOccurs="1">        
+                <xs:annotation>
+                    <xs:documentation>Ospite Singolo (16)</xs:documentation>
+                </xs:annotation>     
+                <xs:complexType>     
+                    <xs:attribute name="TipoAlloggiato">
+                        <xs:simpleType> 
+                            <xs:restriction base="xs:positiveInteger">
+                                <xs:enumeration value="16"/>
+                            </xs:restriction>
+                        </xs:simpleType> 
+                    </xs:attribute>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="OspiteType" >
+        <xs:sequence>        
+            <xs:element ref="DataDiArrivo" minOccurs="1" />
+            <xs:element ref="DataDiPartenza" minOccurs="1"  />
+            <xs:element ref="DataDiNascita"  minOccurs="1" />
+            <xs:element ref="Sesso" minOccurs="1"  />
+            <xs:element ref="Provenienza" minOccurs="1" />
+            <xs:element ref="Nascita" minOccurs="1" />
+            <xs:element ref="Cittadinanza" minOccurs="1" />
+            <xs:element ref="ImpostaDiSoggiorno"/>
+            <xs:element ref="CampiStatistici"/>
+        </xs:sequence>        
+        <xs:attribute name="Id" type="xs:string"  use="required"  />
+        <xs:attribute name="IdCamera" type="xs:string"  use="required"  >
+            <xs:annotation>
+                <xs:documentation>Identificativo univoco della camera (per il calcolo delle camere occupate)</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    
+    <xs:element name="DataDiArrivo"  type="xs:date">
+        <xs:annotation>
+            <xs:documentation> Data di arrivo (aaaa-mm-gg)</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:element name="DataDiPartenza" type="xs:date">
+        <xs:annotation>
+            <xs:documentation> Data di partenza (aaaa-mm-gg)</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+  
+    <xs:element name="DataDiNascita"  type="xs:date">
+        <xs:annotation>
+            <xs:documentation>Data di nascita (aaaa-mm-gg) </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="Sesso"   >
+        <xs:annotation>
+            <xs:documentation>Sesso (1=maschio; 2=femmina)</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType> 
+            <xs:restriction base="xs:positiveInteger">
+                <xs:enumeration value="1" />
+                <xs:enumeration value="2" />
+            </xs:restriction>
+        </xs:simpleType> 
+    </xs:element>
+
+    <xs:element name="ImpostaDiSoggiorno">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="CodiceImpostaSoggiorno" type="xs:string"  >
+                    <xs:annotation>
+                        <xs:documentation>Codice per imposta di soggiorno, null se non esente</xs:documentation>
+                    </xs:annotation>
+                </xs:element> 
+                <xs:element name="ValoreImpostaUnitaria" type="xs:decimal"  >
+                    <xs:annotation>
+                        <xs:documentation>Valore per singolo giorno dell'imposta</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="NottiImponibili" type="xs:positiveInteger"  >
+                    <xs:annotation>
+                        <xs:documentation>Notti soggette ad Imposta</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CampiStatistici" >
+        <xs:complexType>
+            <xs:attribute name="TipoTurismo"  type="TipoTurismo"/>
+            <xs:attribute name="MezzoDiTrasporto"  type="MezzoDiTrasporto"/>
+            <xs:attribute name="TipoPrenotazione"  type="TipoPrenotazione"/>
+        </xs:complexType>
+    </xs:element>
+  
+    <xs:simpleType name="TipoTurismo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration  value="Affari/Congressuale" />
+            <xs:enumeration  value="Arte e cultura" />
+            <xs:enumeration  value="Cicloturismo" />
+            <xs:enumeration  value="Enogastronomia" />
+            <xs:enumeration  value="Fiere" />
+            <xs:enumeration  value="Parchi Tematici" />
+            <xs:enumeration  value="Religioso" />
+            <xs:enumeration  value="Salute" />
+            <xs:enumeration  value="Scolastico" />
+            <xs:enumeration  value="Sportivo e Fitness" />
+            <xs:enumeration  value="Terme" />
+            <xs:enumeration  value="Altro" />
+        </xs:restriction>
+    </xs:simpleType>  
+
+    <xs:simpleType name="MezzoDiTrasporto" >
+        <xs:restriction base="xs:string">
+            <xs:enumeration  value="Auto" />
+            <xs:enumeration  value="Aereo" />
+            <xs:enumeration  value="Treno" />
+            <xs:enumeration  value="Autobus" />
+            <xs:enumeration  value="Barca / Nave" />
+            <xs:enumeration  value="Moto" />
+            <xs:enumeration  value="Bicicletta" />
+            <xs:enumeration  value="Altro" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TipoPrenotazione" >
+        <xs:restriction base="xs:string">
+            <xs:enumeration  value="Email" />
+            <xs:enumeration  value="Sito web privato" />
+            <xs:enumeration  value="Portale" />
+            <xs:enumeration  value="Telefonica/Fax" />
+            <xs:enumeration  value="Tour Operator" />
+            <xs:enumeration  value="Altro" />
+        </xs:restriction>
+    </xs:simpleType>
   
 </xs:schema>
