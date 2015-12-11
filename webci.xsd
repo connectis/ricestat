@@ -49,7 +49,7 @@
         <xs:sequence>
             <xs:element name="Alloggiato">
                 <xs:complexType>
-                    <xs:attribute name="Id" use="required" type="xs:int" />
+                    <xs:attribute name="Id" use="required" type="xs:string" />
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
@@ -130,7 +130,7 @@
     </xs:complexType>
 
     <xs:complexType name="UniqueIDType" >
-        <xs:attribute name="Id" use="required"  type="xs:int">
+        <xs:attribute name="Id" use="required"  type="xs:string">
             <xs:annotation>
                 <xs:documentation>Identificativo univoco</xs:documentation>
             </xs:annotation>
