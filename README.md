@@ -89,3 +89,11 @@ Usiamo uno dei metodi standard OTA di autenticazione  chiamato “POS”
 La richiesta di autenticazione è composta da due elementi:
 *	L’autenticazione della terza parte: l’ID Code  a password ottenuti in fase di registrazione dal Gestionale (vedi sopra)
 *	L’autenticazione della Struttura Ricettiva (S.R.): Il codice utente della S.R. (l che usano per entrare nella Extranet della piattaforma)  e la password di accesso allo stesso. 
+
+
+#4.  Tool extra
+#4.1  Tool di conversione fra schedina Questura e Ricestat
+Il seguente tool sviluppato in php vs>=5.3 consiste in una webform che converte il file txt della questura nel flusso XML del sistema.
+E' rilasciato a solo scopo di esempio in quanto le variabili identificative di Id Ospite, Id Gruppo e Id Camera non sono specificate nel file Questura e quindi sono inserite ramndom (oltre alle informazioni di provenienza). Il tool è però utile per poter visualizzare una possibile implementazione del sistema di accesso al webservice.
+Per accedere alla home chiamare la pagina index.php sotto la cartella web
+
