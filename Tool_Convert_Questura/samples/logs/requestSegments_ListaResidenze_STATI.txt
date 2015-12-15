@@ -1,0 +1,1164 @@
+
+
+Wed, 02 Dec 2015 14:01:37 +0000	sending data to service:
+<?xml version="1.0" encoding="UTF-8"?><MTO_SchedineRQ xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://ws.webci.it/webci.xsd" Version="1.0" PrimaryLangID="it"><POS><Source><RequestorID Type="4" ID="webci" MessagePassword="Prova7592" /></Source><Source><RequestorID Type="10" ID="052004ALB0013" MessagePassword="Prova7592" /></Source></POS><RequestSegments><RequestSegment><SearchCriteria><Criterion><ListaResidenze tipo="Stati" /></Criterion></SearchCriteria></RequestSegment></RequestSegments></MTO_SchedineRQ>
+Wed, 02 Dec 2015 14:01:40 +0000	
+*   Trying 62.149.194.226...
+* Connected to test.motouristoffice.it (62.149.194.226) port 443 (#0)
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* SSL connection using TLSv1.0 / DHE-RSA-AES256-SHA
+* Server certificate:
+* 	 subject: OU=Domain Control Validated; CN=*.motouristoffice.it
+* 	 start date: 2015-10-26 09:48:38 GMT
+* 	 expire date: 2016-10-26 09:48:38 GMT
+* 	 subjectAltName: test.motouristoffice.it matched
+* 	 issuer: C=US; ST=Arizona; L=Scottsdale; O=GoDaddy.com, Inc.; OU=http://certs.godaddy.com/repository/; CN=Go Daddy Secure Certificate Authority - G2
+* 	 SSL certificate verify result: self signed certificate in certificate chain (19), continuing anyway.
+> POST /MTO_SchedinaRQ.php HTTP/1.1
+Host: test.motouristoffice.it
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0
+Accept: */*
+Content-Type: text/xml; charset="utf-8"
+Content-Length: 533
+
+* upload completely sent off: 533 out of 533 bytes
+< HTTP/1.1 200 OK
+< Date: Wed, 02 Dec 2015 14:03:05 GMT
+< Server: Apache/2.2.3 (CentOS)
+< X-Powered-By: PHP/5.2.13
+< Set-Cookie: PHPSESSID=faumlnojg4en236e5ev5sp17k2; path=/
+< Expires: Thu, 19 Nov 1981 08:52:00 GMT
+< Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+< Pragma: no-cache
+< Connection: close
+< Transfer-Encoding: chunked
+< Content-Type: text/html; charset=UTF-8
+< 
+* Closing connection 0
+
+Wed, 02 Dec 2015 14:01:40 +0000	data received: 
+<?xml version="1.0" encoding="UTF-8"?>
+<MTO_SchedineRS xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://ws.webci.it/webci.xsd" Version="1.0" PrimaryLangID="it">
+ <Residenze Tipo="Stati">
+  <Residenza>
+   <Codice>100000301</Codice>
+   <Nome>Afghanistan</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000201</Codice>
+   <Nome>Albania</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000401</Codice>
+   <Nome>Algeria</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000202</Codice>
+   <Nome>Andorra</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000402</Codice>
+   <Nome>Angola</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000733</Codice>
+   <Nome>Anguilla (isola)</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000503</Codice>
+   <Nome>Antigua e Barbuda</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000734</Codice>
+   <Nome>Antille britanniche</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000735</Codice>
+   <Nome>Antille olandesi</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000999</Codice>
+   <Nome>Apolide</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000736</Codice>
+   <Nome>Arabia meridionale</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000302</Codice>
+   <Nome>Arabia saudita</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000602</Codice>
+   <Nome>Argentina</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000358</Codice>
+   <Nome>Armenia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000701</Codice>
+   <Nome>Australia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000203</Codice>
+   <Nome>Austria</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000359</Codice>
+   <Nome>Azerbaigian</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000505</Codice>
+   <Nome>Bahama</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000304</Codice>
+   <Nome>Bahrein</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000305</Codice>
+   <Nome>Bangladesh</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000506</Codice>
+   <Nome>Barbados</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000737</Codice>
+   <Nome>Basutoland Sud Africa Britanni</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000738</Codice>
+   <Nome>Beciuania Sud Africa Britannic</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000206</Codice>
+   <Nome>Belgio</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000507</Codice>
+   <Nome>Belize</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000406</Codice>
+   <Nome>Benin</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000739</Codice>
+   <Nome>Bermude</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000306</Codice>
+   <Nome>Bhutan</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000256</Codice>
+   <Nome>Bielorussia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000604</Codice>
+   <Nome>Bolivia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000252</Codice>
+   <Nome>Bosnia ed Erzegovina</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000408</Codice>
+   <Nome>Botswana</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000605</Codice>
+   <Nome>Brasile</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000309</Codice>
+   <Nome>Brunei</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000209</Codice>
+   <Nome>Bulgaria</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000409</Codice>
+   <Nome>Burkina faso</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000410</Codice>
+   <Nome>Burundi</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000310</Codice>
+   <Nome>Cambogia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000411</Codice>
+   <Nome>Camerun</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000509</Codice>
+   <Nome>Canada</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>110000002</Codice>
+   <Nome>Canarie isole</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000413</Codice>
+   <Nome>Capo Verde</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000741</Codice>
+   <Nome>Caroline</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000742</Codice>
+   <Nome>Cayman (isole)</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000414</Codice>
+   <Nome>Centrafrica</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000743</Codice>
+   <Nome>Christmas</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000415</Codice>
+   <Nome>Ciad</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000606</Codice>
+   <Nome>Cile</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000314</Codice>
+   <Nome>Cina Popolare</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000744</Codice>
+   <Nome>Cina Repubblica Nazionale</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000315</Codice>
+   <Nome>Cipro</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000745</Codice>
+   <Nome>Ciskei</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000246</Codice>
+   <Nome>Città del Vaticano</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000746</Codice>
+   <Nome>Cocos</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000608</Codice>
+   <Nome>Colombia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000417</Codice>
+   <Nome>Comore</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000418</Codice>
+   <Nome>Congo</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000319</Codice>
+   <Nome>Corea del nord</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000320</Codice>
+   <Nome>Corea del sud</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000404</Codice>
+   <Nome>Costa d'Avorio</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000513</Codice>
+   <Nome>Costarica</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000250</Codice>
+   <Nome>Croazia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000514</Codice>
+   <Nome>Cuba</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000212</Codice>
+   <Nome>Danimarca</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000747</Codice>
+   <Nome>Dipendenze Australiane</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000748</Codice>
+   <Nome>Dipendenze Britanniche</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000749</Codice>
+   <Nome>Dipendenze Canadesi</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000750</Codice>
+   <Nome>Dipendenze Francesi</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000751</Codice>
+   <Nome>Dipendenze Neozelandesi</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000752</Codice>
+   <Nome>Dipendenze Sovietiche</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000753</Codice>
+   <Nome>Dipendenze Sudafricane</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000515</Codice>
+   <Nome>Dominica</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000609</Codice>
+   <Nome>Ecuador</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000419</Codice>
+   <Nome>Egitto</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000517</Codice>
+   <Nome>El Salvador</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000754</Codice>
+   <Nome>Ellice</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000322</Codice>
+   <Nome>Emirati Arabi Uniti</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000466</Codice>
+   <Nome>Eritrea</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000247</Codice>
+   <Nome>Estonia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000420</Codice>
+   <Nome>Etiopia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000703</Codice>
+   <Nome>Figi</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000323</Codice>
+   <Nome>Filippine</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000214</Codice>
+   <Nome>Finlandia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000215</Codice>
+   <Nome>Francia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000755</Codice>
+   <Nome>Fær Øer</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000421</Codice>
+   <Nome>Gabon</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000422</Codice>
+   <Nome>Gambia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000360</Codice>
+   <Nome>Georgia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000216</Codice>
+   <Nome>Germania</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000757</Codice>
+   <Nome>Germania Rep. Democratica</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000423</Codice>
+   <Nome>Ghana</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000518</Codice>
+   <Nome>Giamaica</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000326</Codice>
+   <Nome>Giappone</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>110000004</Codice>
+   <Nome>Gibilterra</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000424</Codice>
+   <Nome>Gibuti</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000327</Codice>
+   <Nome>Giordania</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000220</Codice>
+   <Nome>Grecia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000519</Codice>
+   <Nome>Grenada</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000758</Codice>
+   <Nome>Groenlandia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000759</Codice>
+   <Nome>Guadalupa</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000760</Codice>
+   <Nome>Guam</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000523</Codice>
+   <Nome>Guatemala</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000761</Codice>
+   <Nome>Guayana francese</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000425</Codice>
+   <Nome>Guinea</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000426</Codice>
+   <Nome>Guinea Bissau</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000427</Codice>
+   <Nome>Guinea Equatoriale</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000612</Codice>
+   <Nome>Guyana</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000524</Codice>
+   <Nome>Haiti</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000525</Codice>
+   <Nome>Honduras</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>110000005</Codice>
+   <Nome>Hong Kong</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000762</Codice>
+   <Nome>Ifni</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000330</Codice>
+   <Nome>India</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000331</Codice>
+   <Nome>Indonesia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000332</Codice>
+   <Nome>Iran</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>110000006</Codice>
+   <Nome>Iran-etnia curda</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000333</Codice>
+   <Nome>Iraq</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>110000007</Codice>
+   <Nome>Iraq-etnia curda</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000763</Codice>
+   <Nome>Irian occidentale</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000221</Codice>
+   <Nome>Irlanda</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000223</Codice>
+   <Nome>Islanda</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000764</Codice>
+   <Nome>Isole Vergini</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000334</Codice>
+   <Nome>Israele</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000100</Codice>
+   <Nome>Italia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000224</Codice>
+   <Nome>Jugoslavia (Serbia-Montenegro)</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>110000010</Codice>
+   <Nome>Jugoslavia etnia kossovara</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000356</Codice>
+   <Nome>Kazakistan</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000428</Codice>
+   <Nome>Kenia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000361</Codice>
+   <Nome>Kirghizistan</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000708</Codice>
+   <Nome>Kiribati</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000335</Codice>
+   <Nome>Kuwait</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000765</Codice>
+   <Nome>La Reunion</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000336</Codice>
+   <Nome>Laos</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000429</Codice>
+   <Nome>Lesotho</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000248</Codice>
+   <Nome>Lettonia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000337</Codice>
+   <Nome>Libano</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000430</Codice>
+   <Nome>Liberia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000431</Codice>
+   <Nome>Libia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000225</Codice>
+   <Nome>Liechtenstein</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000249</Codice>
+   <Nome>Lituania</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000226</Codice>
+   <Nome>Lussemburgo</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>110000003</Codice>
+   <Nome>Macao</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000253</Codice>
+   <Nome>Macedonia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000766</Codice>
+   <Nome>Macquarie</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000432</Codice>
+   <Nome>Madagascar</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000434</Codice>
+   <Nome>Malawi</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000767</Codice>
+   <Nome>Malaysia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000339</Codice>
+   <Nome>Maldive</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000340</Codice>
+   <Nome>Malesia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000435</Codice>
+   <Nome>Mali</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000227</Codice>
+   <Nome>Malta</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000768</Codice>
+   <Nome>Malvine</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000769</Codice>
+   <Nome>Man</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000770</Codice>
+   <Nome>Marcus</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000771</Codice>
+   <Nome>Marianne</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000436</Codice>
+   <Nome>Marocco</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000772</Codice>
+   <Nome>Marshall</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000773</Codice>
+   <Nome>Martinica</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000437</Codice>
+   <Nome>Mauritania</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000438</Codice>
+   <Nome>Maurizio</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000774</Codice>
+   <Nome>Mayotte</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000527</Codice>
+   <Nome>Messico</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000775</Codice>
+   <Nome>Micronesia Stati Federali</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000776</Codice>
+   <Nome>Midway</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000254</Codice>
+   <Nome>Moldavia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000229</Codice>
+   <Nome>Monaco</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000341</Codice>
+   <Nome>Mongolia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000777</Codice>
+   <Nome>Montserrat</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000440</Codice>
+   <Nome>Mozambico</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000307</Codice>
+   <Nome>Myanmar (Birmania)</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000441</Codice>
+   <Nome>Namibia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000715</Codice>
+   <Nome>Nauru</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>110000011</Codice>
+   <Nome>Naz. britannico(oltremare)-Hon</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000342</Codice>
+   <Nome>Nepal</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000529</Codice>
+   <Nome>Nicaragua</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000442</Codice>
+   <Nome>Niger</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000443</Codice>
+   <Nome>Nigeria</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000778</Codice>
+   <Nome>Norfolk</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000779</Codice>
+   <Nome>Normanne</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000231</Codice>
+   <Nome>Norvegia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000780</Codice>
+   <Nome>Nuova Caledonia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000781</Codice>
+   <Nome>Nuova Guinea</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000719</Codice>
+   <Nome>Nuova Zelanda</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000782</Codice>
+   <Nome>Nuove Ebridi</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000343</Codice>
+   <Nome>Oman</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000232</Codice>
+   <Nome>Paesi Bassi</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000344</Codice>
+   <Nome>Pakistan</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000783</Codice>
+   <Nome>Palau Repubblica</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>110000001</Codice>
+   <Nome>Palestina</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000530</Codice>
+   <Nome>Panama</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000784</Codice>
+   <Nome>Panama Zona del Canale</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000721</Codice>
+   <Nome>Papuasia-N. Guinea</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000614</Codice>
+   <Nome>Paraguay</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000785</Codice>
+   <Nome>Pasqua</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000615</Codice>
+   <Nome>Perù</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000786</Codice>
+   <Nome>Pitcairn</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000787</Codice>
+   <Nome>Polinesia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000233</Codice>
+   <Nome>Polonia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000234</Codice>
+   <Nome>Portogallo</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000788</Codice>
+   <Nome>Principe</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000789</Codice>
+   <Nome>Protettorato della Arabia Meri</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000790</Codice>
+   <Nome>Puerto Rico</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000345</Codice>
+   <Nome>Qatar</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000219</Codice>
+   <Nome>Regno Unito</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000516</Codice>
+   <Nome>Rep. Dominicana</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000257</Codice>
+   <Nome>Repubblica Ceca</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000998</Codice>
+   <Nome>Repubblica Democratica del Con</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000255</Codice>
+   <Nome>Repubblica Slovacca</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000235</Codice>
+   <Nome>Romania</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000446</Codice>
+   <Nome>Ruanda</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000245</Codice>
+   <Nome>Russia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000794</Codice>
+   <Nome>Ryukyu</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000534</Codice>
+   <Nome>S. Christopher e Nevis</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000795</Codice>
+   <Nome>Sahara Spagnolo</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000532</Codice>
+   <Nome>Saint Lucia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000796</Codice>
+   <Nome>Saint Pierre et Miquelon</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000797</Codice>
+   <Nome>Saint Vincent e Grenadine</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000725</Codice>
+   <Nome>Salomone</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000727</Codice>
+   <Nome>Samoa</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000798</Codice>
+   <Nome>Samoa Americane</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000236</Codice>
+   <Nome>San Marino</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000799</Codice>
+   <Nome>Sant Elena</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000448</Codice>
+   <Nome>Sao Tomè e Principe</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000800</Codice>
+   <Nome>Savage</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000449</Codice>
+   <Nome>Seicelle</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000450</Codice>
+   <Nome>Senegal</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000451</Codice>
+   <Nome>Sierra Leone</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000801</Codice>
+   <Nome>Sikkim</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000346</Codice>
+   <Nome>Singapore</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000348</Codice>
+   <Nome>Siria</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>110000008</Codice>
+   <Nome>Siria-etnia curda</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000251</Codice>
+   <Nome>Slovenia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000453</Codice>
+   <Nome>Somalia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000802</Codice>
+   <Nome>Somalia Francese</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000239</Codice>
+   <Nome>Spagna</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000311</Codice>
+   <Nome>Sri Lanka (Ceylon)</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000536</Codice>
+   <Nome>Stati Uniti d'America</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000454</Codice>
+   <Nome>Sud Africa</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000455</Codice>
+   <Nome>Sudan</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000616</Codice>
+   <Nome>Suriname</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000240</Codice>
+   <Nome>Svezia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000241</Codice>
+   <Nome>Svizzera</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000456</Codice>
+   <Nome>Swaziland</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000362</Codice>
+   <Nome>Tagikistan</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000363</Codice>
+   <Nome>Taiwan</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000803</Codice>
+   <Nome>Tanganica</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000457</Codice>
+   <Nome>Tanzania</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000804</Codice>
+   <Nome>Territorio di Gaza</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000349</Codice>
+   <Nome>Thailandia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000805</Codice>
+   <Nome>Timor</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000458</Codice>
+   <Nome>Togo</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000806</Codice>
+   <Nome>Tokelau</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000730</Codice>
+   <Nome>Tonga</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000808</Codice>
+   <Nome>Transkei</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000617</Codice>
+   <Nome>Trinidad e Tobago</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000460</Codice>
+   <Nome>Tunisia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000351</Codice>
+   <Nome>Turchia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>110000009</Codice>
+   <Nome>Turchia-etnia curda</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000364</Codice>
+   <Nome>Turkmenistan</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000810</Codice>
+   <Nome>Turks</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000731</Codice>
+   <Nome>Tuvalu</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000243</Codice>
+   <Nome>Ucraina</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000461</Codice>
+   <Nome>Uganda</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000244</Codice>
+   <Nome>Ungheria</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000793</Codice>
+   <Nome>Urss</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000618</Codice>
+   <Nome>Uruguay</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000357</Codice>
+   <Nome>Uzbekistan</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000732</Codice>
+   <Nome>Vanuatu</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000811</Codice>
+   <Nome>Venda</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000619</Codice>
+   <Nome>Venezuela</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000812</Codice>
+   <Nome>Vergini Britanniche (isole)</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000353</Codice>
+   <Nome>Vietnam</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000813</Codice>
+   <Nome>Vietnam del nord</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000814</Codice>
+   <Nome>Vietnam del sud</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000815</Codice>
+   <Nome>Wallis</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000354</Codice>
+   <Nome>Yemen</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000816</Codice>
+   <Nome>Yemen Rep. Dem. Popolare</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000463</Codice>
+   <Nome>Zaire</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000464</Codice>
+   <Nome>Zambia</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000817</Codice>
+   <Nome>Zanzibar</Nome>
+  </Residenza>
+  <Residenza>
+   <Codice>100000465</Codice>
+   <Nome>Zimbabwe</Nome>
+  </Residenza>
+ </Residenze>
+</MTO_SchedineRS>

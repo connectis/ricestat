@@ -1,0 +1,90 @@
+
+
+Wed, 02 Dec 2015 13:55:41 +0000	sending data to service:
+<?xml version="1.0" encoding="UTF-8"?><MTO_SchedineRQ xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://ws.webci.it/webci.xsd" Version="1.0" PrimaryLangID="it"><POS><Source><RequestorID Type="4" ID="webci" MessagePassword="Prova7592" /></Source><Source><RequestorID Type="10" ID="052004ALB0013" MessagePassword="Prova7592" /></Source></POS><InserimentoAlloggiati><Gruppo IdGruppo="155"><Ospite Id="231140" IdCamera="1602" TipoAlloggiato="17"><DataDiArrivo>2015-03-20</DataDiArrivo><DataDiPartenza>2015-03-21</DataDiPartenza><DataDiNascita>1996-01-01</DataDiNascita><Sesso>2</Sesso><Provenienza><Italia CodiceComune="409100005" Provincia="409100" Stato="100000100" /></Provenienza><Nascita><Estero Stato="100000100" /></Nascita><Cittadinanza Stato="100000100" /><ImpostaDiSoggiorno><CodiceImpostaSoggiorno>MN</CodiceImpostaSoggiorno><ValoreImpostaUnitaria>1,5</ValoreImpostaUnitaria><NottiImponibili>2</NottiImponibili></ImpostaDiSoggiorno><CampiStatistici><TipoTurismo>Altro</TipoTurismo><MezzoDiTrasporto>Altro</MezzoDiTrasporto><TipoPrenotazione>Altro</TipoPrenotazione></CampiStatistici></Ospite><Ospite Id="231144" IdCamera="1602" TipoAlloggiato="19"><DataDiArrivo>2015-03-20</DataDiArrivo><DataDiPartenza>2015-03-21</DataDiPartenza><DataDiNascita>1986-03-01</DataDiNascita><Sesso>1</Sesso><Provenienza><Italia CodiceComune="409100005" Provincia="409100" Stato="100000100" /></Provenienza><Nascita><Estero Stato="100000100" /></Nascita><Cittadinanza Stato="100000100" /><ImpostaDiSoggiorno><CodiceImpostaSoggiorno>MN</CodiceImpostaSoggiorno><ValoreImpostaUnitaria>1,5</ValoreImpostaUnitaria><NottiImponibili>2</NottiImponibili></ImpostaDiSoggiorno><CampiStatistici><TipoTurismo>Altro</TipoTurismo><MezzoDiTrasporto>Altro</MezzoDiTrasporto><TipoPrenotazione>Altro</TipoPrenotazione></CampiStatistici></Ospite></Gruppo><OspiteSingolo Id="331159"><Ospite Id="331159" IdCamera="1355" TipoAlloggiato="16"><DataDiArrivo>2015-03-20</DataDiArrivo><DataDiPartenza>2015-03-21</DataDiPartenza><DataDiNascita>1968-01-01</DataDiNascita><Sesso>2</Sesso><Provenienza><Italia CodiceComune="401001201" Provincia="401001" Stato="100000100" /></Provenienza><Nascita><Estero Stato="100000100" /></Nascita><Cittadinanza Stato="100000100" /><ImpostaDiSoggiorno><CodiceImpostaSoggiorno>MN</CodiceImpostaSoggiorno><ValoreImpostaUnitaria>1,5</ValoreImpostaUnitaria><NottiImponibili>2</NottiImponibili></ImpostaDiSoggiorno><CampiStatistici><TipoTurismo>Altro</TipoTurismo><MezzoDiTrasporto>Altro</MezzoDiTrasporto><TipoPrenotazione>Altro</TipoPrenotazione></CampiStatistici></Ospite></OspiteSingolo></InserimentoAlloggiati></MTO_SchedineRQ>
+Wed, 02 Dec 2015 13:55:43 +0000	
+*   Trying 62.149.194.226...
+* Connected to test.motouristoffice.it (62.149.194.226) port 443 (#0)
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* SSL connection using TLSv1.0 / DHE-RSA-AES256-SHA
+* Server certificate:
+* 	 subject: OU=Domain Control Validated; CN=*.motouristoffice.it
+* 	 start date: 2015-10-26 09:48:38 GMT
+* 	 expire date: 2016-10-26 09:48:38 GMT
+* 	 subjectAltName: test.motouristoffice.it matched
+* 	 issuer: C=US; ST=Arizona; L=Scottsdale; O=GoDaddy.com, Inc.; OU=http://certs.godaddy.com/repository/; CN=Go Daddy Secure Certificate Authority - G2
+* 	 SSL certificate verify result: self signed certificate in certificate chain (19), continuing anyway.
+> POST /MTO_SchedinaRQ.php HTTP/1.1
+Host: test.motouristoffice.it
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0
+Accept: */*
+Content-Type: text/xml; charset="utf-8"
+Content-Length: 2639
+
+* upload completely sent off: 2639 out of 2639 bytes
+< HTTP/1.1 200 OK
+< Date: Wed, 02 Dec 2015 13:57:09 GMT
+< Server: Apache/2.2.3 (CentOS)
+< X-Powered-By: PHP/5.2.13
+< Set-Cookie: PHPSESSID=fm28q9opuukutv6ll2j8fskec1; path=/
+< Expires: Thu, 19 Nov 1981 08:52:00 GMT
+< Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+< Pragma: no-cache
+< Content-Length: 259
+< Connection: close
+< Content-Type: text/html; charset=UTF-8
+< 
+* Closing connection 0
+
+Wed, 02 Dec 2015 13:55:44 +0000	data received: 
+<?xml version="1.0" encoding="UTF-8"?>
+<MTO_SchedineRS xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://ws.webci.it/webci.xsd" Version="1.0" PrimaryLangID="it">
+ <InserimentoAlloggiati CodiceEsercizio="052004ALB0013"/>
+</MTO_SchedineRS>
+
+
+Wed, 02 Dec 2015 13:58:14 +0000	sending data to service:
+<?xml version="1.0" encoding="UTF-8"?><MTO_SchedineRQ xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://ws.webci.it/webci.xsd" Version="1.0" PrimaryLangID="it"><POS><Source><RequestorID Type="4" ID="webci" MessagePassword="Prova7592" /></Source><Source><RequestorID Type="10" ID="052004ALB0013" MessagePassword="Prova7592" /></Source></POS><InserimentoAlloggiati><Gruppo IdGruppo="155"><Ospite Id="231140" IdCamera="1602" TipoAlloggiato="17"><DataDiArrivo>2015-03-20</DataDiArrivo><DataDiPartenza>2015-03-21</DataDiPartenza><DataDiNascita>1996-01-01</DataDiNascita><Sesso>2</Sesso><Provenienza><Italia CodiceComune="409100005" Provincia="409100" Stato="100000100" /></Provenienza><Nascita><Estero Stato="100000100" /></Nascita><Cittadinanza Stato="100000100" /><ImpostaDiSoggiorno><CodiceImpostaSoggiorno>MN</CodiceImpostaSoggiorno><ValoreImpostaUnitaria>1,5</ValoreImpostaUnitaria><NottiImponibili>2</NottiImponibili></ImpostaDiSoggiorno><CampiStatistici><TipoTurismo>Altro</TipoTurismo><MezzoDiTrasporto>Altro</MezzoDiTrasporto><TipoPrenotazione>Altro</TipoPrenotazione></CampiStatistici></Ospite><Ospite Id="231144" IdCamera="1602" TipoAlloggiato="19"><DataDiArrivo>2015-03-20</DataDiArrivo><DataDiPartenza>2015-03-21</DataDiPartenza><DataDiNascita>1986-03-01</DataDiNascita><Sesso>1</Sesso><Provenienza><Italia CodiceComune="409100005" Provincia="409100" Stato="100000100" /></Provenienza><Nascita><Estero Stato="100000100" /></Nascita><Cittadinanza Stato="100000100" /><ImpostaDiSoggiorno><CodiceImpostaSoggiorno>MN</CodiceImpostaSoggiorno><ValoreImpostaUnitaria>1,5</ValoreImpostaUnitaria><NottiImponibili>2</NottiImponibili></ImpostaDiSoggiorno><CampiStatistici><TipoTurismo>Altro</TipoTurismo><MezzoDiTrasporto>Altro</MezzoDiTrasporto><TipoPrenotazione>Altro</TipoPrenotazione></CampiStatistici></Ospite></Gruppo><OspiteSingolo Id="331159"><Ospite Id="331159" IdCamera="1355" TipoAlloggiato="16"><DataDiArrivo>2015-03-20</DataDiArrivo><DataDiPartenza>2015-03-21</DataDiPartenza><DataDiNascita>1968-01-01</DataDiNascita><Sesso>2</Sesso><Provenienza><Italia CodiceComune="401001201" Provincia="401001" Stato="100000100" /></Provenienza><Nascita><Estero Stato="100000100" /></Nascita><Cittadinanza Stato="100000100" /><ImpostaDiSoggiorno><CodiceImpostaSoggiorno>MN</CodiceImpostaSoggiorno><ValoreImpostaUnitaria>1,5</ValoreImpostaUnitaria><NottiImponibili>2</NottiImponibili></ImpostaDiSoggiorno><CampiStatistici><TipoTurismo>Altro</TipoTurismo><MezzoDiTrasporto>Altro</MezzoDiTrasporto><TipoPrenotazione>Altro</TipoPrenotazione></CampiStatistici></Ospite></OspiteSingolo></InserimentoAlloggiati></MTO_SchedineRQ>
+Wed, 02 Dec 2015 13:58:16 +0000	
+*   Trying 62.149.194.226...
+* Connected to test.motouristoffice.it (62.149.194.226) port 443 (#0)
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* SSL connection using TLSv1.0 / DHE-RSA-AES256-SHA
+* Server certificate:
+* 	 subject: OU=Domain Control Validated; CN=*.motouristoffice.it
+* 	 start date: 2015-10-26 09:48:38 GMT
+* 	 expire date: 2016-10-26 09:48:38 GMT
+* 	 subjectAltName: test.motouristoffice.it matched
+* 	 issuer: C=US; ST=Arizona; L=Scottsdale; O=GoDaddy.com, Inc.; OU=http://certs.godaddy.com/repository/; CN=Go Daddy Secure Certificate Authority - G2
+* 	 SSL certificate verify result: self signed certificate in certificate chain (19), continuing anyway.
+> POST /MTO_SchedinaRQ.php HTTP/1.1
+Host: test.motouristoffice.it
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0
+Accept: */*
+Content-Type: text/xml; charset="utf-8"
+Content-Length: 2639
+
+* upload completely sent off: 2639 out of 2639 bytes
+< HTTP/1.1 200 OK
+< Date: Wed, 02 Dec 2015 13:59:41 GMT
+< Server: Apache/2.2.3 (CentOS)
+< X-Powered-By: PHP/5.2.13
+< Set-Cookie: PHPSESSID=nne70hhmlf1hc5opsklm5qi310; path=/
+< Expires: Thu, 19 Nov 1981 08:52:00 GMT
+< Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+< Pragma: no-cache
+< Content-Length: 259
+< Connection: close
+< Content-Type: text/html; charset=UTF-8
+< 
+* Closing connection 0
+
+Wed, 02 Dec 2015 13:58:16 +0000	data received: 
+<?xml version="1.0" encoding="UTF-8"?>
+<MTO_SchedineRS xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://ws.webci.it/webci.xsd" Version="1.0" PrimaryLangID="it">
+ <InserimentoAlloggiati CodiceEsercizio="052004ALB0013"/>
+</MTO_SchedineRS>
+
+
+Thu, 03 Dec 2015 18:26:33 +0000	sending data to service:
+<?xml version="1.0" encoding="UTF-8"?><MTO_SchedineRQ xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://ws.webci.it/webci.xsd" Version="1.0" PrimaryLangID="it"><POS><Source><RequestorID Type="4" ID="webci" MessagePassword="Prova7592" /></Source><Source><RequestorID Type="10" ID="052004ALB0013" MessagePassword="Prova7592" /></Source></POS><InserimentoAlloggiati><Gruppo IdGruppo="155"><Ospite Id="231140" IdCamera="1602" TipoAlloggiato="17"><DataDiArrivo>2015-03-20</DataDiArrivo><DataDiPartenza>2015-03-21</DataDiPartenza><DataDiNascita>1996-01-01</DataDiNascita><Sesso>2</Sesso><Provenienza><Italia CodiceComune="409100005" Provincia="409100" Stato="100000100" /></Provenienza><Nascita><Estero Stato="100000100" /></Nascita><Cittadinanza Stato="100000100" /><ImpostaDiSoggiorno><CodiceImpostaSoggiorno>MN</CodiceImpostaSoggiorno><ValoreImpostaUnitaria>1,5</ValoreImpostaUnitaria><NottiImponibili>2</NottiImponibili></ImpostaDiSoggiorno><CampiStatistici><TipoTurismo>Altro</TipoTurismo><MezzoDiTrasporto>Altro</MezzoDiTrasporto><TipoPrenotazione>Altro</TipoPrenotazione></CampiStatistici></Ospite><Ospite Id="231144" IdCamera="1602" TipoAlloggiato="19"><DataDiArrivo>2015-03-20</DataDiArrivo><DataDiPartenza>2015-03-21</DataDiPartenza><DataDiNascita>1986-03-01</DataDiNascita><Sesso>1</Sesso><Provenienza><Italia CodiceComune="409100005" Provincia="409100" Stato="100000100" /></Provenienza><Nascita><Estero Stato="100000100" /></Nascita><Cittadinanza Stato="100000100" /><ImpostaDiSoggiorno><CodiceImpostaSoggiorno>MN</CodiceImpostaSoggiorno><ValoreImpostaUnitaria>1,5</ValoreImpostaUnitaria><NottiImponibili>2</NottiImponibili></ImpostaDiSoggiorno><CampiStatistici><TipoTurismo>Altro</TipoTurismo><MezzoDiTrasporto>Altro</MezzoDiTrasporto><TipoPrenotazione>Altro</TipoPrenotazione></CampiStatistici></Ospite></Gruppo><OspiteSingolo Id="331159"><Ospite Id="331159" IdCamera="1355" TipoAlloggiato="16"><DataDiArrivo>2015-03-20</DataDiArrivo><DataDiPartenza>2015-03-21</DataDiPartenza><DataDiNascita>1968-01-01</DataDiNascita><Sesso>2</Sesso><Provenienza><Italia CodiceComune="401001201" Provincia="401001" Stato="100000100" /></Provenienza><Nascita><Estero Stato="100000100" /></Nascita><Cittadinanza Stato="100000100" /><ImpostaDiSoggiorno><CodiceImpostaSoggiorno>MN</CodiceImpostaSoggiorno><ValoreImpostaUnitaria>1,5</ValoreImpostaUnitaria><NottiImponibili>2</NottiImponibili></ImpostaDiSoggiorno><CampiStatistici><TipoTurismo>Altro</TipoTurismo><MezzoDiTrasporto>Altro</MezzoDiTrasporto><TipoPrenotazione>Altro</TipoPrenotazione></CampiStatistici></Ospite></OspiteSingolo></InserimentoAlloggiati></MTO_SchedineRQ>

@@ -1,0 +1,62 @@
+
+
+Wed, 02 Dec 2015 14:00:02 +0000	sending data to service:
+<?xml version="1.0" encoding="UTF-8"?><MTO_SchedineRQ xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://ws.webci.it/webci.xsd" Version="1.0" PrimaryLangID="it"><POS><Source><RequestorID Type="4" ID="webci" MessagePassword="Prova7592" /></Source><Source><RequestorID Type="10" ID="052004ALB0013" MessagePassword="Prova7592" /></Source></POS><RequestSegments><RequestSegment><SearchCriteria><Criterion><ImpostaSoggiorno Comune="409052015" /></Criterion></SearchCriteria></RequestSegment></RequestSegments></MTO_SchedineRQ>
+Wed, 02 Dec 2015 14:00:04 +0000	
+*   Trying 62.149.194.226...
+* Connected to test.motouristoffice.it (62.149.194.226) port 443 (#0)
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* SSL connection using TLSv1.0 / DHE-RSA-AES256-SHA
+* Server certificate:
+* 	 subject: OU=Domain Control Validated; CN=*.motouristoffice.it
+* 	 start date: 2015-10-26 09:48:38 GMT
+* 	 expire date: 2016-10-26 09:48:38 GMT
+* 	 subjectAltName: test.motouristoffice.it matched
+* 	 issuer: C=US; ST=Arizona; L=Scottsdale; O=GoDaddy.com, Inc.; OU=http://certs.godaddy.com/repository/; CN=Go Daddy Secure Certificate Authority - G2
+* 	 SSL certificate verify result: self signed certificate in certificate chain (19), continuing anyway.
+> POST /MTO_SchedinaRQ.php HTTP/1.1
+Host: test.motouristoffice.it
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0
+Accept: */*
+Content-Type: text/xml; charset="utf-8"
+Content-Length: 541
+
+* upload completely sent off: 541 out of 541 bytes
+< HTTP/1.1 200 OK
+< Date: Wed, 02 Dec 2015 14:01:29 GMT
+< Server: Apache/2.2.3 (CentOS)
+< X-Powered-By: PHP/5.2.13
+< Set-Cookie: PHPSESSID=1s3do23klk4k808itftedb5u50; path=/
+< Expires: Thu, 19 Nov 1981 08:52:00 GMT
+< Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+< Pragma: no-cache
+< Content-Length: 988
+< Connection: close
+< Content-Type: text/html; charset=UTF-8
+< 
+* Closing connection 0
+
+Wed, 02 Dec 2015 14:00:04 +0000	data received: 
+<?xml version="1.0" encoding="UTF-8"?>
+<MTO_SchedineRS xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://ws.webci.it/webci.xsd" Version="1.0" PrimaryLangID="it">
+ <Regolamento Comune="409052015">
+  <Regola>
+   <CodiceImpostaSoggiorno>RES</CodiceImpostaSoggiorno>
+   <Valore>409052015</Valore>
+   <Label>Residenti</Label>
+   <Descrizione>Soggetti non assoggettati perch&amp;egrave; residenti nel comune.</Descrizione>
+  </Regola>
+  <Regola>
+   <CodiceImpostaSoggiorno>MN</CodiceImpostaSoggiorno>
+   <Valore>12</Valore>
+   <Label>Minorenne</Label>
+   <Descrizione>Minore di 12 anni</Descrizione>
+  </Regola>
+  <Regola>
+   <CodiceImpostaSoggiorno>SC</CodiceImpostaSoggiorno>
+   <Valore/>
+   <Label>Emergenza straordinaria</Label>
+   <Descrizione>Soggetti chiamati a fronteggiare situazioni di emergenza conseguenti a eventi calamitosi o di natura straordinaria o per finalit&amp;agrave; di soccorso umanitario</Descrizione>
+  </Regola>
+ </Regolamento>
+</MTO_SchedineRS>

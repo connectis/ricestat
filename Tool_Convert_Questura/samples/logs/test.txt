@@ -1,0 +1,444 @@
+
+
+Wed, 09 Dec 2015 19:17:33 +0000	sending data to service:
+<?xml version="1.0" encoding="UTF-8"?><MTO_SchedineRQ xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://ws.webci.it/webci.xsd" Version="1.0" PrimaryLangID="it"><POS><Source><RequestorID Type="4" ID="webci" MessagePassword="Prova7592" /></Source><Source><RequestorID Type="10" ID="052004ALB0013" MessagePassword="Prova7592" /></Source></POS><InserimentoAlloggiati><Gruppo IdGruppo="489355"><Ospite Id="128811" IdCamera="190472" TipoAlloggiato="17"><DataDiArrivo>2013-08-18</DataDiArrivo><DataDiPartenza>2013-08-18</DataDiPartenza><DataDiNascita>1970-08-02</DataDiNascita><Sesso>1</Sesso><Cittadinanza Stato="100000233" /></Ospite><Ospite Id="653683" IdCamera="842126" TipoAlloggiato="19"><DataDiArrivo>2013-08-18</DataDiArrivo><DataDiPartenza>2013-08-18</DataDiPartenza><DataDiNascita>1973-04-01</DataDiNascita><Sesso>2</Sesso><Cittadinanza Stato="100000233" /></Ospite></Gruppo><Gruppo IdGruppo="612100"><Ospite Id="275177" IdCamera="267733" TipoAlloggiato="17"><DataDiArrivo>2013-08-18</DataDiArrivo><DataDiPartenza>2013-08-18</DataDiPartenza><DataDiNascita>1971-01-09</DataDiNascita><Sesso>1</Sesso><Cittadinanza Stato="100000232" /></Ospite><Ospite Id="229858" IdCamera="306130" TipoAlloggiato="19"><DataDiArrivo>2013-08-18</DataDiArrivo><DataDiPartenza>2013-08-18</DataDiPartenza><DataDiNascita>1975-04-19</DataDiNascita><Sesso>2</Sesso><Cittadinanza Stato="100000232" /></Ospite></Gruppo><Gruppo IdGruppo="730780"><Ospite Id="709713" IdCamera="761926" TipoAlloggiato="17"><DataDiArrivo>2013-08-18</DataDiArrivo><DataDiPartenza>2013-08-18</DataDiPartenza><DataDiNascita>1973-04-26</DataDiNascita><Sesso>1</Sesso><Cittadinanza Stato="100000216" /></Ospite><Ospite Id="532778" IdCamera="741656" TipoAlloggiato="19"><DataDiArrivo>2013-08-18</DataDiArrivo><DataDiPartenza>2013-08-18</DataDiPartenza><DataDiNascita>1971-01-13</DataDiNascita><Sesso>2</Sesso><Cittadinanza Stato="100000216" /></Ospite></Gruppo><Gruppo IdGruppo="376498"><Ospite Id="497705" IdCamera="363919" TipoAlloggiato="17"><DataDiArrivo>2013-08-18</DataDiArrivo><DataDiPartenza>2013-08-18</DataDiPartenza><DataDiNascita>1964-11-25</DataDiNascita><Sesso>1</Sesso><Cittadinanza Stato="100000244" /></Ospite><Ospite Id="842181" IdCamera="814962" TipoAlloggiato="19"><DataDiArrivo>2013-08-18</DataDiArrivo><DataDiPartenza>2013-08-18</DataDiPartenza><DataDiNascita>1964-10-29</DataDiNascita><Sesso>2</Sesso><Cittadinanza Stato="100000244" /></Ospite></Gruppo><Gruppo IdGruppo="646569"><Ospite Id="221426" IdCamera="216729" TipoAlloggiato="17"><DataDiArrivo>2013-08-18</DataDiArrivo><DataDiPartenza>2013-08-18</DataDiPartenza><DataDiNascita>1954-04-04</DataDiNascita><Sesso>1</Sesso><Cittadinanza Stato="100000244" /></Ospite><Ospite Id="421981" IdCamera="167895" TipoAlloggiato="19"><DataDiArrivo>2013-08-18</DataDiArrivo><DataDiPartenza>2013-08-18</DataDiPartenza><DataDiNascita>1991-11-29</DataDiNascita><Sesso>1</Sesso><Cittadinanza Stato="100000244" /></Ospite></Gruppo><Gruppo IdGruppo="977175"><Ospite Id="299676" IdCamera="744430" TipoAlloggiato="17"><DataDiArrivo>2013-08-18</DataDiArrivo><DataDiPartenza>2013-08-18</DataDiPartenza><DataDiNascita>1972-05-07</DataDiNascita><Sesso>2</Sesso><Cittadinanza Stato="100000233" /></Ospite><Ospite Id="271057" IdCamera="353042" TipoAlloggiato="19"><DataDiArrivo>2013-08-18</DataDiArrivo><DataDiPartenza>2013-08-18</DataDiPartenza><DataDiNascita>1971-04-14</DataDiNascita><Sesso>2</Sesso><Cittadinanza Stato="100000233" /></Ospite></Gruppo><Gruppo IdGruppo="275396"><Ospite Id="179183" IdCamera="815429" TipoAlloggiato="17"><DataDiArrivo>2013-08-18</DataDiArrivo><DataDiPartenza>2013-08-18</DataDiPartenza><DataDiNascita>1975-10-06</DataDiNascita><Sesso>1</Sesso><Cittadinanza Stato="100000216" /></Ospite><Ospite Id="120901" IdCamera="678265" TipoAlloggiato="19"><DataDiArrivo>2013-08-18</DataDiArrivo><DataDiPartenza>2013-08-18</DataDiPartenza><DataDiNascita>1975-10-06</DataDiNascita><Sesso>2</Sesso><Cittadinanza Stato="100000216" /></Ospite></Gruppo><Gruppo IdGruppo="273117"><Ospite Id="310388" IdCamera="702627" TipoAlloggiato="18"><DataDiArrivo>2013-08-18</DataDiArrivo><DataDiPartenza>2013-08-18</DataDiPartenza><DataDiNascita>1981-05-07</DataDiNascita><Sesso>1</Sesso><Cittadinanza Stato="100000216" /></Ospite><Ospite Id="692657" IdCamera="323104" TipoAlloggiato="20"><DataDiArrivo>2013-08-18</DataDiArrivo><DataDiPartenza>2013-08-18</DataDiPartenza><DataDiNascita>1981-05-29</DataDiNascita><Sesso>2</Sesso><Cittadinanza Stato="100000216" /></Ospite></Gruppo><Gruppo IdGruppo="415307"><Ospite Id="270095" IdCamera="852947" TipoAlloggiato="17"><DataDiArrivo>2013-08-18</DataDiArrivo><DataDiPartenza>2013-08-18</DataDiPartenza><DataDiNascita>1963-05-04</DataDiNascita><Sesso>1</Sesso><Cittadinanza Stato="100000216" /></Ospite><Ospite Id="976022" IdCamera="539562" TipoAlloggiato="19"><DataDiArrivo>2013-08-18</DataDiArrivo><DataDiPartenza>2013-08-18</DataDiPartenza><DataDiNascita>1968-11-04</DataDiNascita><Sesso>2</Sesso><Cittadinanza Stato="100000216" /></Ospite></Gruppo></InserimentoAlloggiati></MTO_SchedineRQ>
+Wed, 09 Dec 2015 19:17:50 +0000	
+*   Trying 62.149.194.226...
+* Connected to test.motouristoffice.it (62.149.194.226) port 443 (#0)
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* SSL connection using TLSv1.0 / DHE-RSA-AES256-SHA
+* Server certificate:
+* 	 subject: OU=Domain Control Validated; CN=*.motouristoffice.it
+* 	 start date: 2015-10-26 09:48:38 GMT
+* 	 expire date: 2016-10-26 09:48:38 GMT
+* 	 subjectAltName: test.motouristoffice.it matched
+* 	 issuer: C=US; ST=Arizona; L=Scottsdale; O=GoDaddy.com, Inc.; OU=http://certs.godaddy.com/repository/; CN=Go Daddy Secure Certificate Authority - G2
+* 	 SSL certificate verify result: self signed certificate in certificate chain (19), continuing anyway.
+> POST /MTO_SchedinaRQ.php HTTP/1.1
+Host: test.motouristoffice.it
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0
+Accept: */*
+Content-Type: text/xml; charset="utf-8"
+Content-Length: 5060
+
+* upload completely sent off: 5060 out of 5060 bytes
+< HTTP/1.1 200 OK
+< Date: Wed, 09 Dec 2015 19:17:50 GMT
+< Server: Apache/2.2.3 (CentOS)
+< X-Powered-By: PHP/5.2.13
+< Set-Cookie: PHPSESSID=irq46g7r6tbc1kfk1bvsnhop47; path=/
+< Expires: Thu, 19 Nov 1981 08:52:00 GMT
+< Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+< Pragma: no-cache
+< Connection: close
+< Transfer-Encoding: chunked
+< Content-Type: text/html; charset=UTF-8
+< 
+* Closing connection 0
+
+Wed, 09 Dec 2015 19:17:50 +0000	data received: 
+<?xml version="1.0" encoding="UTF-8"?>
+<MTO_SchedineRS xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ws.webci.it/ http://ws.webci.it/webci.xsd" Version="1.0" PrimaryLangID="it">
+ <InserimentoAlloggiati CodiceEsercizio="052004ALB0013">
+  <OspiteSingolo Id="128811">
+   <Ospite Id="128811" IdCamera="190472" TipoAlloggiato="17">
+    <DataDiArrivo>2013-08-18</DataDiArrivo>
+    <DataDiPartenza>2013-08-18</DataDiPartenza>
+    <Provenienza>
+     <Estero Stato=""/>
+    </Provenienza>
+    <Sesso>1</Sesso>
+    <DataDiNascita>1970-08-02</DataDiNascita>
+    <Nascita>
+     <Estero Stato=""/>
+    </Nascita>
+    <Cittadinanza Stato="100000233"/>
+    <CampiStatistici>
+     <TipoTurismo></TipoTurismo>
+     <MezzoDiTrasporto></MezzoDiTrasporto>
+     <TipoPrenotazione></TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno></CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria></ValoreImpostaUnitaria>
+     <NottiImponibili>0</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </OspiteSingolo>
+  <OspiteSingolo Id="653683">
+   <Ospite Id="653683" IdCamera="842126" TipoAlloggiato="19">
+    <DataDiArrivo>2013-08-18</DataDiArrivo>
+    <DataDiPartenza>2013-08-18</DataDiPartenza>
+    <Provenienza>
+     <Estero Stato=""/>
+    </Provenienza>
+    <Sesso>2</Sesso>
+    <DataDiNascita>1973-04-01</DataDiNascita>
+    <Nascita>
+     <Estero Stato=""/>
+    </Nascita>
+    <Cittadinanza Stato="100000233"/>
+    <CampiStatistici>
+     <TipoTurismo></TipoTurismo>
+     <MezzoDiTrasporto></MezzoDiTrasporto>
+     <TipoPrenotazione></TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno></CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria></ValoreImpostaUnitaria>
+     <NottiImponibili>0</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </OspiteSingolo>
+  <OspiteSingolo Id="709713">
+   <Ospite Id="709713" IdCamera="761926" TipoAlloggiato="17">
+    <DataDiArrivo>2013-08-18</DataDiArrivo>
+    <DataDiPartenza>2013-08-18</DataDiPartenza>
+    <Provenienza>
+     <Estero Stato=""/>
+    </Provenienza>
+    <Sesso>1</Sesso>
+    <DataDiNascita>1973-04-26</DataDiNascita>
+    <Nascita>
+     <Estero Stato=""/>
+    </Nascita>
+    <Cittadinanza Stato="100000216"/>
+    <CampiStatistici>
+     <TipoTurismo></TipoTurismo>
+     <MezzoDiTrasporto></MezzoDiTrasporto>
+     <TipoPrenotazione></TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno></CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria></ValoreImpostaUnitaria>
+     <NottiImponibili>0</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </OspiteSingolo>
+  <OspiteSingolo Id="532778">
+   <Ospite Id="532778" IdCamera="741656" TipoAlloggiato="19">
+    <DataDiArrivo>2013-08-18</DataDiArrivo>
+    <DataDiPartenza>2013-08-18</DataDiPartenza>
+    <Provenienza>
+     <Estero Stato=""/>
+    </Provenienza>
+    <Sesso>2</Sesso>
+    <DataDiNascita>1971-01-13</DataDiNascita>
+    <Nascita>
+     <Estero Stato=""/>
+    </Nascita>
+    <Cittadinanza Stato="100000216"/>
+    <CampiStatistici>
+     <TipoTurismo></TipoTurismo>
+     <MezzoDiTrasporto></MezzoDiTrasporto>
+     <TipoPrenotazione></TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno></CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria></ValoreImpostaUnitaria>
+     <NottiImponibili>0</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </OspiteSingolo>
+  <OspiteSingolo Id="709713">
+   <Ospite Id="709713" IdCamera="761926" TipoAlloggiato="17">
+    <DataDiArrivo>2013-08-18</DataDiArrivo>
+    <DataDiPartenza>2013-08-18</DataDiPartenza>
+    <Provenienza>
+     <Estero Stato=""/>
+    </Provenienza>
+    <Sesso>1</Sesso>
+    <DataDiNascita>1973-04-26</DataDiNascita>
+    <Nascita>
+     <Estero Stato=""/>
+    </Nascita>
+    <Cittadinanza Stato="100000216"/>
+    <CampiStatistici>
+     <TipoTurismo></TipoTurismo>
+     <MezzoDiTrasporto></MezzoDiTrasporto>
+     <TipoPrenotazione></TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno></CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria></ValoreImpostaUnitaria>
+     <NottiImponibili>0</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </OspiteSingolo>
+  <OspiteSingolo Id="532778">
+   <Ospite Id="532778" IdCamera="741656" TipoAlloggiato="19">
+    <DataDiArrivo>2013-08-18</DataDiArrivo>
+    <DataDiPartenza>2013-08-18</DataDiPartenza>
+    <Provenienza>
+     <Estero Stato=""/>
+    </Provenienza>
+    <Sesso>2</Sesso>
+    <DataDiNascita>1971-01-13</DataDiNascita>
+    <Nascita>
+     <Estero Stato=""/>
+    </Nascita>
+    <Cittadinanza Stato="100000216"/>
+    <CampiStatistici>
+     <TipoTurismo></TipoTurismo>
+     <MezzoDiTrasporto></MezzoDiTrasporto>
+     <TipoPrenotazione></TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno></CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria></ValoreImpostaUnitaria>
+     <NottiImponibili>0</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </OspiteSingolo>
+  <OspiteSingolo Id="709713">
+   <Ospite Id="709713" IdCamera="761926" TipoAlloggiato="17">
+    <DataDiArrivo>2013-08-18</DataDiArrivo>
+    <DataDiPartenza>2013-08-18</DataDiPartenza>
+    <Provenienza>
+     <Estero Stato=""/>
+    </Provenienza>
+    <Sesso>1</Sesso>
+    <DataDiNascita>1973-04-26</DataDiNascita>
+    <Nascita>
+     <Estero Stato=""/>
+    </Nascita>
+    <Cittadinanza Stato="100000216"/>
+    <CampiStatistici>
+     <TipoTurismo></TipoTurismo>
+     <MezzoDiTrasporto></MezzoDiTrasporto>
+     <TipoPrenotazione></TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno></CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria></ValoreImpostaUnitaria>
+     <NottiImponibili>0</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </OspiteSingolo>
+  <OspiteSingolo Id="532778">
+   <Ospite Id="532778" IdCamera="741656" TipoAlloggiato="19">
+    <DataDiArrivo>2013-08-18</DataDiArrivo>
+    <DataDiPartenza>2013-08-18</DataDiPartenza>
+    <Provenienza>
+     <Estero Stato=""/>
+    </Provenienza>
+    <Sesso>2</Sesso>
+    <DataDiNascita>1971-01-13</DataDiNascita>
+    <Nascita>
+     <Estero Stato=""/>
+    </Nascita>
+    <Cittadinanza Stato="100000216"/>
+    <CampiStatistici>
+     <TipoTurismo></TipoTurismo>
+     <MezzoDiTrasporto></MezzoDiTrasporto>
+     <TipoPrenotazione></TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno></CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria></ValoreImpostaUnitaria>
+     <NottiImponibili>0</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </OspiteSingolo>
+  <OspiteSingolo Id="709713">
+   <Ospite Id="709713" IdCamera="761926" TipoAlloggiato="17">
+    <DataDiArrivo>2013-08-18</DataDiArrivo>
+    <DataDiPartenza>2013-08-18</DataDiPartenza>
+    <Provenienza>
+     <Estero Stato=""/>
+    </Provenienza>
+    <Sesso>1</Sesso>
+    <DataDiNascita>1973-04-26</DataDiNascita>
+    <Nascita>
+     <Estero Stato=""/>
+    </Nascita>
+    <Cittadinanza Stato="100000216"/>
+    <CampiStatistici>
+     <TipoTurismo></TipoTurismo>
+     <MezzoDiTrasporto></MezzoDiTrasporto>
+     <TipoPrenotazione></TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno></CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria></ValoreImpostaUnitaria>
+     <NottiImponibili>0</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </OspiteSingolo>
+  <OspiteSingolo Id="532778">
+   <Ospite Id="532778" IdCamera="741656" TipoAlloggiato="19">
+    <DataDiArrivo>2013-08-18</DataDiArrivo>
+    <DataDiPartenza>2013-08-18</DataDiPartenza>
+    <Provenienza>
+     <Estero Stato=""/>
+    </Provenienza>
+    <Sesso>2</Sesso>
+    <DataDiNascita>1971-01-13</DataDiNascita>
+    <Nascita>
+     <Estero Stato=""/>
+    </Nascita>
+    <Cittadinanza Stato="100000216"/>
+    <CampiStatistici>
+     <TipoTurismo></TipoTurismo>
+     <MezzoDiTrasporto></MezzoDiTrasporto>
+     <TipoPrenotazione></TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno></CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria></ValoreImpostaUnitaria>
+     <NottiImponibili>0</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </OspiteSingolo>
+  <OspiteSingolo Id="709713">
+   <Ospite Id="709713" IdCamera="761926" TipoAlloggiato="17">
+    <DataDiArrivo>2013-08-18</DataDiArrivo>
+    <DataDiPartenza>2013-08-18</DataDiPartenza>
+    <Provenienza>
+     <Estero Stato=""/>
+    </Provenienza>
+    <Sesso>1</Sesso>
+    <DataDiNascita>1973-04-26</DataDiNascita>
+    <Nascita>
+     <Estero Stato=""/>
+    </Nascita>
+    <Cittadinanza Stato="100000216"/>
+    <CampiStatistici>
+     <TipoTurismo></TipoTurismo>
+     <MezzoDiTrasporto></MezzoDiTrasporto>
+     <TipoPrenotazione></TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno></CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria></ValoreImpostaUnitaria>
+     <NottiImponibili>0</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </OspiteSingolo>
+  <OspiteSingolo Id="532778">
+   <Ospite Id="532778" IdCamera="741656" TipoAlloggiato="19">
+    <DataDiArrivo>2013-08-18</DataDiArrivo>
+    <DataDiPartenza>2013-08-18</DataDiPartenza>
+    <Provenienza>
+     <Estero Stato=""/>
+    </Provenienza>
+    <Sesso>2</Sesso>
+    <DataDiNascita>1971-01-13</DataDiNascita>
+    <Nascita>
+     <Estero Stato=""/>
+    </Nascita>
+    <Cittadinanza Stato="100000216"/>
+    <CampiStatistici>
+     <TipoTurismo></TipoTurismo>
+     <MezzoDiTrasporto></MezzoDiTrasporto>
+     <TipoPrenotazione></TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno></CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria></ValoreImpostaUnitaria>
+     <NottiImponibili>0</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </OspiteSingolo>
+  <OspiteSingolo Id="709713">
+   <Ospite Id="709713" IdCamera="761926" TipoAlloggiato="17">
+    <DataDiArrivo>2013-08-18</DataDiArrivo>
+    <DataDiPartenza>2013-08-18</DataDiPartenza>
+    <Provenienza>
+     <Estero Stato=""/>
+    </Provenienza>
+    <Sesso>1</Sesso>
+    <DataDiNascita>1973-04-26</DataDiNascita>
+    <Nascita>
+     <Estero Stato=""/>
+    </Nascita>
+    <Cittadinanza Stato="100000216"/>
+    <CampiStatistici>
+     <TipoTurismo></TipoTurismo>
+     <MezzoDiTrasporto></MezzoDiTrasporto>
+     <TipoPrenotazione></TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno></CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria></ValoreImpostaUnitaria>
+     <NottiImponibili>0</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </OspiteSingolo>
+  <OspiteSingolo Id="532778">
+   <Ospite Id="532778" IdCamera="741656" TipoAlloggiato="19">
+    <DataDiArrivo>2013-08-18</DataDiArrivo>
+    <DataDiPartenza>2013-08-18</DataDiPartenza>
+    <Provenienza>
+     <Estero Stato=""/>
+    </Provenienza>
+    <Sesso>2</Sesso>
+    <DataDiNascita>1971-01-13</DataDiNascita>
+    <Nascita>
+     <Estero Stato=""/>
+    </Nascita>
+    <Cittadinanza Stato="100000216"/>
+    <CampiStatistici>
+     <TipoTurismo></TipoTurismo>
+     <MezzoDiTrasporto></MezzoDiTrasporto>
+     <TipoPrenotazione></TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno></CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria></ValoreImpostaUnitaria>
+     <NottiImponibili>0</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </OspiteSingolo>
+  <OspiteSingolo Id="709713">
+   <Ospite Id="709713" IdCamera="761926" TipoAlloggiato="17">
+    <DataDiArrivo>2013-08-18</DataDiArrivo>
+    <DataDiPartenza>2013-08-18</DataDiPartenza>
+    <Provenienza>
+     <Estero Stato=""/>
+    </Provenienza>
+    <Sesso>1</Sesso>
+    <DataDiNascita>1973-04-26</DataDiNascita>
+    <Nascita>
+     <Estero Stato=""/>
+    </Nascita>
+    <Cittadinanza Stato="100000216"/>
+    <CampiStatistici>
+     <TipoTurismo></TipoTurismo>
+     <MezzoDiTrasporto></MezzoDiTrasporto>
+     <TipoPrenotazione></TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno></CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria></ValoreImpostaUnitaria>
+     <NottiImponibili>0</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </OspiteSingolo>
+  <OspiteSingolo Id="532778">
+   <Ospite Id="532778" IdCamera="741656" TipoAlloggiato="19">
+    <DataDiArrivo>2013-08-18</DataDiArrivo>
+    <DataDiPartenza>2013-08-18</DataDiPartenza>
+    <Provenienza>
+     <Estero Stato=""/>
+    </Provenienza>
+    <Sesso>2</Sesso>
+    <DataDiNascita>1971-01-13</DataDiNascita>
+    <Nascita>
+     <Estero Stato=""/>
+    </Nascita>
+    <Cittadinanza Stato="100000216"/>
+    <CampiStatistici>
+     <TipoTurismo></TipoTurismo>
+     <MezzoDiTrasporto></MezzoDiTrasporto>
+     <TipoPrenotazione></TipoPrenotazione>
+    </CampiStatistici>
+    <ImpostaDiSoggiorno>
+     <CodiceImpostaSoggiorno></CodiceImpostaSoggiorno>
+     <ValoreImpostaUnitaria></ValoreImpostaUnitaria>
+     <NottiImponibili>0</NottiImponibili>
+    </ImpostaDiSoggiorno>
+   </Ospite>
+  </OspiteSingolo>
+ </InserimentoAlloggiati>
+</MTO_SchedineRS>

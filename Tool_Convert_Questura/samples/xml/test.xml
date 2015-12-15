@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MTO_SchedineRQ xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://ws.webci.it/webci.xsd" Version="1.0" PrimaryLangID="it">
+    <POS>
+        <Source>
+            <RequestorID Type="4" ID="webci" MessagePassword="Prova7592" />
+        </Source>
+        <Source>
+            <RequestorID Type="10" ID="052004ALB0013" MessagePassword="Prova7592" />
+        </Source>
+    </POS>
+    <InserimentoAlloggiati>
+        <OspiteSingolo Id="745749">
+            <Ospite Id="336739" IdCamera="245174" TipoAlloggiato="16">
+                <DataDiArrivo>2015-12-11</DataDiArrivo>
+                <DataDiPartenza>2015-12-11</DataDiPartenza>
+                <DataDiNascita>1959-12-01</DataDiNascita>
+                <Sesso>1</Sesso>
+                <Provenienza>
+                    <Italia CodiceComune="419082073" Provincia="419082" Stato="100000100" />
+                </Provenienza>
+                <Nascita>
+                    <Italia CodiceComune="419082073" Provincia="419082" Stato="100000100" />
+                </Nascita>
+                <Cittadinanza Stato="100000773" />
+            </Ospite>
+        </OspiteSingolo>
+        <OspiteSingolo Id="693288">
+            <Ospite Id="353306" IdCamera="530485" TipoAlloggiato="16">
+                <DataDiArrivo>2015-12-11</DataDiArrivo>
+                <DataDiPartenza>2015-12-11</DataDiPartenza>
+                <DataDiNascita>1989-12-01</DataDiNascita>
+                <Sesso>1</Sesso>
+                <Provenienza>
+                    <Italia CodiceComune="420092009" Provincia="420092" Stato="100000100" />
+                </Provenienza>
+                <Nascita>
+                    <Italia CodiceComune="420092009" Provincia="420092" Stato="100000100" />
+                </Nascita>
+                <Cittadinanza Stato="100000100" />
+            </Ospite>
+        </OspiteSingolo>
+    </InserimentoAlloggiati>
+</MTO_SchedineRQ>
