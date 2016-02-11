@@ -90,9 +90,21 @@ La richiesta di autenticazione è composta da due elementi:
 *	L’autenticazione della terza parte: l’ID Code  a password ottenuti in fase di registrazione dal Gestionale (vedi sopra)
 *	L’autenticazione della Struttura Ricettiva (S.R.): Il codice utente della S.R. (l che usano per entrare nella Extranet della piattaforma)  e la password di accesso allo stesso. 
 
+#4 Esempi
+Sono caricati alcuni esempi di flusso xml per poter testare le funzionalità del webservice e confrontare i risultati con quelli ritornati dal proprio software
+#4.1
+#4.2
+#4.3
+#4.4 esempio_lettura_regolamento_imposta
+Chiamando il servizio si accede al regolamento così come configurato e voluto dal comune stesso.
+Per accedere alla lista di tutte le esenzioni potenzialmente configurabili dal comune la richiesta è la seguente:
+     <ImpostaSoggiorno Comune="*" />
+Per accedere invece al regolamento del Comune specifico la chiamata è la seguente:
+     <ImpostaSoggiorno Comune="409052015" /> (Nel caso del Comune di Montepulciano)
+Qualora il risultato di questa chiamata sia nullo è perchè il comnue non ha ancora configurato il regolamento
 
-#4.  Tool extra
-#4.1  Tool di conversione fra schedina Questura e Ricestat
+#5.  Tool extra
+#5.1  Tool di conversione fra schedina Questura e Ricestat
 Il seguente tool sviluppato in php vs>=5.3 consiste in una webform che converte il file txt della questura nel flusso XML del sistema.
 E' rilasciato a solo scopo di esempio in quanto le variabili identificative di Id Ospite, Id Gruppo e Id Camera non sono specificate nel file Questura e quindi sono inserite ramndom (oltre alle informazioni di provenienza). Il tool è però utile per poter visualizzare una possibile implementazione del sistema di accesso al webservice.
 Per accedere alla home chiamare la pagina index.php sotto la cartella web
