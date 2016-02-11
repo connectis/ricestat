@@ -26,8 +26,8 @@ I parametri del POS devono essere sostituiti con i propri personali forniti da C
 Di seguito un esempio di Richiesta XML per leggere i clienti comunicati in un dato periodo. 
 
  
-`<?xml version="1.0" encoding="UTF-8"?>
-<MTO_SchedineRQ>
+'`<?xml version="1.0" encoding="UTF-8"?>
+'<MTO_SchedineRQ>
 <POS>
         <Source>
             <RequestorID Type = "4" ID = "PmsProva" MessagePassword = "ProvaProva"/>
@@ -98,9 +98,9 @@ Sono caricati alcuni esempi di flusso xml per poter testare le funzionalità del
 #4.4 esempio_lettura_regolamento_imposta
 Chiamando il servizio si accede al regolamento così come configurato e voluto dal comune stesso.
 Per accedere alla lista di tutte le esenzioni potenzialmente configurabili dal comune la richiesta è la seguente:
-     <ImpostaSoggiorno Comune="*" />
+'     <ImpostaSoggiorno Comune="*" />
 Per accedere invece al regolamento del Comune specifico la chiamata è la seguente:
-     <ImpostaSoggiorno Comune="409052015" /> (Nel caso del Comune di Montepulciano)
+'     <ImpostaSoggiorno Comune="409052015" /> (Nel caso del Comune di Montepulciano)
 Qualora il risultato di questa chiamata sia nullo è perchè il comnue non ha ancora configurato il regolamento
 
 #5.  Tool extra
