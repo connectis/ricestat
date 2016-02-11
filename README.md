@@ -89,23 +89,49 @@ Usiamo uno dei metodi standard OTA di autenticazione  chiamato “POS”
 La richiesta di autenticazione è composta da due elementi:
 *	L’autenticazione della terza parte: l’ID Code  a password ottenuti in fase di registrazione dal Gestionale (vedi sopra)
 *	L’autenticazione della Struttura Ricettiva (S.R.): Il codice utente della S.R. (l che usano per entrare nella Extranet della piattaforma)  e la password di accesso allo stesso. 
+##3.4 Schema
+webci.xsd è lo schema commentato che esprime le specifiche del flusso xml
 
 #4 Esempi
-Sono caricati alcuni esempi di flusso xml per poter testare le funzionalità del webservice e confrontare i risultati con quelli ritornati dal proprio software
-#4.1
-#4.2
-#4.3
-#4.4 esempio_lettura_regolamento_imposta
-Chiamando il servizio si accede al regolamento così come configurato e voluto dal comune stesso.
+Sono caricati alcuni esempi d i flusso xml per poter testare le funzionalità del webservice e confrontare i risultati con quelli ritornati dal proprio software
+
+#4.1 Configurazione 
+Questi sono gli esempi per richiedere i parametri operativi per l'invio dei dati
+#4.1.1 esempio_lettura_comuni
+Questo esempio permette di avere la lista dei codici comuni supportati dalla procedura (sono gli stessi previsti per la Questura)
+#4.1.2 esempio_lettura_stati
+Questo esempio permette di avere la lista degli stati supportati dalla procedura (sono gli stessi previsti per la Questura)
+#4.1.3 esempio_lettura_mezzi
+Questo esempio permette di avere la lista degli id delle informazioni opzionali statistiche riguardo  la registrazione dei mezzi di trasporto dei clienti
+#4.1.4 esempio_lettura_tipoprenotazione
+Questo esempio permette di avere la lista degli id delle informazioni opzionali statistiche riguardo la registrazione delle modalità di prenotazione
+#4.1.5 esempio_lettura_tipoturismo
+Questo esempio permette di avere la lista degli id delle informazioni opzionali statistiche riguardo la registrazione delle tipologia di turismo
+#4.1.6 Esempio_lettura_regolamento_imposta
+Chiamando il servizio si accede alla lista delle estensioni previste dal regolamento comunale così come configurato e voluto dal comune stesso.
 Per accedere alla lista di tutte le esenzioni potenzialmente configurabili dal comune la richiesta è la seguente:
 `     <ImpostaSoggiorno Comune="*" />`
 Per accedere invece al regolamento del Comune specifico la chiamata è la seguente:
 `     <ImpostaSoggiorno Comune="409052015" />` (Nel caso del Comune di Montepulciano)
 Qualora il risultato di questa chiamata sia nullo è perchè il comnue non ha ancora configurato il regolamento
 
+#4.2 Movimentazione 
+Esempi legati ai dati di movimentazione. Questi esempi si riferiscono alle procedure continuative che permettono la corretta gestione dei flussi di movimentazione
+#4.2.1 Esempio_inserimento
+Procedura di inserimento delle movimentazioni giornaliere.
+#4.2.2 Esempio_lettura
+Procedura di lettura delle informazione inserite, la lettura è per periodo, ma può essere anche per singolo Idutente (esempio_lettura_id) 
+#4.2.3 Esempio_cancellazione
+Modalità di cancellazione per singolo ID, la risposta indica l'esito dell'evento
+#4.2.4 Esempio_aggiornamento
+Modalità di aggiornamento è per singolo id Utente
+
+
 #5.  Tool extra
 #5.1  Tool di conversione fra schedina Questura e Ricestat
 Il seguente tool sviluppato in php vs>=5.3 consiste in una webform che converte il file txt della questura nel flusso XML del sistema.
 E' rilasciato a solo scopo di esempio in quanto le variabili identificative di Id Ospite, Id Gruppo e Id Camera non sono specificate nel file Questura e quindi sono inserite ramndom (oltre alle informazioni di provenienza). Il tool è però utile per poter visualizzare una possibile implementazione del sistema di accesso al webservice.
 Per accedere alla home chiamare la pagina index.php sotto la cartella web
+
+#6. Produzione
 
