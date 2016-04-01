@@ -1,0 +1,3445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MTO_SchedineRQ xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://ws.webci.it/webci.xsd" Version="1.0" PrimaryLangID="it">
+    <POS>
+        <Source>
+            <RequestorID Type="4" ID="webci" MessagePassword="Prova7592" />
+        </Source>
+        <Source>
+            <RequestorID Type="10" ID="052004ALB0013" MessagePassword="Prova7592" />
+        </Source>
+    </POS>
+    <Aggiornamento>
+        <Ospite Id="601312601" IdCamera="20160131_601312601" TipoAlloggiato="17">
+            <DataDiArrivo>2016-01-31</DataDiArrivo>
+            <DataDiPartenza>2016-01-31</DataDiPartenza>
+            <DataDiNascita>1948-08-02</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="601312602" IdCamera="20160131_601312602" TipoAlloggiato="19">
+            <DataDiArrivo>2016-01-31</DataDiArrivo>
+            <DataDiPartenza>2016-01-31</DataDiPartenza>
+            <DataDiNascita>0000-00-00</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="601312603" IdCamera="20160131_601312603" TipoAlloggiato="19">
+            <DataDiArrivo>2016-01-31</DataDiArrivo>
+            <DataDiPartenza>2016-01-31</DataDiPartenza>
+            <DataDiNascita>0000-00-00</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="601312604" IdCamera="20160131_601312604" TipoAlloggiato="19">
+            <DataDiArrivo>2016-01-31</DataDiArrivo>
+            <DataDiPartenza>2016-01-31</DataDiPartenza>
+            <DataDiNascita>0000-00-00</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="601312611" IdCamera="20160131_601312611" TipoAlloggiato="17">
+            <DataDiArrivo>2016-01-31</DataDiArrivo>
+            <DataDiPartenza>2016-01-31</DataDiPartenza>
+            <DataDiNascita>1977-02-01</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="416073024" Provincia="416073" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="416073024" Provincia="416073" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="601312612" IdCamera="20160131_601312612" TipoAlloggiato="19">
+            <DataDiArrivo>2016-01-31</DataDiArrivo>
+            <DataDiPartenza>2016-01-31</DataDiPartenza>
+            <DataDiNascita>1987-03-15</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="418078025" Provincia="418078" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="418078025" Provincia="418078" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="601312621" IdCamera="20160131_601312621" TipoAlloggiato="16">
+            <DataDiArrivo>2016-01-31</DataDiArrivo>
+            <DataDiPartenza>2016-01-31</DataDiPartenza>
+            <DataDiNascita>1965-10-01</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000419" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000419" />
+            </Nascita>
+            <Cittadinanza Stato="100000419" />
+        </Ospite>
+        <Ospite Id="601312631" IdCamera="20160131_601312631" TipoAlloggiato="16">
+            <DataDiArrivo>2016-01-31</DataDiArrivo>
+            <DataDiPartenza>2016-01-31</DataDiPartenza>
+            <DataDiNascita>1978-01-05</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000250" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000250" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="601312641" IdCamera="20160131_601312641" TipoAlloggiato="17">
+            <DataDiArrivo>2016-01-31</DataDiArrivo>
+            <DataDiPartenza>2016-01-31</DataDiPartenza>
+            <DataDiNascita>1966-01-14</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="418078087" Provincia="418078" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="418078087" Provincia="418078" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="601312642" IdCamera="20160131_601312642" TipoAlloggiato="19">
+            <DataDiArrivo>2016-01-31</DataDiArrivo>
+            <DataDiPartenza>2016-01-31</DataDiPartenza>
+            <DataDiNascita>1985-10-08</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="418078025" Provincia="418078" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="418078025" Provincia="418078" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602012651" IdCamera="20160201_602012651" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-01</DataDiArrivo>
+            <DataDiPartenza>2016-02-01</DataDiPartenza>
+            <DataDiNascita>1982-09-26</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="419082053" Provincia="419082" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="419082053" Provincia="419082" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602012661" IdCamera="20160201_602012661" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-01</DataDiArrivo>
+            <DataDiPartenza>2016-02-01</DataDiPartenza>
+            <DataDiNascita>1978-04-06</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="401004029" Provincia="401004" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="401004029" Provincia="401004" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602012671" IdCamera="20160201_602012671" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-01</DataDiArrivo>
+            <DataDiPartenza>2016-02-01</DataDiPartenza>
+            <DataDiNascita>1974-03-15</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="412058111" Provincia="412058" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="412058111" Provincia="412058" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602012672" IdCamera="20160201_602012672" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-01</DataDiArrivo>
+            <DataDiPartenza>2016-02-01</DataDiPartenza>
+            <DataDiNascita>1965-05-30</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="412058091" Provincia="412058" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="412058091" Provincia="412058" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602012681" IdCamera="20160201_602012681" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-01</DataDiArrivo>
+            <DataDiPartenza>2016-02-01</DataDiPartenza>
+            <DataDiNascita>1983-04-06</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="412059011" Provincia="412059" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="412059011" Provincia="412059" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602012682" IdCamera="20160201_602012682" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-01</DataDiArrivo>
+            <DataDiPartenza>2016-02-01</DataDiPartenza>
+            <DataDiNascita>1972-01-13</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="412059011" Provincia="412059" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="412059011" Provincia="412059" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602012691" IdCamera="20160201_602012691" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-01</DataDiArrivo>
+            <DataDiPartenza>2016-02-01</DataDiPartenza>
+            <DataDiNascita>1969-11-05</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="401001272" Provincia="401001" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="401001272" Provincia="401001" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602012701" IdCamera="20160201_602012701" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-01</DataDiArrivo>
+            <DataDiPartenza>2016-02-01</DataDiPartenza>
+            <DataDiNascita>1995-08-23</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063049" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063049" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602012702" IdCamera="20160201_602012702" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-01</DataDiArrivo>
+            <DataDiPartenza>2016-02-01</DataDiPartenza>
+            <DataDiNascita>1990-05-11</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063041" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063041" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602012703" IdCamera="20160201_602012703" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-01</DataDiArrivo>
+            <DataDiPartenza>2016-02-01</DataDiPartenza>
+            <DataDiNascita>1976-06-03</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063049" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063049" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602022711" IdCamera="20160202_602022711" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-02</DataDiArrivo>
+            <DataDiPartenza>2016-02-02</DataDiPartenza>
+            <DataDiNascita>1983-12-03</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="408039010" Provincia="408039" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="408039010" Provincia="408039" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602022721" IdCamera="20160202_602022721" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-02</DataDiArrivo>
+            <DataDiPartenza>2016-02-02</DataDiPartenza>
+            <DataDiNascita>1968-12-04</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="409046017" Provincia="409046" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="409046017" Provincia="409046" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602022731" IdCamera="20160202_602022731" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-02</DataDiArrivo>
+            <DataDiPartenza>2016-02-02</DataDiPartenza>
+            <DataDiNascita>1956-09-02</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="419082036" Provincia="419082" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="419082036" Provincia="419082" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602022741" IdCamera="20160202_602022741" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-02</DataDiArrivo>
+            <DataDiPartenza>2016-02-02</DataDiPartenza>
+            <DataDiNascita>1987-07-02</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000436" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000436" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602022751" IdCamera="20160202_602022751" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-02</DataDiArrivo>
+            <DataDiPartenza>2016-02-02</DataDiPartenza>
+            <DataDiNascita>1976-11-01</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="409049009" Provincia="409049" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="409049009" Provincia="409049" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602022761" IdCamera="20160202_602022761" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-02</DataDiArrivo>
+            <DataDiPartenza>2016-02-02</DataDiPartenza>
+            <DataDiNascita>1980-05-02</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="405024009" Provincia="405024" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="405024009" Provincia="405024" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602022771" IdCamera="20160202_602022771" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-02</DataDiArrivo>
+            <DataDiPartenza>2016-02-02</DataDiPartenza>
+            <DataDiNascita>1969-11-05</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="401001272" Provincia="401001" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="401001272" Provincia="401001" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602022781" IdCamera="20160202_602022781" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-02</DataDiArrivo>
+            <DataDiPartenza>2016-02-02</DataDiPartenza>
+            <DataDiNascita>1959-08-21</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415061002" Provincia="415061" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415061002" Provincia="415061" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602032791" IdCamera="20160203_602032791" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-03</DataDiArrivo>
+            <DataDiPartenza>2016-02-03</DataDiPartenza>
+            <DataDiNascita>1979-12-30</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="602032801" IdCamera="20160203_602032801" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-03</DataDiArrivo>
+            <DataDiPartenza>2016-02-03</DataDiPartenza>
+            <DataDiNascita>1963-12-13</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000241" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000241" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602032811" IdCamera="20160203_602032811" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-03</DataDiArrivo>
+            <DataDiPartenza>2016-02-03</DataDiPartenza>
+            <DataDiNascita>1977-07-30</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="602032821" IdCamera="20160203_602032821" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-03</DataDiArrivo>
+            <DataDiPartenza>2016-02-03</DataDiPartenza>
+            <DataDiNascita>1972-02-16</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="602032831" IdCamera="20160203_602032831" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-03</DataDiArrivo>
+            <DataDiPartenza>2016-02-03</DataDiPartenza>
+            <DataDiNascita>1965-07-27</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="409046007" Provincia="409046" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="409046007" Provincia="409046" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602032832" IdCamera="20160203_602032832" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-03</DataDiArrivo>
+            <DataDiPartenza>2016-02-03</DataDiPartenza>
+            <DataDiNascita>1993-04-11</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602042841" IdCamera="20160204_602042841" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-04</DataDiArrivo>
+            <DataDiPartenza>2016-02-04</DataDiPartenza>
+            <DataDiNascita>1981-06-29</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="419081008" Provincia="419081" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="419081008" Provincia="419081" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602042842" IdCamera="20160204_602042842" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-04</DataDiArrivo>
+            <DataDiPartenza>2016-02-04</DataDiPartenza>
+            <DataDiNascita>1982-04-11</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="405029041" Provincia="405029" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="405029041" Provincia="405029" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602042851" IdCamera="20160204_602042851" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-04</DataDiArrivo>
+            <DataDiPartenza>2016-02-04</DataDiPartenza>
+            <DataDiNascita>1967-07-02</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="404021008" Provincia="404021" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="404021008" Provincia="404021" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602042852" IdCamera="20160204_602042852" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-04</DataDiArrivo>
+            <DataDiPartenza>2016-02-04</DataDiPartenza>
+            <DataDiNascita>1969-08-28</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="404021008" Provincia="404021" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="404021008" Provincia="404021" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602042861" IdCamera="20160204_602042861" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-04</DataDiArrivo>
+            <DataDiPartenza>2016-02-04</DataDiPartenza>
+            <DataDiNascita>1947-08-03</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000250" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000250" />
+            </Nascita>
+            <Cittadinanza Stato="100000250" />
+        </Ospite>
+        <Ospite Id="602042862" IdCamera="20160204_602042862" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-04</DataDiArrivo>
+            <DataDiPartenza>2016-02-04</DataDiPartenza>
+            <DataDiNascita>1956-04-03</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000250" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000250" />
+            </Nascita>
+            <Cittadinanza Stato="100000250" />
+        </Ospite>
+        <Ospite Id="602042863" IdCamera="20160204_602042863" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-04</DataDiArrivo>
+            <DataDiPartenza>2016-02-04</DataDiPartenza>
+            <DataDiNascita>1968-04-14</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000250" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000250" />
+            </Nascita>
+            <Cittadinanza Stato="100000250" />
+        </Ospite>
+        <Ospite Id="602042871" IdCamera="20160204_602042871" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-04</DataDiArrivo>
+            <DataDiPartenza>2016-02-04</DataDiPartenza>
+            <DataDiNascita>1989-06-15</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="403015146" Provincia="403015" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="403015146" Provincia="403015" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602042881" IdCamera="20160204_602042881" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-04</DataDiArrivo>
+            <DataDiPartenza>2016-02-04</DataDiPartenza>
+            <DataDiNascita>1987-07-02</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000436" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000436" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602042891" IdCamera="20160204_602042891" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-04</DataDiArrivo>
+            <DataDiPartenza>2016-02-04</DataDiPartenza>
+            <DataDiNascita>1956-09-02</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="419082036" Provincia="419082" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="419082036" Provincia="419082" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602042901" IdCamera="20160204_602042901" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-04</DataDiArrivo>
+            <DataDiPartenza>2016-02-04</DataDiPartenza>
+            <DataDiNascita>1959-06-05</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="412058091" Provincia="412058" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="412058091" Provincia="412058" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602052911" IdCamera="20160205_602052911" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-05</DataDiArrivo>
+            <DataDiPartenza>2016-02-05</DataDiPartenza>
+            <DataDiNascita>1992-08-02</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="416073027" Provincia="416073" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="416073027" Provincia="416073" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602062921" IdCamera="20160206_602062921" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-06</DataDiArrivo>
+            <DataDiPartenza>2016-02-06</DataDiPartenza>
+            <DataDiNascita>1997-09-22</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="401006121" Provincia="401006" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="401006121" Provincia="401006" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602062922" IdCamera="20160206_602062922" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-06</DataDiArrivo>
+            <DataDiPartenza>2016-02-06</DataDiPartenza>
+            <DataDiNascita>1991-11-12</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="401006121" Provincia="401006" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="401006121" Provincia="401006" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602062931" IdCamera="20160206_602062931" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-06</DataDiArrivo>
+            <DataDiPartenza>2016-02-06</DataDiPartenza>
+            <DataDiNascita>1980-03-31</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="418080093" Provincia="418080" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="418080093" Provincia="418080" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602062941" IdCamera="20160206_602062941" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-06</DataDiArrivo>
+            <DataDiPartenza>2016-02-06</DataDiPartenza>
+            <DataDiNascita>1962-10-30</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415064008" Provincia="415064" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415064008" Provincia="415064" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602062942" IdCamera="20160206_602062942" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-06</DataDiArrivo>
+            <DataDiPartenza>2016-02-06</DataDiPartenza>
+            <DataDiNascita>1965-07-28</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415064008" Provincia="415064" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415064008" Provincia="415064" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602062943" IdCamera="20160206_602062943" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-06</DataDiArrivo>
+            <DataDiPartenza>2016-02-06</DataDiPartenza>
+            <DataDiNascita>1993-03-05</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415064008" Provincia="415064" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415064008" Provincia="415064" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602062951" IdCamera="20160206_602062951" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-06</DataDiArrivo>
+            <DataDiPartenza>2016-02-06</DataDiPartenza>
+            <DataDiNascita>1960-02-24</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415064008" Provincia="415064" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415064008" Provincia="415064" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602062952" IdCamera="20160206_602062952" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-06</DataDiArrivo>
+            <DataDiPartenza>2016-02-06</DataDiPartenza>
+            <DataDiNascita>1959-12-23</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415064008" Provincia="415064" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415064008" Provincia="415064" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602062961" IdCamera="20160206_602062961" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-06</DataDiArrivo>
+            <DataDiPartenza>2016-02-06</DataDiPartenza>
+            <DataDiNascita>1963-07-31</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="419087015" Provincia="419087" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="419087015" Provincia="419087" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602062962" IdCamera="20160206_602062962" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-06</DataDiArrivo>
+            <DataDiPartenza>2016-02-06</DataDiPartenza>
+            <DataDiNascita>1981-08-01</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063049" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063049" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602062971" IdCamera="20160206_602062971" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-06</DataDiArrivo>
+            <DataDiPartenza>2016-02-06</DataDiPartenza>
+            <DataDiNascita>1961-04-20</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="416110004" Provincia="416110" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="416110004" Provincia="416110" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602062981" IdCamera="20160206_602062981" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-06</DataDiArrivo>
+            <DataDiPartenza>2016-02-06</DataDiPartenza>
+            <DataDiNascita>1993-12-01</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="602062982" IdCamera="20160206_602062982" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-06</DataDiArrivo>
+            <DataDiPartenza>2016-02-06</DataDiPartenza>
+            <DataDiNascita>1995-01-17</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="602062991" IdCamera="20160206_602062991" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-06</DataDiArrivo>
+            <DataDiPartenza>2016-02-06</DataDiPartenza>
+            <DataDiNascita>1981-02-02</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="405023012" Provincia="405023" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="405023012" Provincia="405023" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602063001" IdCamera="20160206_602063001" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-06</DataDiArrivo>
+            <DataDiPartenza>2016-02-06</DataDiPartenza>
+            <DataDiNascita>1964-12-20</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="405023091" Provincia="405023" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="405023091" Provincia="405023" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602063002" IdCamera="20160206_602063002" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-06</DataDiArrivo>
+            <DataDiPartenza>2016-02-06</DataDiPartenza>
+            <DataDiNascita>1978-09-14</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="405023012" Provincia="405023" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="405023012" Provincia="405023" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602063011" IdCamera="20160206_602063011" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-06</DataDiArrivo>
+            <DataDiPartenza>2016-02-06</DataDiPartenza>
+            <DataDiNascita>1992-12-02</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="403108033" Provincia="403108" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="403108033" Provincia="403108" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602073021" IdCamera="20160207_602073021" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-07</DataDiArrivo>
+            <DataDiPartenza>2016-02-07</DataDiPartenza>
+            <DataDiNascita>1980-04-22</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000250" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000250" />
+            </Nascita>
+            <Cittadinanza Stato="100000250" />
+        </Ospite>
+        <Ospite Id="602073022" IdCamera="20160207_602073022" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-07</DataDiArrivo>
+            <DataDiPartenza>2016-02-07</DataDiPartenza>
+            <DataDiNascita>1963-06-19</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000221" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000221" />
+            </Nascita>
+            <Cittadinanza Stato="100000221" />
+        </Ospite>
+        <Ospite Id="602073031" IdCamera="20160207_602073031" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-07</DataDiArrivo>
+            <DataDiPartenza>2016-02-07</DataDiPartenza>
+            <DataDiNascita>1961-04-20</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="416110004" Provincia="416110" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="416110004" Provincia="416110" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602073041" IdCamera="20160207_602073041" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-07</DataDiArrivo>
+            <DataDiPartenza>2016-02-07</DataDiPartenza>
+            <DataDiNascita>1963-07-31</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="419087015" Provincia="419087" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="419087015" Provincia="419087" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602073042" IdCamera="20160207_602073042" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-07</DataDiArrivo>
+            <DataDiPartenza>2016-02-07</DataDiPartenza>
+            <DataDiNascita>1981-08-01</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063049" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063049" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602083051" IdCamera="20160208_602083051" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-08</DataDiArrivo>
+            <DataDiPartenza>2016-02-08</DataDiPartenza>
+            <DataDiNascita>1975-11-18</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602083061" IdCamera="20160208_602083061" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-08</DataDiArrivo>
+            <DataDiPartenza>2016-02-08</DataDiPartenza>
+            <DataDiNascita>1964-08-22</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415065055" Provincia="415065" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415065055" Provincia="415065" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602083062" IdCamera="20160208_602083062" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-08</DataDiArrivo>
+            <DataDiPartenza>2016-02-08</DataDiPartenza>
+            <DataDiNascita>1965-01-01</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415065056" Provincia="415065" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415065056" Provincia="415065" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602083071" IdCamera="20160208_602083071" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-08</DataDiArrivo>
+            <DataDiPartenza>2016-02-08</DataDiPartenza>
+            <DataDiNascita>1976-04-25</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="408036040" Provincia="408036" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="408036040" Provincia="408036" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602083081" IdCamera="20160208_602083081" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-08</DataDiArrivo>
+            <DataDiPartenza>2016-02-08</DataDiPartenza>
+            <DataDiNascita>1979-07-06</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063058" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063058" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602083091" IdCamera="20160208_602083091" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-08</DataDiArrivo>
+            <DataDiPartenza>2016-02-08</DataDiPartenza>
+            <DataDiNascita>1953-09-06</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="417077013" Provincia="417077" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="417077013" Provincia="417077" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602083101" IdCamera="20160208_602083101" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-08</DataDiArrivo>
+            <DataDiPartenza>2016-02-08</DataDiPartenza>
+            <DataDiNascita>1989-08-19</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="418078044" Provincia="418078" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="418078044" Provincia="418078" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602083102" IdCamera="20160208_602083102" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-08</DataDiArrivo>
+            <DataDiPartenza>2016-02-08</DataDiPartenza>
+            <DataDiNascita>1992-01-01</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000436" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000436" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602083111" IdCamera="20160208_602083111" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-08</DataDiArrivo>
+            <DataDiPartenza>2016-02-08</DataDiPartenza>
+            <DataDiNascita>1950-04-30</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="412058091" Provincia="412058" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="412058091" Provincia="412058" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602083121" IdCamera="20160208_602083121" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-08</DataDiArrivo>
+            <DataDiPartenza>2016-02-08</DataDiPartenza>
+            <DataDiNascita>1965-07-27</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="409046007" Provincia="409046" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="409046007" Provincia="409046" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602083122" IdCamera="20160208_602083122" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-08</DataDiArrivo>
+            <DataDiPartenza>2016-02-08</DataDiPartenza>
+            <DataDiNascita>1989-02-23</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="409046017" Provincia="409046" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="409046017" Provincia="409046" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602083131" IdCamera="20160208_602083131" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-08</DataDiArrivo>
+            <DataDiPartenza>2016-02-08</DataDiPartenza>
+            <DataDiNascita>1982-04-11</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="405029041" Provincia="405029" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="405029041" Provincia="405029" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602083132" IdCamera="20160208_602083132" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-08</DataDiArrivo>
+            <DataDiPartenza>2016-02-08</DataDiPartenza>
+            <DataDiNascita>1981-06-29</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="419081008" Provincia="419081" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="419081008" Provincia="419081" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602083133" IdCamera="20160208_602083133" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-08</DataDiArrivo>
+            <DataDiPartenza>2016-02-08</DataDiPartenza>
+            <DataDiNascita>1982-07-02</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="408038008" Provincia="408038" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="408038008" Provincia="408038" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602083141" IdCamera="20160208_602083141" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-08</DataDiArrivo>
+            <DataDiPartenza>2016-02-08</DataDiPartenza>
+            <DataDiNascita>1972-11-04</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000215" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000215" />
+            </Nascita>
+            <Cittadinanza Stato="100000215" />
+        </Ospite>
+        <Ospite Id="602083151" IdCamera="20160208_602083151" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-08</DataDiArrivo>
+            <DataDiPartenza>2016-02-08</DataDiPartenza>
+            <DataDiNascita>1961-04-20</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="416110004" Provincia="416110" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="416110004" Provincia="416110" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602083161" IdCamera="20160208_602083161" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-08</DataDiArrivo>
+            <DataDiPartenza>2016-02-08</DataDiPartenza>
+            <DataDiNascita>1979-11-06</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="401001058" Provincia="401001" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="401001058" Provincia="401001" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602083162" IdCamera="20160208_602083162" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-08</DataDiArrivo>
+            <DataDiPartenza>2016-02-08</DataDiPartenza>
+            <DataDiNascita>1970-11-01</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000215" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000215" />
+            </Nascita>
+            <Cittadinanza Stato="100000215" />
+        </Ospite>
+        <Ospite Id="602083171" IdCamera="20160208_602083171" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-08</DataDiArrivo>
+            <DataDiPartenza>2016-02-08</DataDiPartenza>
+            <DataDiNascita>1969-11-05</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="401001272" Provincia="401001" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="401001272" Provincia="401001" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602083181" IdCamera="20160208_602083181" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-08</DataDiArrivo>
+            <DataDiPartenza>2016-02-08</DataDiPartenza>
+            <DataDiNascita>1950-05-24</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="416075035" Provincia="416075" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="416075035" Provincia="416075" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602093191" IdCamera="20160209_602093191" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-09</DataDiArrivo>
+            <DataDiPartenza>2016-02-09</DataDiPartenza>
+            <DataDiNascita>1976-06-03</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063049" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063049" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602093192" IdCamera="20160209_602093192" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-09</DataDiArrivo>
+            <DataDiPartenza>2016-02-09</DataDiPartenza>
+            <DataDiNascita>1995-08-23</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063049" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063049" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602093201" IdCamera="20160209_602093201" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-09</DataDiArrivo>
+            <DataDiPartenza>2016-02-09</DataDiPartenza>
+            <DataDiNascita>1962-03-22</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063049" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063049" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602093202" IdCamera="20160209_602093202" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-09</DataDiArrivo>
+            <DataDiPartenza>2016-02-09</DataDiPartenza>
+            <DataDiNascita>1987-02-19</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063084" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063084" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602093211" IdCamera="20160209_602093211" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-09</DataDiArrivo>
+            <DataDiPartenza>2016-02-09</DataDiPartenza>
+            <DataDiNascita>1981-07-24</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000233" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000233" />
+            </Nascita>
+            <Cittadinanza Stato="100000233" />
+        </Ospite>
+        <Ospite Id="602093212" IdCamera="20160209_602093212" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-09</DataDiArrivo>
+            <DataDiPartenza>2016-02-09</DataDiPartenza>
+            <DataDiNascita>1976-09-20</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000233" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000233" />
+            </Nascita>
+            <Cittadinanza Stato="100000233" />
+        </Ospite>
+        <Ospite Id="602093213" IdCamera="20160209_602093213" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-09</DataDiArrivo>
+            <DataDiPartenza>2016-02-09</DataDiPartenza>
+            <DataDiNascita>1974-05-28</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000233" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000233" />
+            </Nascita>
+            <Cittadinanza Stato="100000233" />
+        </Ospite>
+        <Ospite Id="602093221" IdCamera="20160209_602093221" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-09</DataDiArrivo>
+            <DataDiPartenza>2016-02-09</DataDiPartenza>
+            <DataDiNascita>1960-07-12</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000314" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000314" />
+            </Nascita>
+            <Cittadinanza Stato="100000314" />
+        </Ospite>
+        <Ospite Id="602093222" IdCamera="20160209_602093222" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-09</DataDiArrivo>
+            <DataDiPartenza>2016-02-09</DataDiPartenza>
+            <DataDiNascita>1957-10-25</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000314" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000314" />
+            </Nascita>
+            <Cittadinanza Stato="100000314" />
+        </Ospite>
+        <Ospite Id="602093223" IdCamera="20160209_602093223" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-09</DataDiArrivo>
+            <DataDiPartenza>2016-02-09</DataDiPartenza>
+            <DataDiNascita>1992-10-21</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000314" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000314" />
+            </Nascita>
+            <Cittadinanza Stato="100000314" />
+        </Ospite>
+        <Ospite Id="602093231" IdCamera="20160209_602093231" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-09</DataDiArrivo>
+            <DataDiPartenza>2016-02-09</DataDiPartenza>
+            <DataDiNascita>1975-03-16</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000351" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000351" />
+            </Nascita>
+            <Cittadinanza Stato="100000351" />
+        </Ospite>
+        <Ospite Id="602093232" IdCamera="20160209_602093232" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-09</DataDiArrivo>
+            <DataDiPartenza>2016-02-09</DataDiPartenza>
+            <DataDiNascita>1972-05-02</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000351" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000351" />
+            </Nascita>
+            <Cittadinanza Stato="100000351" />
+        </Ospite>
+        <Ospite Id="602103241" IdCamera="20160210_602103241" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-10</DataDiArrivo>
+            <DataDiPartenza>2016-02-10</DataDiPartenza>
+            <DataDiNascita>1971-01-22</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="405028060" Provincia="405028" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="405028060" Provincia="405028" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602103251" IdCamera="20160210_602103251" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-10</DataDiArrivo>
+            <DataDiPartenza>2016-02-10</DataDiPartenza>
+            <DataDiNascita>1974-11-05</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="406093044" Provincia="406093" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="406093044" Provincia="406093" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602113261" IdCamera="20160211_602113261" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-11</DataDiArrivo>
+            <DataDiPartenza>2016-02-11</DataDiPartenza>
+            <DataDiNascita>1959-06-18</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="401103072" Provincia="401103" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="401103072" Provincia="401103" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602113271" IdCamera="20160211_602113271" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-11</DataDiArrivo>
+            <DataDiPartenza>2016-02-11</DataDiPartenza>
+            <DataDiNascita>1969-11-05</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="401001272" Provincia="401001" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="401001272" Provincia="401001" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602113281" IdCamera="20160211_602113281" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-11</DataDiArrivo>
+            <DataDiPartenza>2016-02-11</DataDiPartenza>
+            <DataDiNascita>1959-04-19</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="403015146" Provincia="403015" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="403015146" Provincia="403015" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602113282" IdCamera="20160211_602113282" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-11</DataDiArrivo>
+            <DataDiPartenza>2016-02-11</DataDiPartenza>
+            <DataDiNascita>1960-08-23</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="419083048" Provincia="419083" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="419083048" Provincia="419083" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602113283" IdCamera="20160211_602113283" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-11</DataDiArrivo>
+            <DataDiPartenza>2016-02-11</DataDiPartenza>
+            <DataDiNascita>2004-10-15</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="419083048" Provincia="419083" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="419083048" Provincia="419083" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602113291" IdCamera="20160211_602113291" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-11</DataDiArrivo>
+            <DataDiPartenza>2016-02-11</DataDiPartenza>
+            <DataDiNascita>1972-09-29</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="408099014" Provincia="408099" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="408099014" Provincia="408099" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602113292" IdCamera="20160211_602113292" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-11</DataDiArrivo>
+            <DataDiPartenza>2016-02-11</DataDiPartenza>
+            <DataDiNascita>1966-08-03</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="408099014" Provincia="408099" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="408099014" Provincia="408099" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602123301" IdCamera="20160212_602123301" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-12</DataDiArrivo>
+            <DataDiPartenza>2016-02-12</DataDiPartenza>
+            <DataDiNascita>1982-06-18</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000209" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000209" />
+            </Nascita>
+            <Cittadinanza Stato="100000209" />
+        </Ospite>
+        <Ospite Id="602123302" IdCamera="20160212_602123302" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-12</DataDiArrivo>
+            <DataDiPartenza>2016-02-12</DataDiPartenza>
+            <DataDiNascita>1983-08-01</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000209" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000209" />
+            </Nascita>
+            <Cittadinanza Stato="100000209" />
+        </Ospite>
+        <Ospite Id="602123311" IdCamera="20160212_602123311" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-12</DataDiArrivo>
+            <DataDiPartenza>2016-02-12</DataDiPartenza>
+            <DataDiNascita>1990-05-22</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000605" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000605" />
+            </Nascita>
+            <Cittadinanza Stato="100000605" />
+        </Ospite>
+        <Ospite Id="602123312" IdCamera="20160212_602123312" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-12</DataDiArrivo>
+            <DataDiPartenza>2016-02-12</DataDiPartenza>
+            <DataDiNascita>1984-10-22</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000605" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000605" />
+            </Nascita>
+            <Cittadinanza Stato="100000605" />
+        </Ospite>
+        <Ospite Id="602123321" IdCamera="20160212_602123321" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-12</DataDiArrivo>
+            <DataDiPartenza>2016-02-12</DataDiPartenza>
+            <DataDiNascita>1950-05-24</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="416075035" Provincia="416075" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="416075035" Provincia="416075" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602123331" IdCamera="20160212_602123331" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-12</DataDiArrivo>
+            <DataDiPartenza>2016-02-12</DataDiPartenza>
+            <DataDiNascita>1981-03-31</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000605" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000605" />
+            </Nascita>
+            <Cittadinanza Stato="100000605" />
+        </Ospite>
+        <Ospite Id="602123341" IdCamera="20160212_602123341" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-12</DataDiArrivo>
+            <DataDiPartenza>2016-02-12</DataDiPartenza>
+            <DataDiNascita>1963-07-10</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000241" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000241" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602133351" IdCamera="20160213_602133351" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-13</DataDiArrivo>
+            <DataDiPartenza>2016-02-13</DataDiPartenza>
+            <DataDiNascita>1955-11-25</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000605" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000605" />
+            </Nascita>
+            <Cittadinanza Stato="100000605" />
+        </Ospite>
+        <Ospite Id="602133361" IdCamera="20160213_602133361" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-13</DataDiArrivo>
+            <DataDiPartenza>2016-02-13</DataDiPartenza>
+            <DataDiNascita>1962-08-02</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000605" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000605" />
+            </Nascita>
+            <Cittadinanza Stato="100000605" />
+        </Ospite>
+        <Ospite Id="602133362" IdCamera="20160213_602133362" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-13</DataDiArrivo>
+            <DataDiPartenza>2016-02-13</DataDiPartenza>
+            <DataDiNascita>1996-10-31</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000605" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000605" />
+            </Nascita>
+            <Cittadinanza Stato="100000605" />
+        </Ospite>
+        <Ospite Id="602133371" IdCamera="20160213_602133371" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-13</DataDiArrivo>
+            <DataDiPartenza>2016-02-13</DataDiPartenza>
+            <DataDiNascita>1960-08-27</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063049" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063049" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602133381" IdCamera="20160213_602133381" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-13</DataDiArrivo>
+            <DataDiPartenza>2016-02-13</DataDiPartenza>
+            <DataDiNascita>1964-10-04</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="416072006" Provincia="416072" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="416072006" Provincia="416072" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602133382" IdCamera="20160213_602133382" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-13</DataDiArrivo>
+            <DataDiPartenza>2016-02-13</DataDiPartenza>
+            <DataDiNascita>1963-03-14</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000241" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000241" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602133391" IdCamera="20160213_602133391" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-13</DataDiArrivo>
+            <DataDiPartenza>2016-02-13</DataDiPartenza>
+            <DataDiNascita>1983-05-20</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000233" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000233" />
+            </Nascita>
+            <Cittadinanza Stato="100000233" />
+        </Ospite>
+        <Ospite Id="602133392" IdCamera="20160213_602133392" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-13</DataDiArrivo>
+            <DataDiPartenza>2016-02-13</DataDiPartenza>
+            <DataDiNascita>1980-01-02</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000233" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000233" />
+            </Nascita>
+            <Cittadinanza Stato="100000233" />
+        </Ospite>
+        <Ospite Id="602133401" IdCamera="20160213_602133401" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-13</DataDiArrivo>
+            <DataDiPartenza>2016-02-13</DataDiPartenza>
+            <DataDiNascita>1957-09-03</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000233" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000233" />
+            </Nascita>
+            <Cittadinanza Stato="100000233" />
+        </Ospite>
+        <Ospite Id="602133411" IdCamera="20160213_602133411" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-13</DataDiArrivo>
+            <DataDiPartenza>2016-02-13</DataDiPartenza>
+            <DataDiNascita>1971-11-15</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="418102047" Provincia="418102" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="418102047" Provincia="418102" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602133412" IdCamera="20160213_602133412" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-13</DataDiArrivo>
+            <DataDiPartenza>2016-02-13</DataDiPartenza>
+            <DataDiNascita>1970-07-16</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="403015146" Provincia="403015" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="403015146" Provincia="403015" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602133421" IdCamera="20160213_602133421" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-13</DataDiArrivo>
+            <DataDiPartenza>2016-02-13</DataDiPartenza>
+            <DataDiNascita>1965-04-07</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="411109037" Provincia="411109" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="411109037" Provincia="411109" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602133431" IdCamera="20160213_602133431" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-13</DataDiArrivo>
+            <DataDiPartenza>2016-02-13</DataDiPartenza>
+            <DataDiNascita>1992-12-02</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="403108033" Provincia="403108" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="403108033" Provincia="403108" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602133432" IdCamera="20160213_602133432" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-13</DataDiArrivo>
+            <DataDiPartenza>2016-02-13</DataDiPartenza>
+            <DataDiNascita>1995-11-08</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="416071051" Provincia="416071" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="416071051" Provincia="416071" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602133441" IdCamera="20160213_602133441" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-13</DataDiArrivo>
+            <DataDiPartenza>2016-02-13</DataDiPartenza>
+            <DataDiNascita>1968-08-13</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="416110001" Provincia="416110" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="416110001" Provincia="416110" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602143451" IdCamera="20160214_602143451" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-14</DataDiArrivo>
+            <DataDiPartenza>2016-02-14</DataDiPartenza>
+            <DataDiNascita>1984-09-15</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="602143461" IdCamera="20160214_602143461" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-14</DataDiArrivo>
+            <DataDiPartenza>2016-02-14</DataDiPartenza>
+            <DataDiNascita>1983-12-14</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="602143471" IdCamera="20160214_602143471" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-14</DataDiArrivo>
+            <DataDiPartenza>2016-02-14</DataDiPartenza>
+            <DataDiNascita>1983-11-28</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="602143481" IdCamera="20160214_602143481" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-14</DataDiArrivo>
+            <DataDiPartenza>2016-02-14</DataDiPartenza>
+            <DataDiNascita>1988-11-06</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="602143491" IdCamera="20160214_602143491" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-14</DataDiArrivo>
+            <DataDiPartenza>2016-02-14</DataDiPartenza>
+            <DataDiNascita>1983-03-23</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="602143501" IdCamera="20160214_602143501" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-14</DataDiArrivo>
+            <DataDiPartenza>2016-02-14</DataDiPartenza>
+            <DataDiNascita>1948-08-07</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="417076085" Provincia="417076" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="417076085" Provincia="417076" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602143502" IdCamera="20160214_602143502" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-14</DataDiArrivo>
+            <DataDiPartenza>2016-02-14</DataDiPartenza>
+            <DataDiNascita>1953-10-10</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="417076030" Provincia="417076" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="417076030" Provincia="417076" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602143503" IdCamera="20160214_602143503" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-14</DataDiArrivo>
+            <DataDiPartenza>2016-02-14</DataDiPartenza>
+            <DataDiNascita>1986-05-24</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415064008" Provincia="415064" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415064008" Provincia="415064" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602143504" IdCamera="20160214_602143504" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-14</DataDiArrivo>
+            <DataDiPartenza>2016-02-14</DataDiPartenza>
+            <DataDiNascita>1988-04-19</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415065134" Provincia="415065" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415065134" Provincia="415065" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602143511" IdCamera="20160214_602143511" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-14</DataDiArrivo>
+            <DataDiPartenza>2016-02-14</DataDiPartenza>
+            <DataDiNascita>1969-08-20</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="412058091" Provincia="412058" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="412058091" Provincia="412058" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602143521" IdCamera="20160214_602143521" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-14</DataDiArrivo>
+            <DataDiPartenza>2016-02-14</DataDiPartenza>
+            <DataDiNascita>1977-04-05</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="403017992" Provincia="403017" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="403017992" Provincia="403017" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602143522" IdCamera="20160214_602143522" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-14</DataDiArrivo>
+            <DataDiPartenza>2016-02-14</DataDiPartenza>
+            <DataDiNascita>1993-08-14</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="403015209" Provincia="403015" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="403015209" Provincia="403015" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602143531" IdCamera="20160214_602143531" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-14</DataDiArrivo>
+            <DataDiPartenza>2016-02-14</DataDiPartenza>
+            <DataDiNascita>1973-08-22</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="406093007" Provincia="406093" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="406093007" Provincia="406093" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602143541" IdCamera="20160214_602143541" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-14</DataDiArrivo>
+            <DataDiPartenza>2016-02-14</DataDiPartenza>
+            <DataDiNascita>1968-07-27</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000251" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000251" />
+            </Nascita>
+            <Cittadinanza Stato="100000251" />
+        </Ospite>
+        <Ospite Id="602143542" IdCamera="20160214_602143542" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-14</DataDiArrivo>
+            <DataDiPartenza>2016-02-14</DataDiPartenza>
+            <DataDiNascita>1979-06-06</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000253" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000253" />
+            </Nascita>
+            <Cittadinanza Stato="100000253" />
+        </Ospite>
+        <Ospite Id="602153551" IdCamera="20160215_602153551" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-15</DataDiArrivo>
+            <DataDiPartenza>2016-02-15</DataDiPartenza>
+            <DataDiNascita>1968-09-04</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="413068028" Provincia="413068" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="413068028" Provincia="413068" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602153561" IdCamera="20160215_602153561" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-15</DataDiArrivo>
+            <DataDiPartenza>2016-02-15</DataDiPartenza>
+            <DataDiNascita>1969-11-05</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="401001272" Provincia="401001" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="401001272" Provincia="401001" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602153571" IdCamera="20160215_602153571" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-15</DataDiArrivo>
+            <DataDiPartenza>2016-02-15</DataDiPartenza>
+            <DataDiNascita>1991-11-19</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000330" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000330" />
+            </Nascita>
+            <Cittadinanza Stato="100000330" />
+        </Ospite>
+        <Ospite Id="602153572" IdCamera="20160215_602153572" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-15</DataDiArrivo>
+            <DataDiPartenza>2016-02-15</DataDiPartenza>
+            <DataDiNascita>1995-12-07</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000330" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000330" />
+            </Nascita>
+            <Cittadinanza Stato="100000330" />
+        </Ospite>
+        <Ospite Id="602153581" IdCamera="20160215_602153581" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-15</DataDiArrivo>
+            <DataDiPartenza>2016-02-15</DataDiPartenza>
+            <DataDiNascita>1964-09-05</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000330" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000330" />
+            </Nascita>
+            <Cittadinanza Stato="100000330" />
+        </Ospite>
+        <Ospite Id="602153582" IdCamera="20160215_602153582" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-15</DataDiArrivo>
+            <DataDiPartenza>2016-02-15</DataDiPartenza>
+            <DataDiNascita>1959-09-17</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000330" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000330" />
+            </Nascita>
+            <Cittadinanza Stato="100000330" />
+        </Ospite>
+        <Ospite Id="602153591" IdCamera="20160215_602153591" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-15</DataDiArrivo>
+            <DataDiPartenza>2016-02-15</DataDiPartenza>
+            <DataDiNascita>1979-01-02</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="412058110" Provincia="412058" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="412058110" Provincia="412058" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602153601" IdCamera="20160215_602153601" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-15</DataDiArrivo>
+            <DataDiPartenza>2016-02-15</DataDiPartenza>
+            <DataDiNascita>1961-04-20</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="416110004" Provincia="416110" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="416110004" Provincia="416110" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602153611" IdCamera="20160215_602153611" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-15</DataDiArrivo>
+            <DataDiPartenza>2016-02-15</DataDiPartenza>
+            <DataDiNascita>1984-10-07</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602153612" IdCamera="20160215_602153612" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-15</DataDiArrivo>
+            <DataDiPartenza>2016-02-15</DataDiPartenza>
+            <DataDiNascita>1984-03-24</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000254" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000254" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602163621" IdCamera="20160216_602163621" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-16</DataDiArrivo>
+            <DataDiPartenza>2016-02-16</DataDiPartenza>
+            <DataDiNascita>1959-08-21</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415061002" Provincia="415061" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415061002" Provincia="415061" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602163631" IdCamera="20160216_602163631" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-16</DataDiArrivo>
+            <DataDiPartenza>2016-02-16</DataDiPartenza>
+            <DataDiNascita>1979-08-11</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000215" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000215" />
+            </Nascita>
+            <Cittadinanza Stato="100000215" />
+        </Ospite>
+        <Ospite Id="602163641" IdCamera="20160216_602163641" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-16</DataDiArrivo>
+            <DataDiPartenza>2016-02-16</DataDiPartenza>
+            <DataDiNascita>1968-06-25</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="602163642" IdCamera="20160216_602163642" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-16</DataDiArrivo>
+            <DataDiPartenza>2016-02-16</DataDiPartenza>
+            <DataDiNascita>1975-04-29</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="602163651" IdCamera="20160216_602163651" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-16</DataDiArrivo>
+            <DataDiPartenza>2016-02-16</DataDiPartenza>
+            <DataDiNascita>1964-04-18</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="419087033" Provincia="419087" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="419087033" Provincia="419087" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602163661" IdCamera="20160216_602163661" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-16</DataDiArrivo>
+            <DataDiPartenza>2016-02-16</DataDiPartenza>
+            <DataDiNascita>1962-08-03</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063006" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063006" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602163662" IdCamera="20160216_602163662" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-16</DataDiArrivo>
+            <DataDiPartenza>2016-02-16</DataDiPartenza>
+            <DataDiNascita>1989-09-09</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063006" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063006" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602173671" IdCamera="20160217_602173671" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-17</DataDiArrivo>
+            <DataDiPartenza>2016-02-17</DataDiPartenza>
+            <DataDiNascita>1948-07-14</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063055" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063055" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602173672" IdCamera="20160217_602173672" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-17</DataDiArrivo>
+            <DataDiPartenza>2016-02-17</DataDiPartenza>
+            <DataDiNascita>1948-10-13</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="403015146" Provincia="403015" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="403015146" Provincia="403015" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602173681" IdCamera="20160217_602173681" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-17</DataDiArrivo>
+            <DataDiPartenza>2016-02-17</DataDiPartenza>
+            <DataDiNascita>1995-04-03</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000219" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000219" />
+            </Nascita>
+            <Cittadinanza Stato="100000219" />
+        </Ospite>
+        <Ospite Id="602173682" IdCamera="20160217_602173682" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-17</DataDiArrivo>
+            <DataDiPartenza>2016-02-17</DataDiPartenza>
+            <DataDiNascita>0000-00-00</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000219" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000219" />
+            </Nascita>
+            <Cittadinanza Stato="100000219" />
+        </Ospite>
+        <Ospite Id="602173683" IdCamera="20160217_602173683" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-17</DataDiArrivo>
+            <DataDiPartenza>2016-02-17</DataDiPartenza>
+            <DataDiNascita>0000-00-00</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000219" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000219" />
+            </Nascita>
+            <Cittadinanza Stato="100000219" />
+        </Ospite>
+        <Ospite Id="602173684" IdCamera="20160217_602173684" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-17</DataDiArrivo>
+            <DataDiPartenza>2016-02-17</DataDiPartenza>
+            <DataDiNascita>0000-00-00</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000219" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000219" />
+            </Nascita>
+            <Cittadinanza Stato="100000219" />
+        </Ospite>
+        <Ospite Id="602173691" IdCamera="20160217_602173691" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-17</DataDiArrivo>
+            <DataDiPartenza>2016-02-17</DataDiPartenza>
+            <DataDiNascita>1961-04-20</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="416110004" Provincia="416110" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="416110004" Provincia="416110" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602183701" IdCamera="20160218_602183701" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-18</DataDiArrivo>
+            <DataDiPartenza>2016-02-18</DataDiPartenza>
+            <DataDiNascita>1989-11-23</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="409048015" Provincia="409048" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="409048015" Provincia="409048" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602183711" IdCamera="20160218_602183711" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-18</DataDiArrivo>
+            <DataDiPartenza>2016-02-18</DataDiPartenza>
+            <DataDiNascita>1975-03-11</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="401001272" Provincia="401001" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="401001272" Provincia="401001" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602183721" IdCamera="20160218_602183721" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-18</DataDiArrivo>
+            <DataDiPartenza>2016-02-18</DataDiPartenza>
+            <DataDiNascita>1981-06-29</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="419081008" Provincia="419081" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="419081008" Provincia="419081" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602183722" IdCamera="20160218_602183722" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-18</DataDiArrivo>
+            <DataDiPartenza>2016-02-18</DataDiPartenza>
+            <DataDiNascita>1982-04-11</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="405029041" Provincia="405029" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="405029041" Provincia="405029" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602183731" IdCamera="20160218_602183731" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-18</DataDiArrivo>
+            <DataDiPartenza>2016-02-18</DataDiPartenza>
+            <DataDiNascita>1981-02-25</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="602183732" IdCamera="20160218_602183732" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-18</DataDiArrivo>
+            <DataDiPartenza>2016-02-18</DataDiPartenza>
+            <DataDiNascita>1980-09-24</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602183733" IdCamera="20160218_602183733" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-18</DataDiArrivo>
+            <DataDiPartenza>2016-02-18</DataDiPartenza>
+            <DataDiNascita>1975-10-07</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602193741" IdCamera="20160219_602193741" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-19</DataDiArrivo>
+            <DataDiPartenza>2016-02-19</DataDiPartenza>
+            <DataDiNascita>1984-01-10</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="602193751" IdCamera="20160219_602193751" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-19</DataDiArrivo>
+            <DataDiPartenza>2016-02-19</DataDiPartenza>
+            <DataDiNascita>1973-08-29</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="401001272" Provincia="401001" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="401001272" Provincia="401001" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602193752" IdCamera="20160219_602193752" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-19</DataDiArrivo>
+            <DataDiPartenza>2016-02-19</DataDiPartenza>
+            <DataDiNascita>1967-08-26</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="404022205" Provincia="404022" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="404022205" Provincia="404022" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602193753" IdCamera="20160219_602193753" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-19</DataDiArrivo>
+            <DataDiPartenza>2016-02-19</DataDiPartenza>
+            <DataDiNascita>1985-06-09</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="401001219" Provincia="401001" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="401001219" Provincia="401001" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602193754" IdCamera="20160219_602193754" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-19</DataDiArrivo>
+            <DataDiPartenza>2016-02-19</DataDiPartenza>
+            <DataDiNascita>1974-05-06</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="408035033" Provincia="408035" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="408035033" Provincia="408035" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602193761" IdCamera="20160219_602193761" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-19</DataDiArrivo>
+            <DataDiPartenza>2016-02-19</DataDiPartenza>
+            <DataDiNascita>1964-12-03</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="406032006" Provincia="406032" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="406032006" Provincia="406032" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602193771" IdCamera="20160219_602193771" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-19</DataDiArrivo>
+            <DataDiPartenza>2016-02-19</DataDiPartenza>
+            <DataDiNascita>1989-03-20</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="407011015" Provincia="407011" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="407011015" Provincia="407011" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602203781" IdCamera="20160220_602203781" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-20</DataDiArrivo>
+            <DataDiPartenza>2016-02-20</DataDiPartenza>
+            <DataDiNascita>1970-12-16</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="419087015" Provincia="419087" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="419087015" Provincia="419087" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602203791" IdCamera="20160220_602203791" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-20</DataDiArrivo>
+            <DataDiPartenza>2016-02-20</DataDiPartenza>
+            <DataDiNascita>1986-03-13</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="419087011" Provincia="419087" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="419087011" Provincia="419087" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602203792" IdCamera="20160220_602203792" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-20</DataDiArrivo>
+            <DataDiPartenza>2016-02-20</DataDiPartenza>
+            <DataDiNascita>1992-03-09</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000241" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000241" />
+            </Nascita>
+            <Cittadinanza Stato="100000241" />
+        </Ospite>
+        <Ospite Id="602203801" IdCamera="20160220_602203801" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-20</DataDiArrivo>
+            <DataDiPartenza>2016-02-20</DataDiPartenza>
+            <DataDiNascita>1967-07-13</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="418102001" Provincia="418102" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="418102001" Provincia="418102" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000241" />
+        </Ospite>
+        <Ospite Id="602203802" IdCamera="20160220_602203802" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-20</DataDiArrivo>
+            <DataDiPartenza>2016-02-20</DataDiPartenza>
+            <DataDiNascita>1968-12-19</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000241" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000241" />
+            </Nascita>
+            <Cittadinanza Stato="100000241" />
+        </Ospite>
+        <Ospite Id="602203811" IdCamera="20160220_602203811" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-20</DataDiArrivo>
+            <DataDiPartenza>2016-02-20</DataDiPartenza>
+            <DataDiNascita>1965-10-27</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="408038005" Provincia="408038" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="408038005" Provincia="408038" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602203812" IdCamera="20160220_602203812" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-20</DataDiArrivo>
+            <DataDiPartenza>2016-02-20</DataDiPartenza>
+            <DataDiNascita>1967-07-04</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="405029016" Provincia="405029" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="405029016" Provincia="405029" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602203813" IdCamera="20160220_602203813" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-20</DataDiArrivo>
+            <DataDiPartenza>2016-02-20</DataDiPartenza>
+            <DataDiNascita>2004-06-27</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000605" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000605" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602203821" IdCamera="20160220_602203821" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-20</DataDiArrivo>
+            <DataDiPartenza>2016-02-20</DataDiPartenza>
+            <DataDiNascita>1972-03-25</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="416071051" Provincia="416071" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="416071051" Provincia="416071" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602203831" IdCamera="20160220_602203831" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-20</DataDiArrivo>
+            <DataDiPartenza>2016-02-20</DataDiPartenza>
+            <DataDiNascita>1970-07-13</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="419088003" Provincia="419088" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="419088003" Provincia="419088" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602203832" IdCamera="20160220_602203832" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-20</DataDiArrivo>
+            <DataDiPartenza>2016-02-20</DataDiPartenza>
+            <DataDiNascita>1973-08-20</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="419088009" Provincia="419088" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="419088009" Provincia="419088" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602203841" IdCamera="20160220_602203841" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-20</DataDiArrivo>
+            <DataDiPartenza>2016-02-20</DataDiPartenza>
+            <DataDiNascita>1996-01-31</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="419088003" Provincia="419088" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="419088003" Provincia="419088" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602203842" IdCamera="20160220_602203842" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-20</DataDiArrivo>
+            <DataDiPartenza>2016-02-20</DataDiPartenza>
+            <DataDiNascita>2003-02-18</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="419088003" Provincia="419088" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="419088003" Provincia="419088" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602203843" IdCamera="20160220_602203843" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-20</DataDiArrivo>
+            <DataDiPartenza>2016-02-20</DataDiPartenza>
+            <DataDiNascita>1990-12-26</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="419088003" Provincia="419088" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="419088003" Provincia="419088" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602213851" IdCamera="20160221_602213851" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-21</DataDiArrivo>
+            <DataDiPartenza>2016-02-21</DataDiPartenza>
+            <DataDiNascita>1961-04-20</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="416110004" Provincia="416110" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="416110004" Provincia="416110" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602213861" IdCamera="20160221_602213861" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-21</DataDiArrivo>
+            <DataDiPartenza>2016-02-21</DataDiPartenza>
+            <DataDiNascita>1963-07-31</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="419087015" Provincia="419087" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="419087015" Provincia="419087" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602213862" IdCamera="20160221_602213862" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-21</DataDiArrivo>
+            <DataDiPartenza>2016-02-21</DataDiPartenza>
+            <DataDiNascita>1981-08-01</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063049" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063049" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602213871" IdCamera="20160221_602213871" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-21</DataDiArrivo>
+            <DataDiPartenza>2016-02-21</DataDiPartenza>
+            <DataDiNascita>1965-10-01</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000419" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000419" />
+            </Nascita>
+            <Cittadinanza Stato="100000419" />
+        </Ospite>
+        <Ospite Id="602223881" IdCamera="20160222_602223881" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-22</DataDiArrivo>
+            <DataDiPartenza>2016-02-22</DataDiPartenza>
+            <DataDiNascita>1974-07-14</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415065116" Provincia="415065" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415065116" Provincia="415065" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602223891" IdCamera="20160222_602223891" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-22</DataDiArrivo>
+            <DataDiPartenza>2016-02-22</DataDiPartenza>
+            <DataDiNascita>1982-04-11</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="404022205" Provincia="404022" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="404022205" Provincia="404022" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602223901" IdCamera="20160222_602223901" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-22</DataDiArrivo>
+            <DataDiPartenza>2016-02-22</DataDiPartenza>
+            <DataDiNascita>1984-09-17</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000250" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000250" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602223911" IdCamera="20160222_602223911" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-22</DataDiArrivo>
+            <DataDiPartenza>2016-02-22</DataDiPartenza>
+            <DataDiNascita>1958-07-23</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="401001272" Provincia="401001" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="401001272" Provincia="401001" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602233921" IdCamera="20160223_602233921" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-23</DataDiArrivo>
+            <DataDiPartenza>2016-02-23</DataDiPartenza>
+            <DataDiNascita>1948-10-19</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="420090053" Provincia="420090" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="420090053" Provincia="420090" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602233931" IdCamera="20160223_602233931" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-23</DataDiArrivo>
+            <DataDiPartenza>2016-02-23</DataDiPartenza>
+            <DataDiNascita>1960-11-04</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="406030112" Provincia="406030" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="406030112" Provincia="406030" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602233941" IdCamera="20160223_602233941" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-23</DataDiArrivo>
+            <DataDiPartenza>2016-02-23</DataDiPartenza>
+            <DataDiNascita>1968-05-21</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="406030121" Provincia="406030" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="406030121" Provincia="406030" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602233951" IdCamera="20160223_602233951" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-23</DataDiArrivo>
+            <DataDiPartenza>2016-02-23</DataDiPartenza>
+            <DataDiNascita>1970-09-06</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="419085007" Provincia="419085" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="419085007" Provincia="419085" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602243961" IdCamera="20160224_602243961" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-24</DataDiArrivo>
+            <DataDiPartenza>2016-02-24</DataDiPartenza>
+            <DataDiNascita>1971-09-18</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063023" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063023" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602243971" IdCamera="20160224_602243971" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-24</DataDiArrivo>
+            <DataDiPartenza>2016-02-24</DataDiPartenza>
+            <DataDiNascita>1987-03-04</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063049" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063049" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602243972" IdCamera="20160224_602243972" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-24</DataDiArrivo>
+            <DataDiPartenza>2016-02-24</DataDiPartenza>
+            <DataDiNascita>1985-03-04</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063016" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063016" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602243981" IdCamera="20160224_602243981" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-24</DataDiArrivo>
+            <DataDiPartenza>2016-02-24</DataDiPartenza>
+            <DataDiNascita>1961-08-21</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="409049009" Provincia="409049" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="409049009" Provincia="409049" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602243991" IdCamera="20160224_602243991" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-24</DataDiArrivo>
+            <DataDiPartenza>2016-02-24</DataDiPartenza>
+            <DataDiNascita>1988-04-15</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="405028060" Provincia="405028" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="405028060" Provincia="405028" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602244001" IdCamera="20160224_602244001" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-24</DataDiArrivo>
+            <DataDiPartenza>2016-02-24</DataDiPartenza>
+            <DataDiNascita>1972-06-16</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="405024008" Provincia="405024" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="405024008" Provincia="405024" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602254011" IdCamera="20160225_602254011" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-25</DataDiArrivo>
+            <DataDiPartenza>2016-02-25</DataDiPartenza>
+            <DataDiNascita>1966-09-15</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000351" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000351" />
+            </Nascita>
+            <Cittadinanza Stato="100000216" />
+        </Ospite>
+        <Ospite Id="602254012" IdCamera="20160225_602254012" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-25</DataDiArrivo>
+            <DataDiPartenza>2016-02-25</DataDiPartenza>
+            <DataDiNascita>1970-10-24</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000351" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000351" />
+            </Nascita>
+            <Cittadinanza Stato="100000351" />
+        </Ospite>
+        <Ospite Id="602254021" IdCamera="20160225_602254021" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-25</DataDiArrivo>
+            <DataDiPartenza>2016-02-25</DataDiPartenza>
+            <DataDiNascita>1970-06-27</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="403108024" Provincia="403108" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="403108024" Provincia="403108" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602254031" IdCamera="20160225_602254031" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-25</DataDiArrivo>
+            <DataDiPartenza>2016-02-25</DataDiPartenza>
+            <DataDiNascita>1959-06-05</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="412058091" Provincia="412058" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="412058091" Provincia="412058" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602254041" IdCamera="20160225_602254041" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-25</DataDiArrivo>
+            <DataDiPartenza>2016-02-25</DataDiPartenza>
+            <DataDiNascita>1961-04-20</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="416110004" Provincia="416110" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="416110004" Provincia="416110" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602254051" IdCamera="20160225_602254051" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-25</DataDiArrivo>
+            <DataDiPartenza>2016-02-25</DataDiPartenza>
+            <DataDiNascita>1966-11-13</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000619" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000619" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602264061" IdCamera="20160226_602264061" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-26</DataDiArrivo>
+            <DataDiPartenza>2016-02-26</DataDiPartenza>
+            <DataDiNascita>1959-07-18</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000241" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000241" />
+            </Nascita>
+            <Cittadinanza Stato="100000241" />
+        </Ospite>
+        <Ospite Id="602264062" IdCamera="20160226_602264062" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-26</DataDiArrivo>
+            <DataDiPartenza>2016-02-26</DataDiPartenza>
+            <DataDiNascita>1983-11-11</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000605" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000605" />
+            </Nascita>
+            <Cittadinanza Stato="100000605" />
+        </Ospite>
+        <Ospite Id="602264071" IdCamera="20160226_602264071" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-26</DataDiArrivo>
+            <DataDiPartenza>2016-02-26</DataDiPartenza>
+            <DataDiNascita>1972-08-02</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="412058091" Provincia="412058" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="412058091" Provincia="412058" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602264081" IdCamera="20160226_602264081" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-26</DataDiArrivo>
+            <DataDiPartenza>2016-02-26</DataDiPartenza>
+            <DataDiNascita>1970-11-30</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063068" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063068" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602264082" IdCamera="20160226_602264082" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-26</DataDiArrivo>
+            <DataDiPartenza>2016-02-26</DataDiPartenza>
+            <DataDiNascita>2013-04-10</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063051" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063051" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602264083" IdCamera="20160226_602264083" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-26</DataDiArrivo>
+            <DataDiPartenza>2016-02-26</DataDiPartenza>
+            <DataDiNascita>1974-06-18</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063051" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063051" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602264084" IdCamera="20160226_602264084" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-26</DataDiArrivo>
+            <DataDiPartenza>2016-02-26</DataDiPartenza>
+            <DataDiNascita>2001-06-02</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063051" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063051" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602264091" IdCamera="20160226_602264091" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-26</DataDiArrivo>
+            <DataDiPartenza>2016-02-26</DataDiPartenza>
+            <DataDiNascita>1967-04-08</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="408038004" Provincia="408038" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="408038004" Provincia="408038" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602264092" IdCamera="20160226_602264092" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-26</DataDiArrivo>
+            <DataDiPartenza>2016-02-26</DataDiPartenza>
+            <DataDiNascita>1983-10-28</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000201" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000201" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602264093" IdCamera="20160226_602264093" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-26</DataDiArrivo>
+            <DataDiPartenza>2016-02-26</DataDiPartenza>
+            <DataDiNascita>1975-06-25</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000201" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000201" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602264101" IdCamera="20160226_602264101" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-26</DataDiArrivo>
+            <DataDiPartenza>2016-02-26</DataDiPartenza>
+            <DataDiNascita>1994-03-18</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="403015146" Provincia="403015" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="403015146" Provincia="403015" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602264102" IdCamera="20160226_602264102" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-26</DataDiArrivo>
+            <DataDiPartenza>2016-02-26</DataDiPartenza>
+            <DataDiNascita>1995-09-13</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="403015146" Provincia="403015" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="403015146" Provincia="403015" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602264111" IdCamera="20160226_602264111" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-26</DataDiArrivo>
+            <DataDiPartenza>2016-02-26</DataDiPartenza>
+            <DataDiNascita>1997-04-26</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000523" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000523" />
+            </Nascita>
+            <Cittadinanza Stato="100000523" />
+        </Ospite>
+        <Ospite Id="602264121" IdCamera="20160226_602264121" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-26</DataDiArrivo>
+            <DataDiPartenza>2016-02-26</DataDiPartenza>
+            <DataDiNascita>1981-04-07</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="401001272" Provincia="401001" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="401001272" Provincia="401001" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602264131" IdCamera="20160226_602264131" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-26</DataDiArrivo>
+            <DataDiPartenza>2016-02-26</DataDiPartenza>
+            <DataDiNascita>1972-08-04</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="418078045" Provincia="418078" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="418078045" Provincia="418078" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602274141" IdCamera="20160227_602274141" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-27</DataDiArrivo>
+            <DataDiPartenza>2016-02-27</DataDiPartenza>
+            <DataDiNascita>1995-01-01</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415065088" Provincia="415065" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415065088" Provincia="415065" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602274142" IdCamera="20160227_602274142" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-27</DataDiArrivo>
+            <DataDiPartenza>2016-02-27</DataDiPartenza>
+            <DataDiNascita>1993-01-09</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="415063067" Provincia="415063" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="415063067" Provincia="415063" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602274151" IdCamera="20160227_602274151" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-27</DataDiArrivo>
+            <DataDiPartenza>2016-02-27</DataDiPartenza>
+            <DataDiNascita>1980-05-26</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000234" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000234" />
+            </Nascita>
+            <Cittadinanza Stato="100000234" />
+        </Ospite>
+        <Ospite Id="602274152" IdCamera="20160227_602274152" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-27</DataDiArrivo>
+            <DataDiPartenza>2016-02-27</DataDiPartenza>
+            <DataDiNascita>1992-10-22</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000234" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000234" />
+            </Nascita>
+            <Cittadinanza Stato="100000234" />
+        </Ospite>
+        <Ospite Id="602274153" IdCamera="20160227_602274153" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-27</DataDiArrivo>
+            <DataDiPartenza>2016-02-27</DataDiPartenza>
+            <DataDiNascita>1972-08-27</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000234" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000234" />
+            </Nascita>
+            <Cittadinanza Stato="100000234" />
+        </Ospite>
+        <Ospite Id="602274154" IdCamera="20160227_602274154" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-27</DataDiArrivo>
+            <DataDiPartenza>2016-02-27</DataDiPartenza>
+            <DataDiNascita>1997-08-12</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000234" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000234" />
+            </Nascita>
+            <Cittadinanza Stato="100000234" />
+        </Ospite>
+        <Ospite Id="602274161" IdCamera="20160227_602274161" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-27</DataDiArrivo>
+            <DataDiPartenza>2016-02-27</DataDiPartenza>
+            <DataDiNascita>1973-08-03</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="602274162" IdCamera="20160227_602274162" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-27</DataDiArrivo>
+            <DataDiPartenza>2016-02-27</DataDiPartenza>
+            <DataDiNascita>1973-11-26</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="602274171" IdCamera="20160227_602274171" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-27</DataDiArrivo>
+            <DataDiPartenza>2016-02-27</DataDiPartenza>
+            <DataDiNascita>1981-04-07</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="401001272" Provincia="401001" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="401001272" Provincia="401001" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602274181" IdCamera="20160227_602274181" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-27</DataDiArrivo>
+            <DataDiPartenza>2016-02-27</DataDiPartenza>
+            <DataDiNascita>1985-11-17</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000253" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000253" />
+            </Nascita>
+            <Cittadinanza Stato="100000253" />
+        </Ospite>
+        <Ospite Id="602274191" IdCamera="20160227_602274191" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-27</DataDiArrivo>
+            <DataDiPartenza>2016-02-27</DataDiPartenza>
+            <DataDiNascita>1989-08-20</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000216" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000216" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602274192" IdCamera="20160227_602274192" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-27</DataDiArrivo>
+            <DataDiPartenza>2016-02-27</DataDiPartenza>
+            <DataDiNascita>1994-07-08</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="403015146" Provincia="403015" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="403015146" Provincia="403015" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602274201" IdCamera="20160227_602274201" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-27</DataDiArrivo>
+            <DataDiPartenza>2016-02-27</DataDiPartenza>
+            <DataDiNascita>1992-12-02</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="403108033" Provincia="403108" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="403108033" Provincia="403108" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602284211" IdCamera="20160228_602284211" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-28</DataDiArrivo>
+            <DataDiPartenza>2016-02-28</DataDiPartenza>
+            <DataDiNascita>1934-02-28</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="410055023" Provincia="410055" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="410055023" Provincia="410055" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602284221" IdCamera="20160228_602284221" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-28</DataDiArrivo>
+            <DataDiPartenza>2016-02-28</DataDiPartenza>
+            <DataDiNascita>1963-02-19</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="420092009" Provincia="420092" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="420092009" Provincia="420092" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602284222" IdCamera="20160228_602284222" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-28</DataDiArrivo>
+            <DataDiPartenza>2016-02-28</DataDiPartenza>
+            <DataDiNascita>1963-03-27</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="420092009" Provincia="420092" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="420092009" Provincia="420092" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602284223" IdCamera="20160228_602284223" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-28</DataDiArrivo>
+            <DataDiPartenza>2016-02-28</DataDiPartenza>
+            <DataDiNascita>1995-01-25</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="420092009" Provincia="420092" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="420092009" Provincia="420092" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602284224" IdCamera="20160228_602284224" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-28</DataDiArrivo>
+            <DataDiPartenza>2016-02-28</DataDiPartenza>
+            <DataDiNascita>1993-09-08</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="420092009" Provincia="420092" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="420092009" Provincia="420092" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602284231" IdCamera="20160228_602284231" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-28</DataDiArrivo>
+            <DataDiPartenza>2016-02-28</DataDiPartenza>
+            <DataDiNascita>1961-01-31</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="420092068" Provincia="420092" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="420092068" Provincia="420092" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602284232" IdCamera="20160228_602284232" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-28</DataDiArrivo>
+            <DataDiPartenza>2016-02-28</DataDiPartenza>
+            <DataDiNascita>1961-12-05</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="420090047" Provincia="420090" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="420090047" Provincia="420090" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602284233" IdCamera="20160228_602284233" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-28</DataDiArrivo>
+            <DataDiPartenza>2016-02-28</DataDiPartenza>
+            <DataDiNascita>1990-02-04</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="412058091" Provincia="412058" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="412058091" Provincia="412058" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602284241" IdCamera="20160228_602284241" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-28</DataDiArrivo>
+            <DataDiPartenza>2016-02-28</DataDiPartenza>
+            <DataDiNascita>1988-04-23</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="602284251" IdCamera="20160228_602284251" TipoAlloggiato="17">
+            <DataDiArrivo>2016-02-28</DataDiArrivo>
+            <DataDiPartenza>2016-02-28</DataDiPartenza>
+            <DataDiNascita>1980-02-02</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000450" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000450" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602284252" IdCamera="20160228_602284252" TipoAlloggiato="19">
+            <DataDiArrivo>2016-02-28</DataDiArrivo>
+            <DataDiPartenza>2016-02-28</DataDiPartenza>
+            <DataDiNascita>1983-07-12</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000450" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000450" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602284261" IdCamera="20160228_602284261" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-28</DataDiArrivo>
+            <DataDiPartenza>2016-02-28</DataDiPartenza>
+            <DataDiNascita>1983-07-08</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000235" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000235" />
+            </Nascita>
+            <Cittadinanza Stato="100000235" />
+        </Ospite>
+        <Ospite Id="602284271" IdCamera="20160228_602284271" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-28</DataDiArrivo>
+            <DataDiPartenza>2016-02-28</DataDiPartenza>
+            <DataDiNascita>1944-05-30</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Italia CodiceComune="410054039" Provincia="410054" Stato="100000100" />
+            </Provenienza>
+            <Nascita>
+                <Italia CodiceComune="410054039" Provincia="410054" Stato="100000100" />
+            </Nascita>
+            <Cittadinanza Stato="100000100" />
+        </Ospite>
+        <Ospite Id="602284281" IdCamera="20160228_602284281" TipoAlloggiato="16">
+            <DataDiArrivo>2016-02-28</DataDiArrivo>
+            <DataDiPartenza>2016-02-28</DataDiPartenza>
+            <DataDiNascita>1968-07-27</DataDiNascita>
+            <Sesso>1</Sesso>
+            <Provenienza>
+                <Estero Stato="100000250" />
+            </Provenienza>
+            <Nascita>
+                <Estero Stato="100000250" />
+            </Nascita>
+            <Cittadinanza Stato="100000250" />
+        </Ospite>
+    </Aggiornamento>
+</MTO_SchedineRQ>
