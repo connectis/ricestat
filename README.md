@@ -133,5 +133,9 @@ Il seguente tool sviluppato in php vs>=5.3 consiste in una webform che converte 
 E' rilasciato a solo scopo di esempio in quanto le variabili identificative di Id Ospite, Id Gruppo e Id Camera non sono specificate nel file Questura e quindi sono inserite ramndom (oltre alle informazioni di provenienza). Il tool è però utile per poter visualizzare una possibile implementazione del sistema di accesso al webservice.
 Per accedere alla home chiamare la pagina index.php sotto la cartella web
 
-
+##5.1  Tool di conversione fra file generati con protocollo SIRED (Sardegna, Rimini, Pistoia) e invio a Ricestat/Unicom
+Il seguente tool sviluppato in php vs>=5.3 consiste in una webform che converte il file txt in uso presso gli enti in oggetto nel flusso XML del sistema.
+E' rilasciato a scopo di esempio. Il tool è però utile per poter essere implementato in modalità open source per chi ne necessitasse.
+Per accedere alla home chiamare la pagina index.php sotto la cartella htdocs.
+Esiste una versione pubblicata funzionante all'indirizzo www.unicom.tools. Il link può essere comunicato ai clienti, ma è comunque necessario richiedere le credenziali per il dialogo col webserver.
 
