@@ -288,7 +288,11 @@
             <xs:element ref="ImpostaDiSoggiorno"/>
             <xs:element ref="CampiStatistici"/>
         </xs:sequence>        
-        <xs:attribute name="Id" type="xs:string"  use="required"  />
+        <xs:attribute name="Id" type="xs:string"  use="required"  >
+            <xs:annotation>
+                <xs:documentation>Identificativo univoco della movimentazione, non dell'utente, per utenti ricorrenti deve cambiare ogni volta</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
         <xs:attribute name="IdCamera" type="xs:string"  use="required"  >
             <xs:annotation>
                 <xs:documentation>Identificativo univoco della camera (per il calcolo delle camere occupate)</xs:documentation>
