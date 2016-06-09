@@ -287,6 +287,16 @@
             <xs:element ref="Cittadinanza" minOccurs="1" />
             <xs:element ref="ImpostaDiSoggiorno"/>
             <xs:element ref="CampiStatistici"/>
+            <xs:element name="Nome" type="xs:string"   use="optional">
+                <xs:annotation>
+                    <xs:documentation>Nome dell'ospite. OPZIONALE</xs:documentation>
+                </xs:annotation>
+            </xs:element> 
+            <xs:element name="Cognome" type="xs:string"   use="optional">
+                <xs:annotation>
+                    <xs:documentation>Cognome dell'ospite. OPZIONALE/xs:documentation>
+                </xs:annotation>
+            </xs:element>
         </xs:sequence>        
         <xs:attribute name="Id" type="xs:string"  use="required"  >
             <xs:annotation>
