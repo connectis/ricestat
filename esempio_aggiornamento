@@ -50,7 +50,7 @@
      <TipoPrenotazione>1</TipoPrenotazione>
     </CampiStatistici>
     <ImpostaDiSoggiorno>
-     <CodiceImpostaSoggiorno>MN</CodiceImpostaSoggiorno>
+     <CodiceImpostaSoggiorno></CodiceImpostaSoggiorno>
      <ValoreImpostaUnitaria>1.00</ValoreImpostaUnitaria>
      <NottiImponibili>2</NottiImponibili>
     </ImpostaDiSoggiorno>
