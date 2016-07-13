@@ -1,0 +1,49 @@
+Connectis/ricestat: spunti per la messa in opera.
+
+Prima di tutto è bene dare un'occhiata all'XML e rendersi conto di quali dati sono richiesto e come vengono assemblati assieme.
+Prendiamo il file  esempio_inserimento.
+
+Le prime due righe sono classiche dell'XML.
+La sezione POS contiene il login sia di chi ha materialmente realizzato l'applicativo (che sarà uguale per tutti i proprio clienti) e quello della struttura stessa.
+
+L'idea è di ricalcare la logica di invio delle ps al servizio alloggiati online della Polizia di Stato: raggruppare gli ospiti in gruppi, con i relativi codici delle ps (singolo 16, capogruppo 17 o 18, equipaggio 19 o 20).
+Dentro ogni gruppo, che deve avere id univoco, stanno gli ospiti con tutti i loro dettagli che vedete nell'XML, piuttosto autoesplicativi:
+DataDiArrivo
+DataDiPartenza
+Provenienza
+Sesso
+DataDiNascita
+Nascita (luogo di ...)
+Cittadinanza
+
+poi ci sono altri CampiStatistici
+TipoTurismo
+MezzoDiTrasporto
+TipoPrenotazione
+
+e infine la sezione ImpostaDiSoggiorno
+CodiceImpostaSoggiorno
+ValoreImpostaUnitaria
+NottiImponibili
+
+Come codiceImpostaSoggiorno dovete lasciare vuoto se non ci sono esenzioni, altrimenti inserite:
+MN esente perché minore;
+SP ospite rimasto oltre i 7 giorni;
+ASN accompagnatore di ospiti disabili etc;
+NP ospite che ha rifiutato di pagare l'imposta.
+
+La prima riga di ogni ospite contiene:
+Id - questo è univoco per presenza di ogni persona. Se è ospitata più volte nel corso della stagione deve avere un id diverso ogni volta. Però questo deve essere collegato in qualche modo a quella presenza di quella persona, altrimenti per essa si perde la possibilità di fare aggiornamenti o cancellazioni.
+IdCamera - id che ogni sistema mette a modo suo
+TipoAlloggiato - il famoso numero da 16 a 20 delle ps della Questura. 
+
+Per capire bene tutti i parametri, e nel caso non aveste troppa familiarità con i codici Questura, potete andare in Tool_Convert_Questura/src/Unicom/Ricestat e troverete dei file php con dentro le classi con tutto quanto, uno per tipo di dato.
+
+Tutti questi dati formano ogni oggetto Ospite, che sia singolo o in gruppo. Ovviamente l'ospite singolo non sarà dentro un tag Gruppo ma OspiteSingolo (con un id univoco anch'esso).
+
+La logica di funzionamento che ho implementato, adatta al mio sistema ma adattabile un po' a tutti quanti, prevede di inserire i dati il giorno dopo il check-in, esattamente come viene fatto per l'invio al servizio alloggiati. Sul momento la data di uscita è solo presunta, è meglio non associarci subito la tassa di soggiorno, che verrà riscossa tipicamente al check-out. Per avere finalmente la stima corretta della tassa bisogna aspettare il check-out, per cui in quel momento si farà l'aggiornamento per tutti i partiti col loro reale importo di tassa. Aggiornando il concetto di gruppo non c'è, però bisogna necessariamente ricollegarsi all'Id che è stato già fornito in fase di inserimento.
+
+In definitiva quindi il sistema agisce automaticamente in tarda mattinata (o il pomeriggio, insomma in giornata), prima inserendo tutti gli ospiti e i gruppi che hanno fatto check-in il giorno prima, poi fa l'aggiornamento con l'importo tassa (e numero giorni) per tutti quelli che hanno fatto check-out il giorno prima.
+Con queste due semplici operazioni si riesce a gestire tutto il flusso di ricestat e della tassa di soggiorno.
+
+Esempi molto utili di codice da seguire sono dentro Tool_Convert_Questura/samples . Se adattate InserimentoAlloggiati.php al vostro sistema, potete ricalcare facilmente il suo modo di generare XML e di inviarlo, dopo aver cambiato le variabili $src1 e $src2 con i dati forniti a voi e popolando le funzioni che riguardano l'oggetto Ospite.
