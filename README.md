@@ -139,3 +139,12 @@ E' rilasciato a scopo di esempio. Il tool è però utile per poter essere implem
 Per accedere alla home chiamare la pagina index.php sotto la cartella htdocs.
 Esiste una versione pubblicata funzionante all'indirizzo www.unicom.tools. Il link può essere comunicato ai clienti, ma è comunque necessario richiedere le credenziali per il dialogo col webserver.
 
+#6.  Feedback
+Questa sezione contiene feedback rilasciati dagli sviluppatori dei gestionali a beneficio dei colleghi affinchè possano prendere spunto dalle loro esperienze. Ringraziamo e riportiamo i loro riferimenti.
+##5.1  Smartmedia 2000
+Gestionale per Campeggi. Referente ing. Fabrizio Felici
+Smartmedia 2000  
+via Lituania, 46 - 58100 Grosseto Italia
+tel +39 347 6444150  p.iva 01208620532
+http://www.smartmedia2000.it/ Pec info@pec.smartmedia2000.it
+
