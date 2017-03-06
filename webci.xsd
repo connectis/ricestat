@@ -207,13 +207,13 @@
     </xs:element> 
 
     <xs:complexType name="ItaliaType">
-        <xs:attribute name="CodiceComune" use="required" type="xs:positiveInteger" />
-        <xs:attribute name="Provincia" use="required" type="xs:positiveInteger"/>
-        <xs:attribute name="Stato" use="required" type="xs:positiveInteger" />
+        <xs:attribute name="CodiceComune" use="required" type="xs:string" />
+        <xs:attribute name="Provincia" use="required" type="xs:string"/>
+        <xs:attribute name="Stato" use="required" type="xs:string" />
     </xs:complexType>
 
     <xs:complexType name="EsteroType" >
-        <xs:attribute name="Stato" use="required" type="xs:positiveInteger" />
+        <xs:attribute name="Stato" use="required" type="xs:string" />
     </xs:complexType>
   
     <xs:complexType name="GruppoType">
