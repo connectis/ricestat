@@ -294,7 +294,7 @@
             </xs:element> 
             <xs:element name="Cognome" type="xs:string"   use="optional">
                 <xs:annotation>
-                    <xs:documentation>Cognome dell'ospite. OPZIONALE/xs:documentation>
+                    <xs:documentation>Cognome dell'ospite. OPZIONALE</xs:documentation>
                 </xs:annotation>
             </xs:element>
         </xs:sequence>        
