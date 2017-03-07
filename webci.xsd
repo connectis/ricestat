@@ -202,7 +202,7 @@
     </xs:element> 
     <xs:element name="Cittadinanza" >
         <xs:complexType>
-            <xs:attribute name="Stato" use="required" type="xs:positiveInteger" />
+            <xs:attribute name="Stato" use="required" type="xs:string" />
         </xs:complexType>
     </xs:element> 
 
