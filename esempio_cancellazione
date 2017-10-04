@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MTO_SchedineRQ>
-  <POS>
+<MTO_SchedineRQ xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://ws.webci.it/webci.xsd" Version="1.0" PrimaryLangID="it">
+ <POS>
         <Source>
             <RequestorID Type = "4" ID = "PmsProva1" MessagePassword = "ProvaProva"/>
         </Source>

@@ -202,18 +202,18 @@
     </xs:element> 
     <xs:element name="Cittadinanza" >
         <xs:complexType>
-            <xs:attribute name="Stato" use="required" type="xs:positiveInteger" />
+            <xs:attribute name="Stato" use="required" type="xs:string" />
         </xs:complexType>
     </xs:element> 
 
     <xs:complexType name="ItaliaType">
-        <xs:attribute name="CodiceComune" use="required" type="xs:positiveInteger" />
-        <xs:attribute name="Provincia" use="required" type="xs:positiveInteger"/>
-        <xs:attribute name="Stato" use="required" type="xs:positiveInteger" />
+        <xs:attribute name="CodiceComune" use="required" type="xs:string" />
+        <xs:attribute name="Provincia" use="required" type="xs:string"/>
+        <xs:attribute name="Stato" use="required" type="xs:string" />
     </xs:complexType>
 
     <xs:complexType name="EsteroType" >
-        <xs:attribute name="Stato" use="required" type="xs:positiveInteger" />
+        <xs:attribute name="Stato" use="required" type="xs:string" />
     </xs:complexType>
   
     <xs:complexType name="GruppoType">
@@ -287,8 +287,22 @@
             <xs:element ref="Cittadinanza" minOccurs="1" />
             <xs:element ref="ImpostaDiSoggiorno"/>
             <xs:element ref="CampiStatistici"/>
+            <xs:element name="Nome" type="xs:string"   use="optional">
+                <xs:annotation>
+                    <xs:documentation>Nome dell'ospite. OPZIONALE</xs:documentation>
+                </xs:annotation>
+            </xs:element> 
+            <xs:element name="Cognome" type="xs:string"   use="optional">
+                <xs:annotation>
+                    <xs:documentation>Cognome dell'ospite. OPZIONALE</xs:documentation>
+                </xs:annotation>
+            </xs:element>
         </xs:sequence>        
-        <xs:attribute name="Id" type="xs:string"  use="required"  />
+        <xs:attribute name="Id" type="xs:string"  use="required"  >
+            <xs:annotation>
+                <xs:documentation>Identificativo univoco della movimentazione, non dell'utente, per utenti ricorrenti deve cambiare ogni volta</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
         <xs:attribute name="IdCamera" type="xs:string"  use="required"  >
             <xs:annotation>
                 <xs:documentation>Identificativo univoco della camera (per il calcolo delle camere occupate)</xs:documentation>
