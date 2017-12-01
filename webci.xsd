@@ -58,24 +58,6 @@
     <xs:complexType  name="AggiornamentoType" >
         <xs:sequence>
             <xs:element name="Ospite" type="OspiteType" >  
-                <xs:complexType>
-                    <xs:attribute name="TipoAlloggiato">
-                        <xs:simpleType> 
-                            <xs:restriction base="xs:positiveInteger">
-                                <xs:enumeration value="16"/>
-                                <xs:enumeration value="17"/>
-                                <xs:enumeration value="18"/>
-                                <xs:enumeration value="19"/>
-                                <xs:enumeration value="20"/>
-                            </xs:restriction>
-                        </xs:simpleType>
-                    </xs:attribute> 
-                    <xs:attribute name="IdGruppo" type="xs:ID"  use="required">
-                        <xs:annotation>
-                            <xs:documentation>Possibilità di correggere gruppo</xs:documentation>
-                        </xs:annotation>
-                    </xs:attribute> 
-                </xs:complexType > 
             </xs:element>
         </xs:sequence>
     </xs:complexType > 
@@ -83,7 +65,7 @@
     <xs:complexType name="InserimentoAlloggiatiType" >
         <xs:choice>
             <xs:element  name="Gruppo" type="GruppoType"  minOccurs="2" maxOccurs="unbounded" />
-            <xs:element name="OspiteSingolo" type="OspiteSingoloType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="OspiteSingolo" type="OspiteSingoloType" minOccurs="1" maxOccurs="unbounded"/>
         </xs:choice>
         <xs:attribute name="CodiceEsercizio"/>
     </xs:complexType>
@@ -218,36 +200,15 @@
   
     <xs:complexType name="GruppoType">
         <xs:sequence>
-            <xs:element name="Ospite" type="OspiteType" minOccurs="1" maxOccurs="1" >
-                <xs:complexType>
-                    <xs:attribute name="TipoAlloggiato">
-                        <xs:annotation>
-                            <xs:documentation>Capofamiglia (17) o Capogruppo (18)</xs:documentation>
-                        </xs:annotation>
-                        <xs:simpleType> 
-                            <xs:restriction base="xs:positiveInteger">
-                                <xs:enumeration value="17"/>
-                                <xs:enumeration value="18"/>
-                            </xs:restriction>
-                        </xs:simpleType> 
-                    </xs:attribute>
-                </xs:complexType>
+            <xs:element name="Ospite" type="OspiteType" minOccurs="1"  >
+               
             </xs:element>
   
-            <xs:element name="Ospite" type="OspiteType" minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="Ospite" type="OspiteType" minOccurs="1" >
                 <xs:annotation>
-                    <xs:documentation>Familiare (19) o Membro di gruppo (20)</xs:documentation>
+                    <xs:documentation>TipoAlloggiato solo Familiare (19) o Membro di gruppo (20)</xs:documentation>
                 </xs:annotation>
-                <xs:complexType>
-                    <xs:attribute name="TipoAlloggiato">
-                        <xs:simpleType> 
-                            <xs:restriction base="xs:positiveInteger">
-                                <xs:enumeration value="19"/>
-                                <xs:enumeration value="20"/>
-                            </xs:restriction>
-                        </xs:simpleType> 
-                    </xs:attribute>
-                </xs:complexType>
+                
             </xs:element>
         </xs:sequence>
         <xs:attribute name="IdGruppo" type="xs:ID"  use="required">
@@ -259,21 +220,19 @@
 
     <xs:complexType name="OspiteSingoloType" >
         <xs:sequence>
-            <xs:element name="Ospite" type="OspiteType" minOccurs="1" maxOccurs="1">        
+            <xs:element name="Ospite" type="OspiteType" minOccurs="1" >        
                 <xs:annotation>
-                    <xs:documentation>Ospite Singolo (16)</xs:documentation>
+                    <xs:documentation>TipoAlloggiato solo Ospite Singolo (16) </xs:documentation>
                 </xs:annotation>     
-                <xs:complexType>     
-                    <xs:attribute name="TipoAlloggiato">
-                        <xs:simpleType> 
-                            <xs:restriction base="xs:positiveInteger">
-                                <xs:enumeration value="16"/>
-                            </xs:restriction>
-                        </xs:simpleType> 
-                    </xs:attribute>
-                </xs:complexType>
+                
             </xs:element>
         </xs:sequence>
+		<xs:attribute name="Id" type="xs:string"  use="required"  >
+            <xs:annotation>
+                <xs:documentation>Identificativo univoco della movimentazione, non dell'utente, per utenti ricorrenti deve cambiare ogni volta</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+
     </xs:complexType>
 
     <xs:complexType name="OspiteType" >
@@ -287,12 +246,12 @@
             <xs:element ref="Cittadinanza" minOccurs="1" />
             <xs:element ref="ImpostaDiSoggiorno"/>
             <xs:element ref="CampiStatistici"/>
-            <xs:element name="Nome" type="xs:string"   use="optional">
+            <xs:element name="Nome" type="xs:string"   minOccurs="0">
                 <xs:annotation>
                     <xs:documentation>Nome dell'ospite. OPZIONALE</xs:documentation>
                 </xs:annotation>
             </xs:element> 
-            <xs:element name="Cognome" type="xs:string"   use="optional">
+            <xs:element name="Cognome" type="xs:string"   minOccurs="0">
                 <xs:annotation>
                     <xs:documentation>Cognome dell'ospite. OPZIONALE</xs:documentation>
                 </xs:annotation>
@@ -308,6 +267,24 @@
                 <xs:documentation>Identificativo univoco della camera (per il calcolo delle camere occupate)</xs:documentation>
             </xs:annotation>
         </xs:attribute>
+
+                    <xs:attribute name="TipoAlloggiato">
+                        <xs:simpleType> 
+                            <xs:restriction base="xs:positiveInteger">
+                                <xs:enumeration value="16"/>
+                                <xs:enumeration value="17"/>
+                                <xs:enumeration value="18"/>
+                                <xs:enumeration value="19"/>
+                                <xs:enumeration value="20"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute> 
+                    <xs:attribute name="IdGruppo" type="xs:ID"  use="required">
+                        <xs:annotation>
+                            <xs:documentation>Possibilità di correggere gruppo</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute> 
+
     </xs:complexType>
     
     <xs:element name="DataDiArrivo"  type="xs:date">
