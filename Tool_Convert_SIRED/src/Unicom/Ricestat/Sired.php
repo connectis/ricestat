@@ -94,6 +94,7 @@ class Sired extends SchedinaQuestura {
         
         $all_items = array();
         $sq       = new self( $file );
+
         foreach ( $sq as $item ) {
             if ( empty( $item['Tipo Alloggiato'] ) ) {
                 continue;
@@ -102,6 +103,7 @@ class Sired extends SchedinaQuestura {
             //print_r( $item );
             $all_items[] = $item;
             
+//			$item['Codice identificativo posizione']="A".$item['Codice identificativo posizione'] ;
             $operation = 1 == $item['Modalita'] ? 'insert' : ( 2 == $item['Modalita'] ? 'update' : 'delete' );
             file_put_contents( __DIR__ . '/IDs.txt', "\n" . $item['Codice identificativo posizione']. "|" . $operation, FILE_APPEND );
             
@@ -115,22 +117,47 @@ class Sired extends SchedinaQuestura {
                 $IdCamera   = preg_replace( '/\-/', '', $item['Data Arrivo'] ) . '_' . $Id;
                 $ospite     = new Ospite( $Id, $IdCamera, $item['Tipo Alloggiato'] ); // Id, IdCamera, TipoAlloggiato
                 $ospite->setDataDiArrivo( $item['Data Arrivo'] )
-                       ->setDataDiPartenza( $item['Data Arrivo'] )
+                       ->setDataDiPartenza( $item['Data Partenza'] )
                        ->setSesso( $item['Sesso'] )
                        ->setDataDiNascita( $item['Data Nascita'] )
                        ->setCittadinanza( new Cittadinanza( $item['Cittadinanza'] ) );
 
-                // Estero
-                if ( '' == trim( $item['Comune Nascita'] ) ) { 
-                    $ospite->setProvenienza( new Estero( $item['Stato Nascita'] ) );
-                    $ospite->setNascita( new Estero( $item['Stato Nascita'] ) );
-                } else { // Italia
-                    $CodiceComune = $item['Comune Nascita'];
-                    $Provincia    = substr( $CodiceComune, 0, -3 );
-                    $Stato        = $item['Stato Nascita'];
-                    $ospite->setProvenienza( new Italia( $CodiceComune, $Provincia, $Stato ) );
-                    $ospite->setNascita( new Italia( $CodiceComune, $Provincia, $Stato ) );
-                }
+
+
+
+                    // Estero  Codice comune di residenza;9|Provincia di residenza;2|Codice stato di residenza;
+                   	if($item['Codice stato di residenza']<>''){
+						  $Stato = $item['Codice stato di residenza'];
+					  }else{
+						  $Stato = $item['Stato Nascita'];
+					  } 
+					  
+					  if ( '' == trim( $item['Codice comune di residenza'] ) ) { 
+
+                        $ospite->setProvenienza( new Estero($Stato ) );
+                    } else { // Italia
+
+                      if($item['Codice comune di residenza']<>''){
+						  $CodiceComune = $item['Codice comune di residenza'];
+					  }else{
+						  $CodiceComune = $item['Comune Nascita'];
+					  }
+
+                        $Provincia    = substr( $CodiceComune, 0, -3 );
+                        $ospite->setProvenienza( new Italia( $CodiceComune, $Provincia, $Stato ) );
+                    }
+
+                    // Estero  Codice comune di residenza;9|Provincia di residenza;2|Codice stato di residenza;
+                    if ( '' == trim( $item['Comune Nascita'] ) ) { 
+                        $ospite->setNascita( new Estero( $item['Stato Nascita'] ) );
+                    } else { // Italia
+                        $CodiceComune = $item['Comune Nascita'];
+                        $Provincia    = substr( $CodiceComune, 0, -3 );
+                        $Stato        = $item['Stato Nascita'];
+                        $ospite->setNascita( new Italia( $CodiceComune, $Provincia, $Stato ) );
+                    }
+
+
                 
                 $operation_items['aggiornamento'][] = $ospite;
             } 
@@ -150,6 +177,18 @@ class Sired extends SchedinaQuestura {
                  */
                 
                 // building a Gruppo
+
+
+			if( in_array( $item['Tipo Alloggiato'], array(  16) )  ){
+				        // maybe save last group
+				if ( $group && count( $group ) >= 2 ) {
+					$operation_items['inserimentoAlloggiati'][] = $group;
+				}
+				$group=null;
+			}
+
+			if( in_array( $item['Tipo Alloggiato'], array(  17, 18 ) )  || !is_null($group)){
+
                 if ( in_array( $item['Tipo Alloggiato'], array( 17, 18, 19, 20 ) ) ) {
                     // new Gruppo
                     if ( in_array( $item['Tipo Alloggiato'], array( 17, 18 ) ) ) {
@@ -162,14 +201,19 @@ class Sired extends SchedinaQuestura {
                         $rooms    = (int) $item['Camere occupate'];
                         $idCamera_base = preg_replace( '/\-/', '', $item['Data Arrivo'] ) . '_' . $IdGruppo;
                         $assigned_rid = 0;
-                    }
                     
+                    }
+ 
                     // building Ospite instance
                     $Id         = $item['Codice identificativo posizione'];
                     $item['Id'] = $Id;
-                    
+ //      echo      $Id ;        
                     // generate IdCamera
-                    if ( 1 == $rooms ) {
+                    if(is_null($group)){
+						echo "1( $Id, $IdCamera, ".$item['Tipo Alloggiato']." )";
+					die();
+					} 
+					if ( 1 == $rooms ) {
                         $IdCamera = $idCamera_base; 
                     } else {
                         $assigned_rid++;
@@ -178,31 +222,66 @@ class Sired extends SchedinaQuestura {
                         }
                         $IdCamera = $idCamera_base . '_' . $assigned_rid;
                     }
-                    
+                    if(is_null($group)){
+						echo "2( $Id, $IdCamera, ".$item['Tipo Alloggiato']." )";
+					die();
+					}
                     $ospite = new Ospite( $Id, $IdCamera, $item['Tipo Alloggiato'] ); // Id, IdCamera, TipoAlloggiato
+
                     $ospite->setDataDiArrivo( $item['Data Arrivo'] )
-                           ->setDataDiPartenza( $item['Data Arrivo'] )
+                           ->setDataDiPartenza( $item['Data Partenza'] )
                            ->setSesso( $item['Sesso'] )
                            ->setDataDiNascita( $item['Data Nascita'] )
                            ->setCittadinanza( new Cittadinanza( $item['Cittadinanza'] ) );
 
-                    // Estero
+                    // Estero  Codice comune di residenza;9|Provincia di residenza;2|Codice stato di residenza;
+                   	if($item['Codice stato di residenza']<>''){
+						  $Stato = $item['Codice stato di residenza'];
+					  }else{
+						  $Stato = $item['Stato Nascita'];
+					  } 
+					  
+					  if ( '' == trim( $item['Codice comune di residenza'] ) ) { 
+
+                        $ospite->setProvenienza( new Estero($Stato ) );
+                    } else { // Italia
+
+                      if($item['Codice comune di residenza']<>''){
+						  $CodiceComune = $item['Codice comune di residenza'];
+					  }else{
+						  $CodiceComune = $item['Comune Nascita'];
+					  }
+
+                        $Provincia    = substr( $CodiceComune, 0, -3 );
+                        $ospite->setProvenienza( new Italia( $CodiceComune, $Provincia, $Stato ) );
+                    }
+
+                    // Estero 
                     if ( '' == trim( $item['Comune Nascita'] ) ) { 
-                        $ospite->setProvenienza( new Estero( $item['Stato Nascita'] ) );
                         $ospite->setNascita( new Estero( $item['Stato Nascita'] ) );
                     } else { // Italia
                         $CodiceComune = $item['Comune Nascita'];
                         $Provincia    = substr( $CodiceComune, 0, -3 );
                         $Stato        = $item['Stato Nascita'];
-                        $ospite->setProvenienza( new Italia( $CodiceComune, $Provincia, $Stato ) );
                         $ospite->setNascita( new Italia( $CodiceComune, $Provincia, $Stato ) );
                     }
 
+
+
+					if(is_null($group)){
+						echo " qui2( $Id, $IdCamera, ".$item['Tipo Alloggiato']." )";
+					//die();
+					}
+//print_r($ospite);
                     // add Ospite to Gruppo
                     $group->setOspite( $ospite );
-                } 
-                elseif ( 16 == $item['Tipo Alloggiato'] ) { // building OspiteSingolo
 
+                }
+					} 
+					elseif ( 16 == $item['Tipo Alloggiato'] ) { // building OspiteSingolo
+	//				elseif ( 16 == $item['Tipo Alloggiato'] || is_null($group)) { // building OspiteSingolo
+					$group=null;
+					$item['Tipo Alloggiato']=16;
                     $IdGruppo   = $item['Codice identificativo posizione'];
                     $Id         = $item['Codice identificativo posizione'];
                     $IdCamera   = preg_replace( '/\-/', '', $item['Data Arrivo'] ) . '_' . $IdGruppo; 
@@ -210,29 +289,54 @@ class Sired extends SchedinaQuestura {
                     $singolo    = new OspiteSingolo( $IdGruppo );
                     $ospite     = new Ospite( $Id, $IdCamera, $item['Tipo Alloggiato'] );
                     $ospite->setDataDiArrivo( $item['Data Arrivo'] )
-                           ->setDataDiPartenza( $item['Data Arrivo'] )
+                           ->setDataDiPartenza( $item['Data Partenza'] )
                            ->setSesso( $item['Sesso'] )
                            ->setDataDiNascita( $item['Data Nascita'] )
                            ->setCittadinanza( new Cittadinanza( $item['Cittadinanza'] ) );
 
-                    // Estero
+
+                    // Estero  Codice comune di residenza;9|Provincia di residenza;2|Codice stato di residenza;
+                   	if($item['Codice stato di residenza']<>''){
+						  $Stato = $item['Codice stato di residenza'];
+					  }else{
+						  $Stato = $item['Stato Nascita'];
+					  } 
+					  
+					  if ( '' == trim( $item['Codice comune di residenza'] ) ) { 
+
+                        $ospite->setProvenienza( new Estero($Stato ) );
+                    } else { // Italia
+
+                      if($item['Codice comune di residenza']<>''){
+						  $CodiceComune = $item['Codice comune di residenza'];
+					  }else{
+						  $CodiceComune = $item['Comune Nascita'];
+					  }
+
+                        $Provincia    = substr( $CodiceComune, 0, -3 );
+                        $ospite->setProvenienza( new Italia( $CodiceComune, $Provincia, $Stato ) );
+                    }
+
+                    // Estero  Codice comune di residenza;9|Provincia di residenza;2|Codice stato di residenza;
                     if ( '' == trim( $item['Comune Nascita'] ) ) { 
-                        $ospite->setProvenienza( new Estero( $item['Stato Nascita'] ) );
                         $ospite->setNascita( new Estero( $item['Stato Nascita'] ) );
                     } else { // Italia
                         $CodiceComune = $item['Comune Nascita'];
                         $Provincia    = substr( $CodiceComune, 0, -3 );
                         $Stato        = $item['Stato Nascita'];
-                        $ospite->setProvenienza( new Italia( $CodiceComune, $Provincia, $Stato ) );
                         $ospite->setNascita( new Italia( $CodiceComune, $Provincia, $Stato ) );
                     }
+
 
                     $singolo->setOspite( $ospite );
                     $operation_items['inserimentoAlloggiati'][] = $singolo;
                     
                 }
 
-            } // end create
+            }else{
+			echo "Attenzione ERRORE: Guardare LOG";
+
+			} // end create
 
         }
         
