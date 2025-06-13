@@ -161,7 +161,10 @@ Partiamo dal significato di ogni singolo tag e da cosa succede se non è present
 
 ## 5.2 Tag CodiceImpostaSoggiorno ##
 
-Se è valorizzato rende l'utente esente. Se non è valorizzato è pagante (sempre che nel periodo sia prevista l'imposta). Se la valorizzazione non rientra in uno dei codici previsti dal regolamento comunale allora il sistema lo visualizza al gestore come esente, ma evidenziando in rosso che l'esenzione NON è definita in quel comune o per quella tipologia. 
+Se è valorizzato rende l'utente esente. Se non è valorizzato è pagante (sempre che nel periodo sia prevista l'imposta). 
+
+Se la valorizzazione non rientra in uno dei codici previsti dal regolamento comunale allora il sistema lo visualizza al gestore come esente, ma evidenziando in rosso che l'esenzione NON è definita in quel comune o per quella tipologia. 
+
 I codici attivi per i vari comuni sono reperibili o tramite la chiamata API descritta in esempio_lettura_regolamento_imposta nella extranet della nostra applicazion eda parte del gestore. La procedura è pubblicata nella pagina seguente: https://wci.unicom.uno/esenzioni/imposta
 
 Esempi:
@@ -171,18 +174,32 @@ A Pisa non ci sono esenzioni tranne i residenti e ABB
 
 ## 5.3 Tag  ValoreImpostaUnitaria ##
 
-Se è valorizzato corrisponde al costo a persona a note, indipendentemente da quanto specificato nel regolamento. Se non specificato il sistema prende la tariffa massima prevista per quella tipologia di struttura per quel periodo. Se da regolamento è definita una sola tariffa per tipologia e classificazione per il periodo di interesse, il sistema prende sicuramente il valore giusto. Se invece stiamo parlando di un comune come Arezzo in cui le tariffe sono 3 e sono organizzate a fasce in funzione di quanto paga l'ospite a camera, se il PMS non invia la tariffa applicata all'ospite, il gestore rischierebbe di trovarsi applicata la tariffa errata (sicuramente maggiore).
+Se è valorizzato corrisponde al costo a persona a note, indipendentemente da quanto specificato nel regolamento. 
+
+Se non specificato il sistema prende la tariffa massima prevista per quella tipologia di struttura per quel periodo. 
+
+Se da regolamento è definita una sola tariffa per tipologia e classificazione per il periodo di interesse, il sistema prende sicuramente il valore giusto. 
+
+Se invece stiamo parlando di un comune come Arezzo in cui le tariffe sono 3 e sono organizzate a fasce in funzione di quanto paga l'ospite a camera, se il PMS non invia la tariffa applicata all'ospite, il gestore rischierebbe di trovarsi applicata la tariffa errata (sicuramente maggiore).
 
 ## 5.4 Tag NottiImponibili ##
 
-Se non lo si  valorizzate, noi prendiamo come dato quello fornito dal regolamento, cioè le x notti massime continuative che si pagano su quello specifico comune. Se invece lo valorizzate e il valore è superiore a quello definito dal regolamento comunale, teniamo come valido questo valore ma lo segnaliamo come sia al gestore, sia al comune come FORZATURA rispetto allo standard.  Se lo valorizzate con un numero superiore a quello definito dal regolamento non lo consideriamo
+Se non lo si  valorizzate, noi prendiamo come dato quello fornito dal regolamento, cioè le x notti massime continuative che si pagano su quello specifico comune. 
+
+Se invece lo valorizzate e il valore è superiore a quello definito dal regolamento comunale, teniamo come valido questo valore ma lo segnaliamo come sia al gestore, sia al comune come FORZATURA rispetto allo standard.  
+
+Se lo valorizzate con un numero superiore a quello definito dal regolamento non lo consideriamo
 
 Esempi:
 
 Su Grosseto si pagano le prime 14 notti usufruite nell'anno (non le consecutive). Serve per i clienti di ritorno. 
+
 Se un cliente viene tutti i fine settimana per 3 giorni nel periodo Maggio, Settembre, il PMS mi può mandare il residuo dei giorni da usufruire per ogni soggiorno  14 ; 11; 8; 5; 2; 0 ; 0 ; ... e così via. Oppure 14; 14; 14;14; 2 ; 0 ; 0; ... e così via. Questo a vostra discrezione in base a a come avete implementato questa specifica nel vostro  PMS.
+
 In altri comuni, esempio Pisa questo valore cambia in base al periodo di alta o bassa stagione (Fino alla domenica delle Palme si pagano i primi 3 continuativi, dopo la domenica delle Palme si pagano i primi 5. Se voi non valorizzate il tag, noi sappiamo quando scattano i giorni, se invece mi comunicate 5 in bassa stagione io prendo buono 3, se mi comunicate 3 in alta stagione prendo buono 3 (perchè inferiore) evidenziando l'anomalia. 
+
 La domanda è: perchè prendo per buono 3? Perchè magari state mandando i dati di un ospite a cui avete cambiato stanza dopo 2 giorni e lo mandate come nuovo arrivo e non come modifica del precedente
+
 In generale quindi questo tag non serve tranne in pochi casi particolari, ma è messo a disposizione del PMS e del gestore per poter gestire anche quelli
 
 
