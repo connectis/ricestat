@@ -162,7 +162,7 @@ Partiamo dal significato di ogni singolo tag e da cosa succede se non è present
 ## 5.2 Tag Imposta di soggiorno  <CodiceImpostaSoggiorno> ##
 
 Se è valorizzato rende l'utente esente. Se non è valorizzato è pagante (sempre che nel periodo sia prevista l'imposta). Se la valorizzazione non rientra in uno dei codici previsti dal regolamento comunale allora il sistema lo visualizza al gestore come esente, ma evidenziando in rosso che l'esenzione NON è definita in quel comune o per quella tipologia. 
-I codici attivi per i vari comuni sono reperibili o tramite la chiamata API descritta in  esempio_lettura_regolamento nella extranet della nostra applicazion eda parte del gestore. La procedura è pubblicata nella pagina seguente: https://wci.unicom.uno/esenzioni/imposta
+I codici attivi per i vari comuni sono reperibili o tramite la chiamata API descritta in esempio_lettura_regolamento_imposta nella extranet della nostra applicazion eda parte del gestore. La procedura è pubblicata nella pagina seguente: https://wci.unicom.uno/esenzioni/imposta
 
 Esempi:  ò
 
