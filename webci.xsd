@@ -340,9 +340,11 @@
 
     <xs:element name="CampiStatistici" >
         <xs:complexType>
-            <xs:attribute name="TipoTurismo"  type="TipoTurismo"/>
-            <xs:attribute name="MezzoDiTrasporto"  type="MezzoDiTrasporto"/>
-            <xs:attribute name="TipoPrenotazione"  type="TipoPrenotazione"/>
+            <xs:sequence>
+                <xs:element name="TipoTurismo" type="TipoTurismo" minOccurs="0" />
+                <xs:element name="MezzoDiTrasporto" type="MezzoDiTrasporto" minOccurs="0" />
+                <xs:element name="TipoPrenotazione" type="TipoPrenotazione" minOccurs="0" />
+            </xs:sequence>
         </xs:complexType>
     </xs:element>
   
