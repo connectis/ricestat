@@ -237,15 +237,17 @@
 
     <xs:complexType name="OspiteType" >
         <xs:sequence>        
-            <xs:element ref="DataDiArrivo" minOccurs="1" />
-            <xs:element ref="DataDiPartenza" minOccurs="1"  />
-            <xs:element ref="DataDiNascita"  minOccurs="1" />
-            <xs:element ref="Sesso" minOccurs="1"  />
-            <xs:element ref="Provenienza" minOccurs="1" />
-            <xs:element ref="Nascita" minOccurs="1" />
-            <xs:element ref="Cittadinanza" minOccurs="1" />
-            <xs:element ref="ImpostaDiSoggiorno"/>
-            <xs:element ref="CampiStatistici"/>
+	    <xs:all>
+	        <xs:element ref="DataDiArrivo" minOccurs="1" />
+	        <xs:element ref="DataDiPartenza" minOccurs="1" />
+	        <xs:element ref="DataDiNascita" minOccurs="1" /> 
+	        <xs:element ref="Sesso" minOccurs="1" />
+	        <xs:element ref="Provenienza" minOccurs="1" />
+ 	       <xs:element ref="Nascita" minOccurs="1" />
+ 	       <xs:element ref="Cittadinanza" minOccurs="1" />
+  	      <xs:element ref="ImpostaDiSoggiorno" minOccurs="0"/>
+   	     <xs:element ref="CampiStatistici"/>
+
             <xs:element name="Nome" type="xs:string"   minOccurs="0">
                 <xs:annotation>
                     <xs:documentation>Nome dell'ospite. OPZIONALE</xs:documentation>
@@ -256,7 +258,7 @@
                     <xs:documentation>Cognome dell'ospite. OPZIONALE</xs:documentation>
                 </xs:annotation>
             </xs:element>
-        </xs:sequence>        
+ 	       </xs:all>        
         <xs:attribute name="Id" type="xs:string"  use="required"  >
             <xs:annotation>
                 <xs:documentation>Identificativo univoco della movimentazione, non dell'utente, per utenti ricorrenti deve cambiare ogni volta</xs:documentation>
