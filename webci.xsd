@@ -236,7 +236,6 @@
     </xs:complexType>
 
     <xs:complexType name="OspiteType" >
-        <xs:sequence>        
 	    <xs:all>
 	        <xs:element ref="DataDiArrivo" minOccurs="1" />
 	        <xs:element ref="DataDiPartenza" minOccurs="1" />
