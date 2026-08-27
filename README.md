@@ -1,226 +1,383 @@
 # Ricestat
-Con il seguente progetto si cerca di definire un protocollo univoco per lo scambio delle informazioni del movimento turistico 
-con gli enti pubblici che lo richiedono (Questura, Istat, Comuni).
-Si sono prese alcune decisioni di base come specifiche di partenza:
-* Le specifiche di Alloggiatiweb (Il portale della Questura dedicato allo scopo) rappresentano l'ossatura da cui parte lo sviluppo
-* Le codifiche nazioni/comuni che si considerano sono quelle di Alloggiati Web. Sarà cura dei vari enti (o delegati) convertirli nei formati Istat.
-* Si sono ridefinite le specifiche utilizzando il formato xml 
-* Si sono integrate le variabili necessarie per gli adempimenti Istat
-* Si sono integrate le variabili necessarie per l'Imposta di soggiorno
 
-Nasce dall'iniziativa di Connectis in ambito al progetto UPI Toscana per una ottimizzazione delle procedure a livello Regionale, 
-ma si cerca con la pubblicazione su GitHub di far sì che possano partecipare tutti gli attori della filiera e che il protocollo 
-possa poi essere esteso all'esterno della Regione Toscana.
+**Il protocollo XML per la comunicazione del movimento turistico** — rilevazione
+statistica Istat e imposta di soggiorno.
 
-Sono invitati a partecipare al progetto tutti gli sviluppatori di software GESTIONALI del settore Ricettivo e gli sviluppatori 
-di software per gli Enti Pubblici di tutta Italia.
+**Versione del protocollo: 1.0.** Questa pagina è aggiornata al 27 agosto 2026; che cosa è
+cambiato e quando è nello [storico delle versioni](#storico-delle-versioni).
 
+> **Le istruzioni e gli esempi non sono qui: sono sul portale.**
+> **→ <https://ws.unicom.uno/>**
+>
+> Su questa pagina trovi da dove viene il protocollo, dove si usa e come accedere alla
+> documentazione viva. Il materiale che c'era prima — procedure ed esempi — è conservato
+> [in fondo](#materiale-storico), ma è obsoleto e non fa testo.
 
-L'end point di test è il seguente:
-http://test.motouristoffice.it/MTO_SchedinaRQ.php
+---
 
-Usando un client REST tipo l'estensione per Chrome: Advanced REST client http://chromerestclient.appspot.com/
-E'possibile fare delle prove.
-I file che iniziano con esempio riportano una serie di esempi utili per interrogare il webservice.
-I parametri del POS devono essere sostituiti con i propri personali forniti da Connectis, per non accavallarsi con altri sviluppatori.
-Di seguito un esempio di Richiesta XML per leggere i clienti comunicati in un dato periodo. 
+## 1. Da dove viene
 
- 
+Il progetto nasce per definire un protocollo univoco per lo scambio delle informazioni del
+movimento turistico con gli enti pubblici che le richiedono. Nasce dall'iniziativa di
+Connectis nell'ambito del progetto UPI Toscana, per ottimizzare le procedure a livello
+regionale, e viene pubblicato su GitHub perché possano parteciparvi tutti gli attori della
+filiera e perché possa essere esteso oltre la Toscana.
+
+Le decisioni di partenza, che spiegano perché il tracciato è fatto così:
+
+* le specifiche di **AlloggiatiWeb** — il portale della Questura — sono l'ossatura da cui
+  parte lo sviluppo;
+* le **codifiche di nazioni e comuni** sono quelle di AlloggiatiWeb; sarà cura dei vari
+  enti, o dei loro delegati, convertirle nei formati Istat;
+* le specifiche sono state ridefinite in **XML**;
+* sono state integrate le variabili necessarie agli **adempimenti Istat**;
+* sono state integrate le variabili necessarie all'**imposta di soggiorno**.
+
+Il protocollo è in esercizio da oltre dieci anni ed è cresciuto per aggiunte successive:
+il tracciato di base è rimasto quello, e chi lo implementò allora continua a funzionare.
+
+> **Attenzione a un nome che inganna.** Nel tracciato compaiono `InserimentoAlloggiati`,
+> `Alloggiato`, `TipoAlloggiato`, ma i dati che viaggiano qui servono alla **rilevazione
+> statistica del movimento turistico e all'imposta di soggiorno**. Non hanno nulla a che
+> vedere con la comunicazione delle schedine alla **Questura** (portale AlloggiatiWeb),
+> che resta un adempimento distinto e non passa da qui.
+
+## 2. Dove si usa, e chi può usarlo
+
+**Il protocollo è liberamente usabile.** Sono invitati a partecipare tutti gli
+sviluppatori di software gestionale del settore ricettivo e gli sviluppatori di software
+per gli enti pubblici, di tutta Italia.
+
+Non è il protocollo di un singolo portale: è **lo stesso web service** che serve tutte le
+piattaforme qui sotto.
+
+| | | |
+|---|---|---|
+| **Unicom** | **Motouristoffice** | **Ricestat** |
+| **MTO** | **WebCheckin** | **FlashID** |
+
+Questo ha una conseguenza pratica che conviene mettere a fuoco subito: **ci si integra una
+volta sola.** Un albergatore può chiedervi il collegamento a un portale con un nome
+diverso da quello su cui vi siete certificati, ma **protocollo ed endpoint restano gli
+stessi** — cambiano soltanto le credenziali della struttura. Non serve alcuna
+integrazione aggiuntiva.
+
+Ricestat era la piattaforma in uso presso alcune province toscane (Arezzo, Grosseto,
+Livorno, Lucca, Massa Carrara, Pisa, Siena) per la ricezione dei dati Istat fino a Genniao 2026. E' stata sostituita da Motouristoffice. Unicom è in
+uso presso vari comuni italiani e riceve, oltre ai dati Istat, l'imposta di soggiorno e
+l'offerta turistica. Le piattaforme dialogano fra loro e condividono i dati di comune
+interesse.
+
+## 3. Il portale: è lì che si lavora
+
+**→ <https://ws.unicom.uno/>**
+
+C'è un portale dedicato a chi integra il protocollo, e **la documentazione che fa testo è
+quella**. Sul portale, dopo una registrazione che si fa da sé e senza attendere risposta
+da nessuno, si trovano:
+
+* le **istruzioni aggiornate** e la documentazione API, anche in forma interattiva;
+* gli **esempi**, già compilati con le proprie credenziali di prova;
+* un **ambiente sandbox** dove provare quante volte si vuole, senza toccare la produzione;
+* la **suite di test**, che dice quali prove mancano e che cosa ha risposto il sistema a
+  ciascun invio;
+* l'**indirizzo del web service** assegnato al proprio account;
+* il **passaggio in produzione automatico** al superamento delle prove obbligatorie.
+
+### Il materiale su GitHub è funzionante, ma obsoleto
+
+Le procedure e gli esempi pubblicati qui **continuano a funzionare**: l'endpoint storico
+risponde ancora e i flussi XML sono ancora quelli. Non sono stati spenti e non lo saranno
+a breve.
+
+Ma sono fermi a prima del portale, e non contengono le funzioni aggiunte in seguito. Se
+li usi come riferimento resti indietro senza accorgertene, perché nulla ti segnala che
+esiste una versione più recente.
+
+**Quindi: registrati sul portale e lavora lì.** Questa pagina serve a mandarti là.
+
+## 4. Lo schema
+
+Lo schema commentato che esprime le specifiche del flusso XML è pubblicato a un indirizzo
+**versionato**, ed è l'unico indirizzo da usare:
+
+**<https://ws.unicom.uno/webci-1.0.xsd>**
+
+Resta pubblicato anche `https://ws.unicom.uno/webci.xsd`, come alias di cortesia per chi
+lo ha già cablato: è **congelato sulla 1.0** e non è «l'ultima versione». Il giorno che
+uscirà la 2.0, quell'indirizzo resterà fermo dov'è e la 2.0 sarà `webci-2.0.xsd` — così
+nessuno si ritrova validato contro uno schema che non ha scelto. Oggi i due file sono
+identici byte per byte.
+
+Ogni messaggio dichiara la versione con cui è costruito: l'attributo `Version`
+sull'elemento radice è **obbligatorio** e oggi ammette **un solo valore, `1.0`**. Un
+messaggio di un'altra versione va validato contro lo schema di quella versione.
+
+> **Nota, per chi legge le risposte del servizio storico.** Quel servizio dichiara al suo
+> interno un terzo indirizzo per lo schema (`http://ws.webci.it/webci.xsd`), diverso da
+> quelli qui sopra. È un disallineamento noto: l'indirizzo da usare è quello versionato.
+
+---
+
+# Storico delle versioni
+
+Le voci più recenti per prime. La **versione del protocollo** è quella dichiarata
+nell'attributo `Version` dei messaggi; le date sono quelle di aggiornamento di questa
+pagina.
+
+## Protocollo 1.0
+
+### 27 agosto 2026
+
+* **Questa pagina cambia natura**: non è più un manuale ma un rimando al portale, dove
+  stanno istruzioni ed esempi aggiornati. Il contenuto precedente è conservato in
+  [Materiale storico](#materiale-storico).
+* **Registrazione autonoma**: ci si iscrive dal portale, senza mandare mail né attendere
+  che qualcuno risponda con le credenziali.
+* **Rilascio in produzione automatico** al superamento delle prove obbligatorie.
+* **Schema a indirizzo versionato**: `webci-1.0.xsd`; `webci.xsd` resta come alias
+  congelato sulla 1.0.
+* **Nominate tutte le piattaforme** che usano questo web service: chi si certifica una
+  volta è compatibile con tutte.
+* Corretto: `<Aggiornamento>`, `<Eliminazione>` e `<RequestSegments>` **non sono «in
+  roadmap»** — sono implementate da anni e sono fra le prove obbligatorie. Le versioni
+  precedenti di questa pagina le davano come future.
+* Aggiunte al protocollo, documentate sul portale: le **API opzionali** (dichiarazione
+  dei mesi senza movimenti o di chiusura, e richiesta delle presenze del periodo),
+  riservate a chi è certificato per l'imposta di soggiorno nei comuni in cui la gestiamo.
+
+### Prima del 2026
+
+Versioni precedenti di questa pagina, senza storico. Le differenze note rispetto a oggi
+sono quelle elencate qui sopra.
+
+## Protocollo 2.0
+
+Non ancora pubblicata. Quando uscirà avrà il proprio schema (`webci-2.0.xsd`) e la propria
+sezione in questo storico, e i messaggi la dichiareranno con `Version="2.0"`. La 1.0
+resterà valida e documentata.
+
+---
+
+# Materiale storico
+
+> ## ⚠ Da qui in giù è materiale storico, e non fa testo
+>
+> È il contenuto che questa pagina aveva prima di agosto 2026. **Non è aggiornato**:
+> descrive una procedura di accesso che non è più quella, non contiene le funzioni
+> aggiunte in seguito e in qualche punto dice cose che non valgono più.
+>
+> È conservato per chi ci arriva da un collegamento vecchio e per non perdere memoria di
+> come funzionava. **Parte di questo materiale è tuttora corretto** — le regole
+> sull'imposta di soggiorno, per esempio, sono in buona sostanza quelle — ma **la versione
+> che fa testo è quella sul portale**: <https://ws.unicom.uno/certif/>.
+>
+> Non usarlo come riferimento per una nuova integrazione.
+
+## [storico] Registrazione
+
+> **Non è più così.** Oggi ci si registra da sé sul portale. L'indirizzo di posta indicato
+> qui sotto non è più la via per iniziare.
+
+Per poter utilizzare il servizio era necessario che il gestionale fosse certificato da
+Connectis. Si inviava una mail indicando:
+
+* label (nome sintetico del gestionale) da mostrare agli operatori delle strutture
+  ricettive;
+* nome di un referente di contatto, in caso di problemi;
+* e-mail del referente;
+* codice struttura di un cliente da usare come base per i test;
+* un numero di telefono di reperibilità in orario d'ufficio.
+
+A seguito della ricezione dei dati veniva inviata una mail con l'IdCode e la password di
+test per il gestionale e l'url (endpoint) di test. Una volta effettuati i test di
+compatibilità venivano rilasciati i dati di accesso alla piattaforma di produzione.
+
+## [storico] Come sono mandate le richieste
+
+Un url (endpoint) svolge il compito di web service e accetta le richieste XML su HTTP.
+
+L'endpoint di prova indicato allora era
+`http://test.motouristoffice.it/MTO_SchedinaRQ.php`, e **risponde tuttora**. Non è però
+l'indirizzo da usare: quello del proprio account lo assegna il portale.
+
+## [storico] Autenticazione
+
+Si usa uno dei metodi standard OTA di autenticazione, chiamato **POS**. La richiesta è
+composta da due elementi:
+
+* l'autenticazione della terza parte: l'IdCode e la password ottenuti in fase di
+  registrazione dal gestionale;
+* l'autenticazione della struttura ricettiva: il codice utente della S.R. — quello che usa
+  per entrare nella extranet della piattaforma — e la relativa password.
+
+Esempio di richiesta XML per leggere i clienti comunicati in un dato periodo:
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<MTO_SchedineRQ>
-<POS>
-        <Source>
-            <RequestorID Type = "4" ID = "PmsProva" MessagePassword = "ProvaProva"/>
-        </Source>
-        <Source>
-            <RequestorID Type = "10" ID = "052004ALBDEMO" MessagePassword = "password"/>
-        </Source>
-</POS>
- <RequestSegments>
-  <RequestSegment>
-   <SearchCriteria>
-    <Criterion>
-     <DateRange Start="2013-03-20" End="2014-03-20" />
-    </Criterion>
-   </SearchCriteria>
-  </RequestSegment>
- </RequestSegments>
+<MTO_SchedineRQ Version="1.0" PrimaryLangID="it">
+    <POS>
+        <Source><RequestorID Type="4"  ID="IL_TUO_ID_CANALE"    MessagePassword="LaTuaPasswordCanale"/></Source>
+        <Source><RequestorID Type="10" ID="IL_CODICE_STRUTTURA" MessagePassword="LaTuaPasswordStruttura"/></Source>
+    </POS>
+    <RequestSegments CodiceEsercizio="IL_CODICE_STRUTTURA">
+        <RequestSegment>
+            <SearchCriteria>
+                <Criterion>
+                    <DateRange Start="2026-03-20" End="2026-04-20"/>
+                </Criterion>
+            </SearchCriteria>
+        </RequestSegment>
+    </RequestSegments>
 </MTO_SchedineRQ>
 ```
 
-# 1.	Introduzione
-## 1.1	Finalità ##
-Questo documento descrive l’interfaccia XML in uso alle piattaforme Ricestat ed Unicom. 
-IL servizio è un servizio WEBSERVICE in Rest.
-## 1.2	Destinatari del documento ##
-Questo documento è prodotto per quei soggetti che hanno esperienza nelle procedure XML e di programmazione in generale
-Nel dettaglio è raccomandato che gli sviluppatori abbiano le seguenti competenze:
-*	Comprensione delle tecnologie di base dell’XML e degli schemi XML (Obbligatorio)
-*	Conoscenza delle tecnologie Internet quali http e HTTPS (Obbligatorio)
+## [storico] Esempi
 
-## 1.3	A cosa serve l’interfaccia? ##
-L’interfaccia XML permette a terze parti (denominate Gestionali da qui in poi) di connettersi con le piattaforme Ricestat e Unicom al fine di:
-*	Recuperare elenco e dettaglio delle singole regole del Regolamento del Comune Convenzionato
-*	Inviare all’Ente delegato i dati Istat della Struttura Ricettiva.
-*	Inviare i dati validi per l’Imposta di Soggiorno.
-*	Inviare ulteriori dati statistici.
-*	Recuperare conteggio riepilogativo dell’ Imposta di Soggiorno della struttura ricettiva.
+Nel repository sono caricati alcuni esempi di flusso XML per testare le funzionalità del
+web service e confrontare i risultati con quelli ritornati dal proprio software. **Gli
+esempi aggiornati, già compilati con le proprie credenziali, sono sul portale.**
 
-# 2.	Unicom e Ricestat
-Ricestat è la piattaforma in uso presso alcune province toscane (Arezzo, Grosseto, Livorno, Lucca, Massa Carrara, Pisa, Siena) per la ricezione dei dati Istat.
-Unicom è una piattaforma in uso presso alcuni comuni Italiani (per l’elenco completo si rimanda  a relativo allegato) che fra le altre cose permette anche la ricezione dei dati Istat, Imposta di soggiorno e Offerta Turistica.
-Le due piattaforme possono dialogare quindi entrambe sono in grado di interfacciarsi con i gestionali e condividere i dati di comune interesse.
+### [storico] Configurazione
 
-# 3. Iniziamo
-## 3.1 Registrazione ##
-Per poter utilizzare il servizio è necessario che il Gestionale sia certificato da Connectis. Affinche ciò sia possibile è necessario inviare una mail a support@ricestat.it indicando:
-*	Label (Nome sintetico del Gestionale) da mostrare agli operatori delle Strutture Ricettive.
-*	Nome di un referente (di contatto, in caso di problemi)
-*	Email del referente
-*	Codice struttura di un cliente da usare come base per i test
-*	Un numero di telefono di reperibilità in orario d'ufficio
+Esempi per richiedere i parametri operativi per l'invio dei dati.
 
-A seguito di ricezione dei dati richiesti sarà inviata una mail con :
-*	IdCode e password di test per il gestionale
-*	Url (endopoint) di test
+* `esempio_lettura_comuni` — la lista dei codici comuni supportati dalla procedura (sono
+  gli stessi previsti per la Questura);
+* `esempio_lettura_stati` — la lista degli stati supportati;
+* `esempio_lettura_mezzi` — gli id delle informazioni statistiche sui mezzi di trasporto;
+* `esempio_lettura_tipoprenotazione` — gli id delle modalità di prenotazione;
+* `esempio_lettura_tipoturismo` — gli id delle tipologie di turismo;
+* `esempio_lettura_regolamento_imposta` — le esenzioni previste dal regolamento comunale,
+  così come configurato dal comune stesso. Si interroga un comune per volta, indicandone
+  il codice ISTAT di nove cifre:
 
-Una volta effettuati i test di compatibilità del sistema saranno rilasciati i dati di uso per la piattaforma in produzione.
+  ```xml
+  <ImpostaSoggiorno Comune="409052015"/>
+  ```
 
-## 3.2 Come sono mandate le richieste ##
-E’ specificato un url (endpoint) che svolge il compito di webservice e accetta le richieste XML tramite protocollo XML/SOAP, con HTTP binding 
+  (nel caso del Comune di Montepulciano). Se il risultato è nullo, il comune non ha ancora
+  configurato il regolamento.
 
-## 3.3 Autenticazione ##
-Usiamo uno dei metodi standard OTA di autenticazione  chiamato “POS” 
-La richiesta di autenticazione è composta da due elementi:
-*	L’autenticazione della terza parte: l’ID Code  a password ottenuti in fase di registrazione dal Gestionale (vedi sopra)
-*	L’autenticazione della Struttura Ricettiva (S.R.): Il codice utente della S.R. (l che usano per entrare nella Extranet della piattaforma)  e la password di accesso allo stesso. 
+### [storico] Movimentazione
 
-## 3.4 Schema ##
-webci.xsd è lo schema commentato che esprime le specifiche del flusso xml
+Esempi legati ai flussi di movimentazione, cioè alle procedure continuative.
 
-# 4. Esempi
-Sono caricati alcuni esempi d i flusso xml per poter testare le funzionalità del webservice e confrontare i risultati con quelli ritornati dal proprio software
+* `Esempio_inserimento` — inserimento delle movimentazioni giornaliere;
+* `Esempio_lettura` — lettura delle informazioni inserite, per periodo oppure per singolo
+  id utente (`esempio_lettura_id`);
+* `Esempio_cancellazione` — cancellazione per singolo id; la risposta indica l'esito;
+* `Esempio_aggiornamento` — aggiornamento per singolo id utente.
 
-## 4.1 Configurazione ##
-Questi sono gli esempi per richiedere i parametri operativi per l'invio dei dati
+## [storico] Imposta di soggiorno
 
-### 4.1.1 esempio_lettura_comuni ###
-Questo esempio permette di avere la lista dei codici comuni supportati dalla procedura (sono gli stessi previsti per la Questura)
+> Questa parte è **in buona sostanza ancora valida**, ed è la ragione principale per cui
+> il materiale storico non viene cancellato. La versione aggiornata sta sul portale.
 
-### 4.1.2 esempio_lettura_stati ###
-Questo esempio permette di avere la lista degli stati supportati dalla procedura (sono gli stessi previsti per la Questura)
+### Tag `ImpostaDiSoggiorno`
 
-### 4.1.3 esempio_lettura_mezzi ###
-Questo esempio permette di avere la lista degli id delle informazioni opzionali statistiche riguardo  la registrazione dei mezzi di trasporto dei clienti
+Il tag è sempre opzionale, inclusi i suoi sottotag:
 
-### 4.1.4 esempio_lettura_tipoprenotazione ###
-Questo esempio permette di avere la lista degli id delle informazioni opzionali statistiche riguardo la registrazione delle modalità di prenotazione
+```xml
+<ImpostaDiSoggiorno>
+    <CodiceImpostaSoggiorno></CodiceImpostaSoggiorno>
+    <ValoreImpostaUnitaria></ValoreImpostaUnitaria>
+    <NottiImponibili></NottiImponibili>
+</ImpostaDiSoggiorno>
+```
 
-### 4.1.5 esempio_lettura_tipoturismo ###
-Questo esempio permette di avere la lista degli id delle informazioni opzionali statistiche riguardo la registrazione delle tipologia di turismo
+Questo però non vuol dire che non mandandolo la comunicazione fornisca l'informazione
+corretta: la compilazione dei tre campi è sempre funzione del regolamento comunale e
+dell'operatività dell'albergo.
 
-### 4.1.6 Esempio_lettura_regolamento_imposta ###
-Chiamando il servizio si accede alla lista delle estensioni previste dal regolamento comunale così come configurato e voluto dal comune stesso.
-Per accedere alla lista di tutte le esenzioni potenzialmente configurabili dal comune la richiesta è la seguente:
-`     <ImpostaSoggiorno Comune="*" />`
-Per accedere invece al regolamento del Comune specifico la chiamata è la seguente:
-`     <ImpostaSoggiorno Comune="409052015" />` (Nel caso del Comune di Montepulciano)
-Qualora il risultato di questa chiamata sia nullo è perchè il comnue non ha ancora configurato il regolamento
+### Tag `CodiceImpostaSoggiorno`
 
-## 4.2 Movimentazione ##
-Esempi legati ai dati di movimentazione. Questi esempi si riferiscono alle procedure continuative che permettono la corretta gestione dei flussi di movimentazione
+Se è valorizzato rende l'ospite **esente**; se non è valorizzato è **pagante**, sempre che
+nel periodo sia prevista l'imposta.
 
-### 4.2.1 Esempio_inserimento ###
-Procedura di inserimento delle movimentazioni giornaliere.
+Se la valorizzazione non rientra fra i codici previsti dal regolamento comunale, il sistema
+mostra l'ospite al gestore come esente, ma evidenzia in rosso che l'esenzione **non** è
+definita in quel comune o per quella tipologia.
 
-### 4.2.2 Esempio_lettura ###
-Procedura di lettura delle informazione inserite, la lettura è per periodo, ma può essere anche per singolo Idutente (esempio_lettura_id) 
+I codici attivi per i vari comuni si ottengono con la chiamata
+`esempio_lettura_regolamento_imposta`, oppure dalla extranet a cura del gestore. La
+procedura è pubblicata su <https://wci.unicom.uno/esenzioni/imposta>.
 
-### 4.2.3 Esempio_cancellazione ###
-Modalità di cancellazione per singolo ID, la risposta indica l'esito dell'evento
+Per esempio il codice `ABB`, per l'esenzione in quanto imposta già incassata da AirBnB:
+non tutti i comuni hanno sottoscritto tale esenzione. A Pisa non ci sono esenzioni tranne
+i residenti e ABB.
 
-### 4.2.4 Esempio_aggiornamento ###
-Modalità di aggiornamento è per singolo id Utente
+### Tag `ValoreImpostaUnitaria`
 
-# 5. Imposta di Soggiorno
-## 5.1 Tag ImpostaDiSoggiorno ##
+Se è valorizzato corrisponde al costo a persona a notte, indipendentemente da quanto
+specificato nel regolamento. È un numero decimale con il **punto**, non con la virgola.
 
-il tag imposta di soggiorno è sempre opzionale incluso i suoi sottotag:
+Se non è specificato, il sistema prende la tariffa massima prevista per quella tipologia
+di struttura in quel periodo.
 
->  <ImpostaDiSoggiorno>
->      <CodiceImpostaSoggiorno></CodiceImpostaSoggiorno>
->      <ValoreImpostaUnitaria></ValoreImpostaUnitaria>
->      <NottiImponibili></NottiImponibili>
->     </ImpostaDiSoggiorno>
- questo però non vuol dire che non mandandolo poi la comunicazione fornisca l'informazione corretta
+Se da regolamento è definita una sola tariffa per tipologia e classificazione nel periodo
+di interesse, il sistema prende sicuramente il valore giusto. Se invece si tratta di un
+comune come Arezzo, dove le tariffe sono tre e organizzate a fasce in funzione di quanto
+paga l'ospite a camera, e il PMS non invia la tariffa applicata, il gestore rischia di
+trovarsi applicata la tariffa errata — sicuramente maggiore.
 
-Questo vuol dire che la compilazione dei 3 campi è sempre funzione del regolamento comunale e dell'operatività dell'albergo
+### Tag `NottiImponibili`
 
-Partiamo dal significato di ogni singolo tag e da cosa succede se non è presente o valorizzato.
+Se non lo si valorizza, viene preso il dato del regolamento: le *x* notti massime
+continuative che si pagano in quel comune.
 
-## 5.2 Tag CodiceImpostaSoggiorno ##
+Se lo si valorizza con un valore superiore a quello definito dal regolamento, quel valore
+viene tenuto come valido ma segnalato al gestore e al comune come **forzatura** rispetto
+allo standard.
 
-Se è valorizzato rende l'utente esente. Se non è valorizzato è pagante (sempre che nel periodo sia prevista l'imposta). 
+A Grosseto si pagano le prime 14 notti usufruite nell'anno, non le consecutive: serve per
+i clienti di ritorno. Se un cliente torna tutti i fine settimana per tre giorni da maggio
+a settembre, il PMS può mandare il residuo dei giorni da usufruire per ogni soggiorno —
+14; 11; 8; 5; 2; 0; 0; … — oppure 14; 14; 14; 14; 2; 0; 0; … a propria discrezione, in
+base a come ha implementato la specifica.
 
-Se la valorizzazione non rientra in uno dei codici previsti dal regolamento comunale allora il sistema lo visualizza al gestore come esente, ma evidenziando in rosso che l'esenzione NON è definita in quel comune o per quella tipologia. 
+In altri comuni il valore cambia con la stagione. A Pisa, fino alla domenica delle Palme si
+pagano i primi 3 giorni continuativi, dopo i primi 5. Se il tag non è valorizzato, il
+sistema sa quando scattano i giorni; se gli si comunica 5 in bassa stagione prende buono
+3, e se gli si comunica 3 in alta stagione prende buono 3 perché inferiore, evidenziando
+l'anomalia. Perché prende per buono 3? Perché potrebbero essere i dati di un ospite a cui
+è stata cambiata stanza dopo due giorni e che viene mandato come nuovo arrivo anziché come
+modifica del precedente.
 
-I codici attivi per i vari comuni sono reperibili o tramite la chiamata API descritta in esempio_lettura_regolamento_imposta nella extranet della nostra applicazion eda parte del gestore. La procedura è pubblicata nella pagina seguente: https://wci.unicom.uno/esenzioni/imposta
+In generale questo tag non serve, tranne in pochi casi particolari, ma è a disposizione
+del PMS e del gestore per poterli gestire.
 
-Esempi:
+## [storico] Tool extra
 
-Il codice ABB per esenzione in quanto incassato da AirBnB, ma non tutti i comuni hanno sottoscritto tale esenzione
-A Pisa non ci sono esenzioni tranne i residenti e ABB
+### Conversione fra schedina Questura e Ricestat
 
-## 5.3 Tag  ValoreImpostaUnitaria ##
+Sviluppato in PHP >= 5.3, è una webform che converte il file txt della Questura nel flusso
+XML del sistema. È rilasciato a solo scopo di esempio: le variabili identificative di id
+ospite, id gruppo e id camera non sono presenti nel file della Questura e vengono quindi
+inserite in modo casuale, così come le informazioni di provenienza. Resta utile per
+vedere una possibile implementazione dell'accesso al web service. Per accedere alla home,
+chiamare `index.php` sotto la cartella `web`.
 
-Se è valorizzato corrisponde al costo a persona a note, indipendentemente da quanto specificato nel regolamento. 
+### Conversione fra file SIRED e Ricestat/Unicom
 
-Se non specificato il sistema prende la tariffa massima prevista per quella tipologia di struttura per quel periodo. 
+Sviluppato in PHP >= 5.3, è una webform che converte il file txt in uso presso gli enti
+che adottano il protocollo SIRED (Sardegna, Rimini, Pistoia) nel flusso XML del sistema.
+È rilasciato a scopo di esempio, ma può essere implementato in modalità open source da chi
+ne avesse necessità. Per accedere alla home, chiamare `index.php` sotto la cartella
+`htdocs`.
 
-Se da regolamento è definita una sola tariffa per tipologia e classificazione per il periodo di interesse, il sistema prende sicuramente il valore giusto. 
+Esiste una versione pubblicata funzionante su <http://www.unicom.tools>. Il link può essere
+comunicato ai clienti, ma restano necessarie le credenziali per il dialogo col web service.
 
-Se invece stiamo parlando di un comune come Arezzo in cui le tariffe sono 3 e sono organizzate a fasce in funzione di quanto paga l'ospite a camera, se il PMS non invia la tariffa applicata all'ospite, il gestore rischierebbe di trovarsi applicata la tariffa errata (sicuramente maggiore).
+## [storico] Feedback
 
-## 5.4 Tag NottiImponibili ##
+Questa sezione conteneva i feedback rilasciati dagli sviluppatori dei gestionali a
+beneficio dei colleghi, affinché potessero prendere spunto dalle loro esperienze. Li
+ringraziamo e ne riportiamo i riferimenti.
 
-Se non lo si  valorizzate, noi prendiamo come dato quello fornito dal regolamento, cioè le x notti massime continuative che si pagano su quello specifico comune. 
+### Smartmedia 2000
 
-Se invece lo valorizzate e il valore è superiore a quello definito dal regolamento comunale, teniamo come valido questo valore ma lo segnaliamo come sia al gestore, sia al comune come FORZATURA rispetto allo standard.  
-
-Se lo valorizzate con un numero superiore a quello definito dal regolamento non lo consideriamo
-
-Esempi:
-
-Su Grosseto si pagano le prime 14 notti usufruite nell'anno (non le consecutive). Serve per i clienti di ritorno. 
-
-Se un cliente viene tutti i fine settimana per 3 giorni nel periodo Maggio, Settembre, il PMS mi può mandare il residuo dei giorni da usufruire per ogni soggiorno  14 ; 11; 8; 5; 2; 0 ; 0 ; ... e così via. Oppure 14; 14; 14;14; 2 ; 0 ; 0; ... e così via. Questo a vostra discrezione in base a a come avete implementato questa specifica nel vostro  PMS.
-
-In altri comuni, esempio Pisa questo valore cambia in base al periodo di alta o bassa stagione (Fino alla domenica delle Palme si pagano i primi 3 continuativi, dopo la domenica delle Palme si pagano i primi 5. Se voi non valorizzate il tag, noi sappiamo quando scattano i giorni, se invece mi comunicate 5 in bassa stagione io prendo buono 3, se mi comunicate 3 in alta stagione prendo buono 3 (perchè inferiore) evidenziando l'anomalia. 
-
-La domanda è: perchè prendo per buono 3? Perchè magari state mandando i dati di un ospite a cui avete cambiato stanza dopo 2 giorni e lo mandate come nuovo arrivo e non come modifica del precedente
-
-In generale quindi questo tag non serve tranne in pochi casi particolari, ma è messo a disposizione del PMS e del gestore per poter gestire anche quelli
-
-
-
-# 6. Tool extra
-## 6.1 Tool di conversione fra schedina Questura e Ricestat ##
-Il seguente tool sviluppato in php vs>=5.3 consiste in una webform che converte il file txt della questura nel flusso XML del sistema.
-E' rilasciato a solo scopo di esempio in quanto le variabili identificative di Id Ospite, Id Gruppo e Id Camera non sono specificate nel file Questura e quindi sono inserite ramndom (oltre alle informazioni di provenienza). Il tool è però utile per poter visualizzare una possibile implementazione del sistema di accesso al webservice.
-Per accedere alla home chiamare la pagina index.php sotto la cartella web
-
-## 6.1  Tool di conversione fra file generati con protocollo SIRED (Sardegna, Rimini, Pistoia) e invio a Ricestat/Unicom
-Il seguente tool sviluppato in php vs>=5.3 consiste in una webform che converte il file txt in uso presso gli enti in oggetto nel flusso XML del sistema.
-E' rilasciato a scopo di esempio. Il tool è però utile per poter essere implementato in modalità open source per chi ne necessitasse.
-Per accedere alla home chiamare la pagina index.php sotto la cartella htdocs.
-Esiste una versione pubblicata funzionante all'indirizzo www.unicom.tools. Il link può essere comunicato ai clienti, ma è comunque necessario richiedere le credenziali per il dialogo col webserver.
-
-# 7. Feedback
-Questa sezione contiene feedback rilasciati dagli sviluppatori dei gestionali a beneficio dei colleghi affinchè possano prendere spunto dalle loro esperienze. Ringraziamo e riportiamo i loro riferimenti.
-## 7.1  Smartmedia 2000 ##
-Gestionale per Campeggi. Referente ing. Fabrizio Felici
-Smartmedia 2000  
-via Lituania, 46 - 58100 Grosseto Italia
-tel +39 347 6444150  p.iva 01208620532
-http://www.smartmedia2000.it/ Pec info@pec.smartmedia2000.it
+Gestionale per campeggi. Referente ing. Fabrizio Felici.
+Smartmedia 2000, via Lituania 46 — 58100 Grosseto, Italia.
+Tel. +39 347 6444150 — P.IVA 01208620532
+<http://www.smartmedia2000.it/> — PEC info@pec.smartmedia2000.it
