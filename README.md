@@ -63,7 +63,7 @@ stessi** — cambiano soltanto le credenziali della struttura. Non serve alcuna
 integrazione aggiuntiva.
 
 Ricestat era la piattaforma in uso presso alcune province toscane (Arezzo, Grosseto,
-Livorno, Lucca, Massa Carrara, Pisa, Siena) per la ricezione dei dati Istat fino a Genniao 2026. E' stata sostituita da Motouristoffice. Unicom è in
+Livorno, Lucca, Massa Carrara, Pisa, Siena) per la ricezione dei dati Istat fino a Gennaio 2026. E' stata sostituita da Motouristoffice. Unicom è in
 uso presso vari comuni italiani e riceve, oltre ai dati Istat, l'imposta di soggiorno e
 l'offerta turistica. Le piattaforme dialogano fra loro e condividono i dati di comune
 interesse.
