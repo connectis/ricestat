@@ -1,393 +1,895 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation= "http://ws.webci.it/ http://ws.webci.it/webci.xsd">
-    <xs:element name="MTO_SchedineRQ" >
+<!--
+    Schema dei messaggi di richiesta verso il WebService schedine.
+    Versione del protocollo: 1.0
+
+    ── Dove sta questo file, e perche' in due posti ─────────────────────────
+    E' pubblicato a due indirizzi, con contenuto identico byte per byte:
+
+      webci-1.0.xsd   l'indirizzo stabile. E' questo che va negli esempi, nella
+                      documentazione e nei messaggi nuovi.
+
+      webci.xsd       alias di cortesia per chi lo ha gia' cablato, e per le
+                      risposte che il sistema emette oggi, che scrivono
+                      xsi:schemaLocation="http://ws.webci.it/webci.xsd".
+                      E' CONGELATO SULLA 1.0: non e' "l'ultima versione".
+                      Il giorno che esce la 2.0 questo file resta com'e' e la
+                      2.0 si pubblica come webci-2.0.xsd — altrimenti ogni
+                      gestionale che ha cablato webci.xsd si troverebbe
+                      validato contro uno schema che non ha mai scelto.
+
+    Che i due file coincidano si verifica confrontandone l'impronta:
+    entrambi devono dare lo stesso md5. Se divergono, quello giusto e'
+    webci-1.0.xsd.
+
+    Descrive SOLO le richieste (MTO_SchedineRQ). Le risposte non sono coperte.
+
+    ── Punto aperto: descrivere anche le risposte ───────────────────────────
+    Le risposte del WebService (MTO_SchedineRS) non sono descritte da nessuna
+    parte. Aggiungerle significa introdurre un secondo elemento radice e con
+    esso TUTTE le risposte, comprese quelle delle azioni gia' esistenti: e' un
+    ampliamento di portata, non l'aggiunta di un tipo, e va deciso a parte.
+    Finche' non e' fatto, la forma delle risposte vive solo nel codice che le
+    produce e nelle specifiche delle singole funzioni
+    (docs/api_opzionali/, _SPECIFICA_eventi_mensili.md §2.3).
+
+    Lo schema e' il contratto della certificazione: e' volutamente piu' severo di
+    quanto il sistema ricevente tolleri in esercizio. Un gestionale che si
+    certifica deve produrre messaggi corretti; le indulgenze del ricevente
+    servono a non respingere chi e' gia' in produzione, non a definire cosa sia
+    valido.
+
+    Due regole di questo protocollo NON sono esprimibili in XSD 1.0 e sono
+    dichiarate nelle annotazioni dei tipi che le riguardano, dove il sistema
+    ricevente le applica dopo la validazione:
+      - la coerenza dei ruoli dentro un gruppo (vedi GruppoType);
+      - l'accordo fra l'elemento Italia/Estero scelto e il codice dello stato,
+        per la parte che l'enumerazione non riesce a coprire.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="MTO_SchedineRQ">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="POS" type="POSType" />
                 <xs:choice>
-                    <xs:element name="InserimentoAlloggiati"  type="InserimentoAlloggiatiType" />
-                    <xs:element name="Aggiornamento"  type="AggiornamentoType"/>
-                    <xs:element name="Eliminazione" type="EliminazioneType" />    
-                    <xs:element name="RequestSegments" type="RequestSegmentsType" />
+                    <xs:element name="InserimentoAlloggiati" type="InserimentoAlloggiatiType" />
+                    <xs:element name="Aggiornamento"         type="AggiornamentoType"/>
+                    <xs:element name="Eliminazione"          type="EliminazioneType" />
+                    <xs:element name="RequestSegments"       type="RequestSegmentsType" />
+                    <xs:element name="RichiestaPresenze"     type="RichiestaPresenzeType" />
+                    <xs:element name="InserimentoEvento"     type="EventiType" />
+                    <xs:element name="AggiornamentoEvento"   type="EventiType" />
+                    <xs:element name="EliminazioneEvento"    type="EventiRevocaType" />
                 </xs:choice>
             </xs:sequence>
-        </xs:complexType>
-    </xs:element> 
-
-    <xs:complexType name="POSType"  >
-        <xs:annotation>
-            <xs:documentation>Point of Sale (POS) is the details identifying the party or PMS making the request.</xs:documentation>
-        </xs:annotation>    
-        <xs:sequence>
-            <xs:element name="Source" type="SourceType" minOccurs="2" maxOccurs="2">
+            <xs:attribute name="Version" use="required">
                 <xs:annotation>
-                    <xs:documentation>This holds details regarding the requestor. It may be repeated to also accommodate the delivery systems.</xs:documentation>
+                    <xs:documentation>
+                        Versione del protocollo con cui il messaggio e' costruito.
+                        Questo schema descrive la 1.0 e non ne accetta altre: un
+                        messaggio di una versione diversa va validato contro lo
+                        schema di quella versione.
+                    </xs:documentation>
                 </xs:annotation>
-            </xs:element>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="1.0" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="PrimaryLangID" type="xs:string" use="optional">
+                <xs:annotation>
+                    <xs:documentation>Lingua preferita per i testi della risposta (es. it).</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="POSType">
+        <xs:annotation>
+            <xs:documentation>
+                Point of Sale: identifica chi effettua la richiesta. Servono due
+                Source, il canale (Type=4) e la struttura (Type=10): il primo dice
+                quale gestionale sta scrivendo, il secondo per quale struttura.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="Source" type="SourceType" minOccurs="2" maxOccurs="2" />
         </xs:sequence>
     </xs:complexType>
-       
-    <xs:complexType name="SourceType" >
+
+    <xs:complexType name="SourceType">
         <xs:sequence>
-            <xs:element name="RequestorID"  >
+            <xs:element name="RequestorID">
                 <xs:complexType>
                     <xs:annotation>
-                        <xs:documentation>An identifier of the entity making the request </xs:documentation>
+                        <xs:documentation>Credenziali dell'entita' che effettua la richiesta.</xs:documentation>
                     </xs:annotation>
                     <xs:attributeGroup ref="Authentication"/>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
     </xs:complexType>
+
     <xs:attributeGroup name="Authentication">
-        <xs:attribute name="Type" use="required" type="xs:string" />
+        <xs:attribute name="Type" use="required">
+            <xs:annotation>
+                <xs:documentation>4 = canale (gestionale); 10 = struttura ricettiva.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="4" />
+                    <xs:enumeration value="10" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
         <xs:attribute name="ID" use="required" type="xs:string" />
         <xs:attribute name="MessagePassword" use="required" type="xs:string" />
     </xs:attributeGroup>
 
-    <xs:complexType name="EliminazioneType" >
+    <!--
+        CodiceEsercizio su ogni azione, non solo sull'inserimento: un gestore con
+        un unico account puo' amministrare piu' strutture, e il messaggio deve
+        dire su quale di esse sta operando.
+    -->
+    <xs:complexType name="EliminazioneType">
         <xs:sequence>
-            <xs:element name="Alloggiato">
+            <xs:element name="Alloggiato" maxOccurs="unbounded">
                 <xs:complexType>
-                    <xs:attribute name="Id" use="required" type="xs:string" />
+                    <xs:attribute name="Id" use="required" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Identificativo della movimentazione da eliminare, lo
+                                stesso dichiarato in inserimento. Un gruppo si elimina
+                                indicando ogni componente.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
-    </xs:complexType> 
-     
-    <xs:complexType  name="AggiornamentoType" >
-        <xs:sequence>
-            <xs:element name="Ospite" type="OspiteType" >  
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType > 
-
-    <xs:complexType name="InserimentoAlloggiatiType" >
-        <xs:choice>
-            <xs:element  name="Gruppo" type="GruppoType"  minOccurs="2" maxOccurs="unbounded" />
-            <xs:element name="OspiteSingolo" type="OspiteSingoloType" minOccurs="1" maxOccurs="unbounded"/>
-        </xs:choice>
-        <xs:attribute name="CodiceEsercizio"/>
+        <xs:attribute name="CodiceEsercizio" type="xs:string" use="required" />
     </xs:complexType>
 
-    <xs:complexType name="RequestSegmentsType" >
+    <xs:complexType name="AggiornamentoType">
+        <xs:annotation>
+            <xs:documentation>
+                Aggiorna schedine gia' presenti in archivio. L'unita' di
+                aggiornamento e' la singola schedina, identificata dall'Id della
+                movimentazione e appartenga o no a un gruppo; un messaggio puo'
+                portarne quante ne servono.
+
+                I dati vanno inviati completi: l'aggiornamento sostituisce la
+                schedina, non la modifica in parte.
+
+                L'attributo IdGruppo su Ospite, qui, non descrive il gruppo: lo
+                CAMBIA. E' il modo per spostare un ospite in un altro gruppo o per
+                correggere un'appartenenza sbagliata. Per questo il tag Gruppo non
+                e' ammesso in aggiornamento: il gruppo e' un attributo della
+                schedina, non l'oggetto dell'operazione.
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
-            <xs:element name="RequestSegment" >
+            <xs:element name="Ospite" type="OspiteType" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="CodiceEsercizio" type="xs:string" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="InserimentoAlloggiatiType">
+        <xs:annotation>
+            <xs:documentation>
+                Uno o piu' ospiti, singoli e in gruppo, in qualsiasi ordine e
+                quantita': un messaggio puo' contenere solo singoli, solo gruppi
+                o entrambi.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:choice minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="Gruppo"        type="GruppoType" />
+            <xs:element name="OspiteSingolo" type="OspiteSingoloType" />
+        </xs:choice>
+        <xs:attribute name="CodiceEsercizio" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation>
+                    Struttura su cui si sta scrivendo. Deve coincidere con l'ID del
+                    Source Type=10 con cui il messaggio si autentica.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+
+    <!-- =========================================================
+         Tipologia dell'ospite nella schedina
+         ========================================================= -->
+
+    <xs:simpleType name="TipoAlloggiatoType">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:enumeration value="16" />  <!-- ospite singolo -->
+            <xs:enumeration value="17" />  <!-- capofamiglia -->
+            <xs:enumeration value="18" />  <!-- capogruppo -->
+            <xs:enumeration value="19" />  <!-- familiare -->
+            <xs:enumeration value="20" />  <!-- membro di gruppo -->
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TipoAlloggiatoSingoloType">
+        <xs:annotation>
+            <xs:documentation>Dentro OspiteSingolo l'unico valore ammesso e' 16.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="TipoAlloggiatoType">
+            <xs:enumeration value="16" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- =========================================================
+         Gruppi e ospiti singoli
+         ========================================================= -->
+
+    <xs:complexType name="GruppoType">
+        <xs:annotation>
+            <xs:documentation>
+                Un gruppo ha almeno due componenti. Il PRIMO Ospite e' il capo e
+                deve essere 17 (capofamiglia) o 18 (capogruppo); tutti i
+                successivi devono essere coerenti con esso: 19 (familiare) dopo un
+                17, 20 (membro di gruppo) dopo un 18.
+
+                La coerenza dei ruoli NON e' verificata da questo schema: in XSD
+                1.0 non e' esprimibile una condizione fra i valori di elementi
+                diversi. La applica il sistema ricevente, dopo la validazione.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="Ospite" type="OspiteType" />
+            <xs:element name="Ospite" type="OspiteType" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="IdGruppo" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation>Identificativo del gruppo, assegnato dal gestionale.</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="OspiteSingoloType">
+        <xs:annotation>
+            <xs:documentation>
+                Un ospite che non fa parte di alcun gruppo. L'identificativo della
+                movimentazione e' quello di Ospite: qui non va ripetuto.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="Ospite" type="OspiteSingoloDatiType" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- =========================================================
+         Ospite
+         ========================================================= -->
+
+    <xs:complexType name="OspiteType">
+        <xs:all>
+            <xs:element ref="DataDiArrivo"       minOccurs="1" />
+            <xs:element ref="DataDiPartenza"     minOccurs="1" />
+            <xs:element ref="DataDiNascita"      minOccurs="1" />
+            <xs:element ref="Sesso"              minOccurs="1" />
+            <xs:element ref="Provenienza"        minOccurs="1" />
+            <xs:element ref="Nascita"            minOccurs="1" />
+            <xs:element ref="Cittadinanza"       minOccurs="1" />
+            <xs:element ref="ImpostaDiSoggiorno" minOccurs="0" />
+            <xs:element ref="CampiStatistici"    minOccurs="0" />
+        </xs:all>
+        <xs:attribute name="Id" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation>
+                    Identificativo univoco della movimentazione, non della persona:
+                    per un ospite che torna deve cambiare ogni volta. E' la chiave
+                    con cui aggiornare o eliminare la schedina.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="IdCamera" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation>Identificativo della camera, per il calcolo delle camere occupate.</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="TipoAlloggiato" type="TipoAlloggiatoType" use="required" />
+        <xs:attribute name="IdGruppo" type="xs:string" use="optional">
+            <xs:annotation>
+                <xs:documentation>
+                    Usato in Aggiornamento per spostare l'ospite in un altro gruppo.
+                    In inserimento il gruppo si dichiara sull'elemento Gruppo.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="OspiteSingoloDatiType">
+        <xs:annotation>
+            <xs:documentation>OspiteType con TipoAlloggiato vincolato a 16.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:restriction base="OspiteType">
+                <xs:all>
+                    <xs:element ref="DataDiArrivo"       minOccurs="1" />
+                    <xs:element ref="DataDiPartenza"     minOccurs="1" />
+                    <xs:element ref="DataDiNascita"      minOccurs="1" />
+                    <xs:element ref="Sesso"              minOccurs="1" />
+                    <xs:element ref="Provenienza"        minOccurs="1" />
+                    <xs:element ref="Nascita"            minOccurs="1" />
+                    <xs:element ref="Cittadinanza"       minOccurs="1" />
+                    <xs:element ref="ImpostaDiSoggiorno" minOccurs="0" />
+                    <xs:element ref="CampiStatistici"    minOccurs="0" />
+                </xs:all>
+                <xs:attribute name="Id"             type="xs:string" use="required" />
+                <xs:attribute name="IdCamera"       type="xs:string" use="required" />
+                <xs:attribute name="TipoAlloggiato" type="TipoAlloggiatoSingoloType" use="required" />
+                <xs:attribute name="IdGruppo"       type="xs:string" use="optional" />
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!-- =========================================================
+         Eventi mensili
+
+         API OPZIONALI. Dichiarazioni riferite a un MESE INTERO, non a un
+         ospite: un mese senza alcun movimento, un mese di chiusura della
+         struttura. Per la rilevazione statistica "nessun ospite" e "mese non
+         ancora dichiarato" sono cose diverse, e senza una dichiarazione
+         esplicita non si distinguono.
+
+         L'identita' e' (struttura, anno, mese): per un mese si dichiara UN
+         fatto solo, e il tipo e' cio' che si aggiorna. Un mese chiuso non e'
+         anche un mese senza movimenti da dichiarare a parte.
+
+         Tre azioni, come per le schedine: si dichiara, si corregge, si revoca.
+         Per revocare basta il mese, quindi li' il Tipo non serve.
+         ========================================================= -->
+
+    <xs:simpleType name="TipoEventoType">
+        <xs:annotation>
+            <xs:documentation>
+                Fatti dichiarabili per un mese. E' un'enumerazione e non una
+                stringa libera di proposito: un refuso deve fermarsi qui, non
+                arrivare al ricevente e tornare come "tipo sconosciuto".
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="MovimentoNullo">
+                <xs:annotation><xs:documentation>Mese senza alcun movimento</xs:documentation></xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="ChiusuraTemporanea">
+                <xs:annotation><xs:documentation>Mese di chiusura della struttura</xs:documentation></xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="AnnoType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="2000" />
+            <xs:maxInclusive value="2099" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="MeseType">
+        <xs:annotation>
+            <xs:documentation>
+                Mese, da 1 a 12. In ingresso sono ammesse entrambe le forme, 3 e
+                03: la forma lessicale di xs:integer accetta lo zero iniziale.
+                In uscita il ricevente scrive sempre due cifre.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="12" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="EventoType">
+        <xs:attribute name="Tipo"  type="TipoEventoType" use="required" />
+        <xs:attribute name="Anno"  type="AnnoType"       use="required" />
+        <xs:attribute name="Mese"  type="MeseType"       use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="EventoRevocaType">
+        <xs:annotation>
+            <xs:documentation>
+                Evento da revocare. Il Tipo e' facoltativo: l'identita' della
+                dichiarazione e' il mese, e per toglierla non serve ripetere che
+                cosa dichiarava.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="Tipo"  type="TipoEventoType" use="optional" />
+        <xs:attribute name="Anno"  type="AnnoType"       use="required" />
+        <xs:attribute name="Mese"  type="MeseType"       use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="EventiType">
+        <xs:annotation>
+            <xs:documentation>
+                Uno o piu' eventi in un messaggio. Un evento sbagliato non ferma
+                gli altri: ciascuno riceve il proprio esito nella risposta.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="Evento" type="EventoType" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="CodiceEsercizio" type="xs:string" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="EventiRevocaType">
+        <xs:sequence>
+            <xs:element name="Evento" type="EventoRevocaType" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="CodiceEsercizio" type="xs:string" use="required" />
+    </xs:complexType>
+
+    <!-- =========================================================
+         Le date
+
+         Una sola forma per tutte le date dello schema, senza eccezioni.
+         ========================================================= -->
+
+    <xs:simpleType name="DataIsoType">
+        <xs:annotation>
+            <xs:documentation>
+                Data nella sola forma aaaa-mm-gg: dieci caratteri, niente fuso
+                orario, anno di quattro cifre.
+
+                xs:date da solo non basta. Ammette anche "2026-07-01+02:00" e
+                "12026-07-01", che sono date legali per XML Schema ma non per
+                questo sistema: le colonne che le ospitano sono varchar(10) e
+                i confronti che le filtrano sono lessicografici, non
+                cronologici. Provato: data_arrivo &lt;= '12026-12-31'
+                restituisce zero righe dove '2099-12-31' ne restituisce otto,
+                perche' '1' viene prima di '2'. Il ricevente non protesta —
+                risponde 902 "nessun risultato" — e chi ha inviato crede di non
+                avere schedine. E' il tipo di errore silenzioso che lo schema
+                deve fermare a monte, dove si vede.
+
+                Derivando da xs:date e non da xs:string si conserva la
+                validazione del calendario: 2026-02-30 resta invalido.
+
+                Vale per OGNI data dello schema — periodi di ricerca, periodo
+                delle presenze, arrivo, partenza, nascita. Nessuna eccezione:
+                una data scritta in due forme diverse a seconda di dove
+                compare e' una trappola per chi implementa, e la differenza non
+                avrebbe alcuna ragione d'essere.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:date">
+            <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- =========================================================
+         Presenze del periodo (RichiestaPresenze)
+
+         API OPZIONALE. Restituisce, giorno per giorno, arrivi, partenze,
+         presenze e camere occupate calcolati sulle schedine gia' trasmesse:
+         serve al gestionale per riconciliare i propri numeri con quelli del
+         sistema ricevente prima che diventino rilevazione statistica.
+
+         Non e' richiesta per la certificazione di base: un gestionale che non
+         la implementa resta pienamente conforme.
+         ========================================================= -->
+
+    <xs:complexType name="RichiestaPresenzeType">
+        <xs:attribute name="CodiceEsercizio" type="xs:string" use="required" />
+        <xs:attribute name="DataInizio" type="DataIsoType" use="required">
+            <xs:annotation>
+                <xs:documentation>Primo giorno del periodo (aaaa-mm-gg).</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="DataFine" type="DataIsoType" use="required">
+            <xs:annotation>
+                <xs:documentation>
+                    Ultimo giorno del periodo (aaaa-mm-gg), non anteriore a
+                    DataInizio. Il periodo copre al massimo 31 giorni: oltre, il
+                    ricevente risponde 422. L'ampiezza non e' esprimibile in XSD
+                    1.0, che non sa confrontare due attributi.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+
+    <!-- =========================================================
+         Consultazione (RequestSegments)
+         ========================================================= -->
+
+    <xs:complexType name="RequestSegmentsType">
+        <xs:sequence>
+            <xs:element name="RequestSegment">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="SearchCriteria" >
+                        <xs:element name="SearchCriteria">
                             <xs:complexType>
                                 <xs:sequence>
-                                    <xs:element name="Criterion" >
+                                    <xs:element name="Criterion">
                                         <xs:complexType>
                                             <xs:choice>
-                                                <xs:element name="DateRange"  type="DateRangeType" />
-                                                <xs:element name="UniqueID" type="UniqueIDType" />
+                                                <xs:element name="DateRange"        type="DateRangeType" />
+                                                <xs:element name="UniqueID"         type="UniqueIDType" />
                                                 <xs:element name="ImpostaSoggiorno" type="ImpostaSoggiornoType" />
-                                                <xs:element name="ListaResidenze" type="ListaResidenzeType" />
+                                                <xs:element name="ListaResidenze"   type="ListaResidenzeType" />
                                                 <xs:element name="ListaStatistiche" type="ListaStatisticheType" />
+                                                <xs:element name="Eventi"           type="CriterioEventiType" />
                                             </xs:choice>
                                         </xs:complexType>
-                                    </xs:element>  
+                                    </xs:element>
                                 </xs:sequence>
-                            </xs:complexType>  	
+                            </xs:complexType>
                         </xs:element>
                     </xs:sequence>
-                </xs:complexType> 
-            </xs:element> 
+                </xs:complexType>
+            </xs:element>
         </xs:sequence>
+        <xs:attribute name="CodiceEsercizio" type="xs:string" use="required" />
     </xs:complexType>
 
-    <xs:complexType name="DateRangeType" >       
-        <xs:attribute name="Start" use="required"  type="xs:date">
+    <xs:complexType name="DateRangeType">
+        <xs:annotation>
+            <xs:documentation>
+                Ricerca delle schedine per periodo. Il ricevente applica
+                l'intervallo come lo applica il legacy — arrivo &lt;= End e
+                partenza &gt; Start — quindi End e' incluso e Start e' escluso:
+                non e' un intervallo simmetrico, e chi confronta i conteggi con
+                i propri deve saperlo.
+
+                Che End non sia anteriore a Start non e' esprimibile in XSD 1.0,
+                che non sa confrontare due attributi.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="Start" use="required" type="DataIsoType">
             <xs:annotation>
-                <xs:documentation> Data di inizio periodo di ricerca (aaaa-mm-gg)</xs:documentation>
+                <xs:documentation>Data di inizio periodo di ricerca (aaaa-mm-gg)</xs:documentation>
             </xs:annotation>
-        </xs:attribute> 
-        <xs:attribute name="End" use="required"  type="xs:date">
+        </xs:attribute>
+        <xs:attribute name="End" use="required" type="DataIsoType">
             <xs:annotation>
-                <xs:documentation> Data di fine periodo di ricerca  (aaaa-mm-gg)</xs:documentation>
+                <xs:documentation>Data di fine periodo di ricerca (aaaa-mm-gg)</xs:documentation>
             </xs:annotation>
-        </xs:attribute>    
+        </xs:attribute>
     </xs:complexType>
 
-    <xs:complexType name="UniqueIDType" >
-        <xs:attribute name="Id" use="required"  type="xs:string">
+    <xs:complexType name="UniqueIDType">
+        <xs:attribute name="Id" use="required">
             <xs:annotation>
-                <xs:documentation>Identificativo univoco</xs:documentation>
+                <xs:documentation>
+                    Identificativo assegnato dal gestionale, non dal ricevente:
+                    e' una stringa libera, non un numero. Le colonne che lo
+                    ospitano (id_gruppo, id_cliente) sono varchar(100) su tutti
+                    e tre i database, da cui il limite di cento caratteri.
+
+                    Non puo' essere vuoto. Entrambi i processori scelgono il
+                    criterio con Id != '': con Id="" la ricerca per
+                    identificativo non viene nemmeno tentata, il messaggio
+                    scivola al criterio successivo e chi lo ha inviato riceve
+                    900 "criterio non congruente" senza capire perche'. Meglio
+                    dirlo qui.
+                </xs:documentation>
             </xs:annotation>
-        </xs:attribute> 
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:minLength value="1" />
+                    <xs:maxLength value="100" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
         <xs:attribute name="tipo" use="required">
             <xs:annotation>
-                <xs:documentation>Tipo di identificativo (Gruppo; OspiteSingolo)</xs:documentation>
+                <xs:documentation>
+                    Tipo di identificativo (Gruppo; OspiteSingolo).
+
+                    I processori confrontano solo con "Gruppo" e trattano ogni
+                    altro valore come ospite singolo: l'enumerazione e' piu'
+                    severa di quanto il ricevente pretenda, deliberatamente,
+                    perche' un valore diverso da questi due sarebbe accolto
+                    senza segnalazione e interpretato in un modo che chi scrive
+                    non ha scelto.
+                </xs:documentation>
             </xs:annotation>
-            <xs:simpleType> 
+            <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="Gruppo" />
                     <xs:enumeration value="OspiteSingolo" />
                 </xs:restriction>
-            </xs:simpleType> 
-        </xs:attribute> 
-    </xs:complexType>
-  
-    <xs:complexType name="ImpostaSoggiornoType" >
-        <xs:attribute name="Comune" use="required"  type="xs:int">
-            <xs:annotation>
-                <xs:documentation>Codice identificativo univoco del comune</xs:documentation>
-            </xs:annotation>
-        </xs:attribute> 
+            </xs:simpleType>
+        </xs:attribute>
     </xs:complexType>
 
-    <xs:complexType name="ListaResidenzeType" >
-        <xs:attribute name="tipo" use="required" >
+    <xs:complexType name="ImpostaSoggiornoType">
+        <xs:attribute name="Comune" use="required" type="CodiceIstatType">
             <xs:annotation>
-                <xs:documentation>Tipo di identificativo (Stati; Comuni)</xs:documentation>
+                <xs:documentation>
+                    Codice ISTAT del comune di cui si chiede il regolamento
+                    dell'imposta: nove cifre, lo stesso dominio dei codici usati
+                    nei luoghi di nascita e residenza.
+                </xs:documentation>
             </xs:annotation>
-            <xs:simpleType> 
+        </xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="CriterioEventiType">
+        <xs:annotation>
+            <xs:documentation>
+                Rilegge le dichiarazioni mensili gia' registrate. Solo l'anno e'
+                obbligatorio: senza Mese si ottiene tutto l'anno, senza Tipo
+                tutti i tipi. La risposta porta anche la data in cui ciascuna
+                dichiarazione e' stata registrata, che e' cio' che distingue una
+                dichiarazione tempestiva da una tardiva.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="Anno" type="AnnoType"       use="required" />
+        <xs:attribute name="Mese" type="MeseType"       use="optional" />
+        <xs:attribute name="Tipo" type="TipoEventoType" use="optional" />
+    </xs:complexType>
+
+    <xs:complexType name="ListaResidenzeType">
+        <xs:attribute name="tipo" use="required">
+            <xs:annotation>
+                <xs:documentation>
+                    Tipo di lista richiesta (Stati; Comuni).
+
+                    Qui lo schema e' piu' severo del ricevente, e la differenza
+                    va conosciuta. Il legacy accetta anche "comuni" minuscolo; il
+                    v2 confronta senza distinguere maiuscole. Entrambi, per ogni
+                    altro valore, non segnalano nulla e restituiscono gli Stati:
+                    chi scrivesse "Province" riceverebbe l'elenco degli stati
+                    credendo di avere le province.
+
+                    La certificazione pretende le due forme esatte proprio per
+                    questo. In esercizio nessun messaggio gia' in produzione
+                    viene rifiutato dal ricevente per questo motivo: e' lo
+                    schema a chiedere di piu', non il sistema a essere cambiato.
+                </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="Stati" />
                     <xs:enumeration value="Comuni" />
                 </xs:restriction>
-            </xs:simpleType> 
-        </xs:attribute> 
+            </xs:simpleType>
+        </xs:attribute>
     </xs:complexType>
-    <xs:complexType name="ListaStatisticheType" >
-        <xs:attribute name="tipo" use="required" >
+
+    <xs:complexType name="ListaStatisticheType">
+        <xs:attribute name="tipo" use="required">
             <xs:annotation>
-                <xs:documentation>Tipo di identificativo (Stati; Comuni)</xs:documentation>
+                <xs:documentation>
+                    Tipo di lista richiesta (TipoTurismo; MezzoDiTrasporto;
+                    TipoPrenotazione).
+
+                    Questi tre valori sono esattamente quelli che i due
+                    processori riconoscono, maiuscole comprese: v2 li cerca in
+                    un array, il legacy in uno switch, e ogni altro valore
+                    produce 900 "criterio non supportato" in entrambi. Qui lo
+                    schema e il ricevente coincidono: nessuna indulgenza da
+                    documentare, a differenza di ListaResidenze.
+                </xs:documentation>
             </xs:annotation>
-            <xs:simpleType> 
+            <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="TipoTurismo" />
                     <xs:enumeration value="MezzoDiTrasporto" />
                     <xs:enumeration value="TipoPrenotazione" />
                 </xs:restriction>
-            </xs:simpleType> 
-        </xs:attribute> 
+            </xs:simpleType>
+        </xs:attribute>
     </xs:complexType>
-  
-    <xs:element name="Provenienza" >
+
+    <!-- =========================================================
+         Luoghi: codici ISTAT
+         ========================================================= -->
+
+    <xs:simpleType name="CodiceIstatType">
+        <xs:annotation>
+            <xs:documentation>Codice ISTAT di stato o comune: nove cifre.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{9}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CodiceProvinciaType">
+        <xs:annotation>
+            <xs:documentation>Codice ISTAT di provincia: sei cifre, prefisso del codice comune.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{6}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="StatoItaliaType">
+        <xs:annotation>
+            <xs:documentation>Stato dichiarato dentro l'elemento Italia: puo' essere solo l'Italia.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="CodiceIstatType">
+            <xs:enumeration value="100000100" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="StatoEsteroType">
+        <xs:annotation>
+            <xs:documentation>
+                Codice ISTAT dello stato estero: nove cifre, escluso 100000100
+                (Italia), che va dichiarato con l'elemento Italia. Il pattern
+                elenca le nove posizioni in cui il codice puo' differire da quello
+                dell'Italia: in XSD 1.0 non esiste un modo per escludere un solo
+                valore da un insieme.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[02-9][0-9]{8}|1[1-9][0-9]{7}|10[1-9][0-9]{6}|100[1-9][0-9]{5}|1000[1-9][0-9]{4}|10000[1-9][0-9]{3}|100000[02-9][0-9]{2}|1000001[1-9][0-9]|10000010[1-9]" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="Provenienza">
+        <xs:annotation>
+            <xs:documentation>Residenza dell'ospite.</xs:documentation>
+        </xs:annotation>
         <xs:complexType>
             <xs:choice>
                 <xs:element name="Italia" type="ItaliaType" />
                 <xs:element name="Estero" type="EsteroType" />
             </xs:choice>
         </xs:complexType>
-    </xs:element> 
-    <xs:element name="Nascita" >
+    </xs:element>
+
+    <xs:element name="Nascita">
         <xs:complexType>
             <xs:choice>
-                <xs:element  name="Italia" type="ItaliaType" />
+                <xs:element name="Italia" type="ItaliaType" />
                 <xs:element name="Estero" type="EsteroType" />
             </xs:choice>
         </xs:complexType>
-    </xs:element> 
-    <xs:element name="Cittadinanza" >
+    </xs:element>
+
+    <xs:element name="Cittadinanza">
         <xs:complexType>
-            <xs:attribute name="Stato" use="required" type="xs:string" />
+            <xs:attribute name="Stato" use="required" type="CodiceIstatType" />
         </xs:complexType>
-    </xs:element> 
+    </xs:element>
 
     <xs:complexType name="ItaliaType">
-        <xs:attribute name="CodiceComune" use="required" type="xs:string" />
-        <xs:attribute name="Provincia" use="required" type="xs:string"/>
-        <xs:attribute name="Stato" use="required" type="xs:string" />
-    </xs:complexType>
-
-    <xs:complexType name="EsteroType" >
-        <xs:attribute name="Stato" use="required" type="xs:string" />
-    </xs:complexType>
-  
-    <xs:complexType name="GruppoType">
-        <xs:sequence>
-            <xs:element name="Ospite" type="OspiteType" minOccurs="1"  >
-               
-            </xs:element>
-  
-            <xs:element name="Ospite" type="OspiteType" minOccurs="1" >
-                <xs:annotation>
-                    <xs:documentation>TipoAlloggiato solo Familiare (19) o Membro di gruppo (20)</xs:documentation>
-                </xs:annotation>
-                
-            </xs:element>
-        </xs:sequence>
-        <xs:attribute name="IdGruppo" type="xs:ID"  use="required">
+        <xs:attribute name="CodiceComune" use="required" type="CodiceIstatType" />
+        <xs:attribute name="Provincia"    use="optional" type="CodiceProvinciaType">
             <xs:annotation>
-                <xs:documentation>Identificativo univoco del gruppo</xs:documentation>
+                <xs:documentation>
+                    Ricavabile dal CodiceComune, di cui e' il prefisso: si accetta
+                    per compatibilita' ma non e' richiesta.
+                </xs:documentation>
             </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="Stato" use="required" type="StatoItaliaType" />
     </xs:complexType>
 
-    <xs:complexType name="OspiteSingoloType" >
-        <xs:sequence>
-            <xs:element name="Ospite" type="OspiteType" minOccurs="1" >        
-                <xs:annotation>
-                    <xs:documentation>TipoAlloggiato solo Ospite Singolo (16) </xs:documentation>
-                </xs:annotation>     
-                
-            </xs:element>
-        </xs:sequence>
-		<xs:attribute name="Id" type="xs:string"  use="required"  >
-            <xs:annotation>
-                <xs:documentation>Identificativo univoco della movimentazione, non dell'utente, per utenti ricorrenti deve cambiare ogni volta</xs:documentation>
-            </xs:annotation>
-        </xs:attribute>
-
+    <xs:complexType name="EsteroType">
+        <xs:attribute name="Stato" use="required" type="StatoEsteroType" />
     </xs:complexType>
 
-    <xs:complexType name="OspiteType" >
-	    <xs:all>
-	        <xs:element ref="DataDiArrivo" minOccurs="1" />
-	        <xs:element ref="DataDiPartenza" minOccurs="1" />
-	        <xs:element ref="DataDiNascita" minOccurs="1" /> 
-	        <xs:element ref="Sesso" minOccurs="1" />
-	        <xs:element ref="Provenienza" minOccurs="1" />
- 	       <xs:element ref="Nascita" minOccurs="1" />
- 	       <xs:element ref="Cittadinanza" minOccurs="1" />
-  	      <xs:element ref="ImpostaDiSoggiorno" minOccurs="0"/>
-   	     <xs:element ref="CampiStatistici"/>
+    <!-- =========================================================
+         Dati della schedina
+         ========================================================= -->
 
-            <xs:element name="Nome" type="xs:string"   minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation>Nome dell'ospite. OPZIONALE</xs:documentation>
-                </xs:annotation>
-            </xs:element> 
-            <xs:element name="Cognome" type="xs:string"   minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation>Cognome dell'ospite. OPZIONALE</xs:documentation>
-                </xs:annotation>
-            </xs:element>
- 	       </xs:all>        
-        <xs:attribute name="Id" type="xs:string"  use="required"  >
-            <xs:annotation>
-                <xs:documentation>Identificativo univoco della movimentazione, non dell'utente, per utenti ricorrenti deve cambiare ogni volta</xs:documentation>
-            </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="IdCamera" type="xs:string"  use="required"  >
-            <xs:annotation>
-                <xs:documentation>Identificativo univoco della camera (per il calcolo delle camere occupate)</xs:documentation>
-            </xs:annotation>
-        </xs:attribute>
-
-                    <xs:attribute name="TipoAlloggiato">
-                        <xs:simpleType> 
-                            <xs:restriction base="xs:positiveInteger">
-                                <xs:enumeration value="16"/>
-                                <xs:enumeration value="17"/>
-                                <xs:enumeration value="18"/>
-                                <xs:enumeration value="19"/>
-                                <xs:enumeration value="20"/>
-                            </xs:restriction>
-                        </xs:simpleType>
-                    </xs:attribute> 
-                    <xs:attribute name="IdGruppo" type="xs:ID"  use="required">
-                        <xs:annotation>
-                            <xs:documentation>Possibilità di correggere gruppo</xs:documentation>
-                        </xs:annotation>
-                    </xs:attribute> 
-
-    </xs:complexType>
-    
-    <xs:element name="DataDiArrivo"  type="xs:date">
+    <xs:element name="DataDiArrivo" type="DataIsoType">
         <xs:annotation>
-            <xs:documentation> Data di arrivo (aaaa-mm-gg)</xs:documentation>
+            <xs:documentation>Data di arrivo (aaaa-mm-gg)</xs:documentation>
         </xs:annotation>
     </xs:element>
-    
-    <xs:element name="DataDiPartenza" type="xs:date">
+
+    <xs:element name="DataDiPartenza" type="DataIsoType">
         <xs:annotation>
-            <xs:documentation> Data di partenza (aaaa-mm-gg)</xs:documentation>
+            <xs:documentation>Data di partenza (aaaa-mm-gg)</xs:documentation>
         </xs:annotation>
     </xs:element>
-  
-    <xs:element name="DataDiNascita"  type="xs:date">
+
+    <xs:element name="DataDiNascita" type="DataIsoType">
         <xs:annotation>
-            <xs:documentation>Data di nascita (aaaa-mm-gg) </xs:documentation>
+            <xs:documentation>Data di nascita (aaaa-mm-gg)</xs:documentation>
         </xs:annotation>
     </xs:element>
-    <xs:element name="Sesso"   >
+
+    <xs:element name="Sesso">
         <xs:annotation>
             <xs:documentation>Sesso (1=maschio; 2=femmina)</xs:documentation>
         </xs:annotation>
-        <xs:simpleType> 
+        <xs:simpleType>
             <xs:restriction base="xs:positiveInteger">
                 <xs:enumeration value="1" />
                 <xs:enumeration value="2" />
             </xs:restriction>
-        </xs:simpleType> 
+        </xs:simpleType>
     </xs:element>
 
     <xs:element name="ImpostaDiSoggiorno">
+        <xs:annotation>
+            <xs:documentation>
+                Blocco facoltativo. Quando c'e', porta solo cio' che il caso
+                richiede: i tre elementi sono tutti opzionali.
+            </xs:documentation>
+        </xs:annotation>
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="CodiceImpostaSoggiorno" type="xs:string"  >
+                <xs:element name="CodiceImpostaSoggiorno" type="xs:string" minOccurs="0">
                     <xs:annotation>
-                        <xs:documentation>Codice per imposta di soggiorno, null se non esente</xs:documentation>
-                    </xs:annotation>
-                </xs:element> 
-                <xs:element name="ValoreImpostaUnitaria" type="xs:decimal"  >
-                    <xs:annotation>
-                        <xs:documentation>Valore per singolo giorno dell'imposta</xs:documentation>
+                        <xs:documentation>
+                            Codice di esenzione previsto dal regolamento del comune.
+                            Assente o vuoto per un ospite pagante.
+                        </xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element name="NottiImponibili" type="xs:positiveInteger"  >
+                <xs:element name="ValoreImpostaUnitaria" type="xs:decimal" minOccurs="0">
                     <xs:annotation>
-                        <xs:documentation>Notti soggette ad Imposta</xs:documentation>
+                        <xs:documentation>
+                            Importo per notte della tariffa applicata, con il PUNTO
+                            come separatore decimale (2.50). Dove il comune ha piu'
+                            tariffe valide insieme, il ricevente non puo' dedurre
+                            quale sia stata applicata: va sempre dichiarata.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="NottiImponibili" type="xs:nonNegativeInteger" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Notti soggette a imposta. Omettere l'elemento significa
+                            "non le dichiaro, calcolale dalla permanenza"; dichiarare
+                            zero significa "nessuna notte da tassare". Sono due cose
+                            diverse.
+                        </xs:documentation>
                     </xs:annotation>
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="CampiStatistici" >
+    <xs:element name="CampiStatistici">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="TipoTurismo" type="TipoTurismo" minOccurs="0" />
+                <xs:element name="TipoTurismo"      type="TipoTurismo"      minOccurs="0" />
                 <xs:element name="MezzoDiTrasporto" type="MezzoDiTrasporto" minOccurs="0" />
                 <xs:element name="TipoPrenotazione" type="TipoPrenotazione" minOccurs="0" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-  
+
     <xs:simpleType name="TipoTurismo">
         <xs:restriction base="xs:string">
-            <xs:enumeration  value="Affari/Congressuale" />
-            <xs:enumeration  value="Arte e cultura" />
-            <xs:enumeration  value="Cicloturismo" />
-            <xs:enumeration  value="Enogastronomia" />
-            <xs:enumeration  value="Fiere" />
-            <xs:enumeration  value="Parchi Tematici" />
-            <xs:enumeration  value="Religioso" />
-            <xs:enumeration  value="Salute" />
-            <xs:enumeration  value="Scolastico" />
-            <xs:enumeration  value="Sportivo e Fitness" />
-            <xs:enumeration  value="Terme" />
-            <xs:enumeration  value="Altro" />
-        </xs:restriction>
-    </xs:simpleType>  
-
-    <xs:simpleType name="MezzoDiTrasporto" >
-        <xs:restriction base="xs:string">
-            <xs:enumeration  value="Auto" />
-            <xs:enumeration  value="Aereo" />
-            <xs:enumeration  value="Treno" />
-            <xs:enumeration  value="Autobus" />
-            <xs:enumeration  value="Barca / Nave" />
-            <xs:enumeration  value="Moto" />
-            <xs:enumeration  value="Bicicletta" />
-            <xs:enumeration  value="Altro" />
+            <xs:enumeration value="Affari/Congressuale" />
+            <xs:enumeration value="Arte e cultura" />
+            <xs:enumeration value="Cicloturismo" />
+            <xs:enumeration value="Enogastronomia" />
+            <xs:enumeration value="Fiere" />
+            <xs:enumeration value="Parchi Tematici" />
+            <xs:enumeration value="Religioso" />
+            <xs:enumeration value="Salute" />
+            <xs:enumeration value="Scolastico" />
+            <xs:enumeration value="Sportivo e Fitness" />
+            <xs:enumeration value="Terme" />
+            <xs:enumeration value="Altro" />
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:simpleType name="TipoPrenotazione" >
+    <xs:simpleType name="MezzoDiTrasporto">
         <xs:restriction base="xs:string">
-            <xs:enumeration  value="Email" />
-            <xs:enumeration  value="Sito web privato" />
-            <xs:enumeration  value="Portale" />
-            <xs:enumeration  value="Telefonica/Fax" />
-            <xs:enumeration  value="Tour Operator" />
-            <xs:enumeration  value="Altro" />
+            <xs:enumeration value="Auto" />
+            <xs:enumeration value="Aereo" />
+            <xs:enumeration value="Treno" />
+            <xs:enumeration value="Autobus" />
+            <xs:enumeration value="Barca / Nave" />
+            <xs:enumeration value="Moto" />
+            <xs:enumeration value="Bicicletta" />
+            <xs:enumeration value="Altro" />
         </xs:restriction>
     </xs:simpleType>
-  
+
+    <xs:simpleType name="TipoPrenotazione">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Email" />
+            <xs:enumeration value="Sito web privato" />
+            <xs:enumeration value="Portale" />
+            <xs:enumeration value="Telefonica/Fax" />
+            <xs:enumeration value="Tour Operator" />
+            <xs:enumeration value="Altro" />
+        </xs:restriction>
+    </xs:simpleType>
+
 </xs:schema>
